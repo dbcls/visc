@@ -8,7 +8,7 @@
     - id: "rs1322538365"
 
   # Normalized REF
-  - gvo:ref:  # gvo:ref or sio:SIO_000223 (has property)
+  - gvo:norm_ref:  # gvo:ref or sio:SIO_000223 (has property)
     - []:
       - a: gvo:NormalizedReferenceFeature
       - rdfs:subClassOf:
@@ -26,7 +26,7 @@
         - norm_ref_allele: ""
 
   # Normalized ALT
-  - gvo:alt:
+  - gvo:norm_alt:
     - []:
       - a: gvo:NormalizedAlternativeFeature
       - rdfs:subClassOf:
@@ -86,3 +86,4 @@
         - info_label: "VC"
       - sio:SIO_000300:  # gvo:info sio:SIO_000223 (has property)
         - info_value: "INS"
+
