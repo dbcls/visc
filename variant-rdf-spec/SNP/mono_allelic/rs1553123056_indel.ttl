@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gvo: <http://genomevariant.org/ns> .
+
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+#NC_000001.10	83119	rs1553123056	AA	ATAAC	.	.	RS=1553123056;dbSNPBuildID=147;SSR=0;VC=INDEL
+[ 
+  # http://purl.obolibrary.org/obo/SO_1000032
+  # sequence_feature > sequence_comparison> sequence_alteration > delins
+  
+  rdf:type gvo:INDEL ;                             # variant type
+  rdfs:subClassOf obo:SO_1000032 ;                 # obo:SO_1000032 (delins) 
+  dcterms:identifier "rs1553123056" ;              #$ID  or {"name": "dbSNP", "indentifier": "rs1570391677"}   
+
+  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:NormalizedReferenceFeature ;      # Normalized REF
+    rdfs:subClassOf obo:SO_0000366 ;               # obo:SO_0000366 (insertion_site)
+    rdfs:subClassOf obo:SO_0000159 ;               # obo:SO_0000687 (deletion_junction)  
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:InBetweenPosition ;                  # faldo:InBetweenPosition
+      faldo:after 83119 ;                          # $POS
+      faldo:before 83121 ;                         # $POS + 1 + 1 (base)
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "A"                             # has value $REF
+  ];
+
+  gvo:alt [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:NormalizedAlternativeFeature ;    # Normalized ALT 
+    rdfs:subClassOf obo:SO_1000032 ;               # obo:SO_1000032 (delins)
+    rdfs:subClassOf obo:SO_0000366 ;               # obo:SO_0000366 (insertion_site)    
+    rdfs:subClassOf obo:SO_0000159 ;               # obo:SO_0000687 (deletion_junction)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:InBetweenPosition ;                  # faldo:InBetweenPosition
+      faldo:after 83119 ;                          # $POS
+      faldo:before 83121 ;                         # $POS + 1 + 1 (base)
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> # CHROM
+    ];
+    sio:SIO_000300 "TAAC"                          # has value $REF
+  ];
+
+  # REF
+  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:ReferenceFeature ;                # REF 
+    rdfs:subClassOf obo:SO_0000001 ;               # obo:SO_0000001 (region)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:Region ;                             # faldo:Region
+      faldo:begin 83119 ;                          # faldo:position $POS
+      faldo:end 83120 ;                            # faldo:position $POS + 2 (base) -1         
+      faldo:reference hco:1:GRCh37 ;               #CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "AA"                             #has value $REF
+  ];
+
+  # ALT
+  gvo:alt [                                        #gvo:alt or sio:SIO_000223 (has property)
+    rdf:type gvo:AlternativeFeature ;              #ALT
+    rdfs:subClassOf obo:SO_0000001 ;               # obo:SO_0000001 (region)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:Region ;                             # faldo:Region
+      faldo:begin 83119 ;                          # faldo:position $POS
+      faldo:end 83120 ;                            # faldo:position $POS + 2 (base) -1 
+      faldo:reference hco:1:GRCh37 ;               #CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "ATAAC"                         #has value $ALT   
+  ];
+  
+  gvo:qual "." ;                                   #$QUAL
+  gvo:filter "." ;                                 #$FILTER
+  gvo:info [ rdf:label "VC"; sio:SIO_000300 "INDEL"] # gvo:info sio:SIO_000223 (has property)
+]
+.

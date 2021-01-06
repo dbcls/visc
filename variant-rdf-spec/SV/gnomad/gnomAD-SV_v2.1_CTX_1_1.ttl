@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix gvo: <http://genomevariant.org/ns> .
+
+#1	56651907	gnomAD-SV_v2.1_CTX_1_1	N	<CTX>	999	PASS , 
+# INFO =>  END=56651908, SVLEN=-1, CHR2=5, POS2=12754270, END2=12754271
+
+
+[
+  # sequence_feature > sequence_comparison
+  rdf:type gvo:Interchromosomal_translocation ;             #variant type
+  rdfs:subClassOf obo:SO_0002060 ; #interchromosomal_translocation
+  # sequence_feature > sequence_comparison> sequence_alteration > structural_alteration > translocation > chromosomal_translocation> interchromosomal_translocation
+  # http://purl.obolibrary.org/obo/SO_0002060
+  dcterms:identifiers "gnomAD-SV_v2.1_CTX_1_1" ;
+
+  # REF
+  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:ReferenceFeature ;
+    rdfs:subClassOf obo:SO_0001873 ;               # interchromosomal_breakpoint
+    # http://purl.obolibrary.org/obo/SO_0001873
+    # sequence_feature > junction > chromosome_breakpoint > interchromosomal_breakpoint
+    faldo:location [
+      a faldo:InBetweenPosition ;
+      faldo:after 56651907 ;                       # POS  56651907
+      faldo:before 56651908 ;                      # END=56651908
+      faldo:reference hco:1#GRCh37                 # CHROM
+    ];
+    sio:SIO_000300 "N"  #has value                 # REF
+  ];
+
+  # ALT
+  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:AlternativeFeature ;
+    rdfs:subClassOf obo:SO_0001873 ;               # interchromosomal_breakpoint
+    # http://purl.obolibrary.org/obo/SO_0001873
+    # sequence_feature > junction > chromosome_breakpoint > interchromosomal_breakpoint
+    rdf:type _:AlternativeAllele;                         #
+    sio:SIO_000061 [];                             # is located in ?
+    faldo:location [
+      a faldo:InBetweenPosition ;
+      faldo:after 12754270 ;                       # POS2=12754270
+      faldo:before 12754271 ;                      # END2=12754271
+      faldo:reference hco:5#GRCh37                 # CHR2=5
+    ]; 
+    sio:SIO_000300 "<CTX>"                         # ALT, has value   
+  ]
+]
+.
