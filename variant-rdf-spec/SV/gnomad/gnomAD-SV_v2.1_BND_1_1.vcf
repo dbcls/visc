@@ -1,0 +1,303 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##ALT=<ID=BND,Description="Unresolved non-reference breakpoint junction">
+##ALT=<ID=CPX,Description="Complex SV">
+##ALT=<ID=CTX,Description="Reciprocal translocation">
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INS,Description="Insertion">
+##ALT=<ID=INS:ME,Description="Mobile element insertion of unspecified ME class">
+##ALT=<ID=INS:ME:ALU,Description="Alu element insertion">
+##ALT=<ID=INS:ME:LINE1,Description="LINE1 element insertion">
+##ALT=<ID=INS:ME:SVA,Description="SVA element insertion">
+##ALT=<ID=INS:UNK,Description="Sequence insertion of unspecified origin">
+##ALT=<ID=INV,Description="Inversion">
+##CPX_TYPE_CCR="Complex chromosomal rearrangement, involving two or more chromosomes and multiple SV signatures."
+##CPX_TYPE_INS_iDEL="Insertion with deletion at insertion site."
+##CPX_TYPE_INVdel="Complex inversion with 3' flanking deletion."
+##CPX_TYPE_INVdup="Complex inversion with 3' flanking duplication."
+##CPX_TYPE_dDUP="Dispersed duplication."
+##CPX_TYPE_dDUP_iDEL="Dispersed duplication with deletion at insertion site."
+##CPX_TYPE_delINVdel="Complex inversion with 5' and 3' flanking deletions."
+##CPX_TYPE_delINVdup="Complex inversion with 5' flanking deletion and 3' flanking duplication."
+##CPX_TYPE_delINV="Complex inversion with 5' flanking deletion."
+##CPX_TYPE_dupINVdel="Complex inversion with 5' flanking duplication and 3' flanking deletion."
+##CPX_TYPE_dupINVdup="Complex inversion with 5' and 3' flanking duplications."
+##CPX_TYPE_dupINV="Complex inversion with 5' flanking duplication."
+##CPX_TYPE_piDUP_FR="Palindromic inverted tandem duplication, forward-reverse orientation."
+##CPX_TYPE_piDUP_RF="Palindromic inverted tandem duplication, reverse-forward orientation."
+##FILTER=<ID=LOW_CALL_RATE,Description="Site does not meet minimum requirements for fraction of PCR- samples with non-null genotypes. Flags sites more prone to false discoveries.">
+##FILTER=<ID=MULTIALLELIC,Description="Multiallelic site">
+##FILTER=<ID=PCRPLUS_ENRICHED,Description="Site enriched for non-reference genotypes among PCR+ samples. Likely reflects technical batch effects. All PCR- samples have been assigned null GTs for these sites.>">
+##FILTER=<ID=UNRESOLVED,Description="Variant is unresolved">
+##FILTER=<ID=UNSTABLE_AF_PCRMINUS,Description="Allele frequency for this variant in PCR- samples is sensitive to choice of GQ filtering thresholds. All PCR- samples have been assigned null GTs for these sites.>">
+##FORMAT=<ID=EV,Number=1,Type=String,Description="Classes of evidence supporting final genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PE_GQ,Number=1,Type=Integer,Description="Paired-end genotype quality">
+##FORMAT=<ID=PE_GT,Number=1,Type=Integer,Description="Paired-end genotype">
+##FORMAT=<ID=RD_CN,Number=1,Type=Integer,Description="Predicted copy state">
+##FORMAT=<ID=RD_GQ,Number=1,Type=Integer,Description="Read-depth genotype quality">
+##FORMAT=<ID=SR_GQ,Number=1,Type=Integer,Description="Split read genotype quality">
+##FORMAT=<ID=SR_GT,Number=1,Type=Integer,Description="Split-read genotype">
+##INFO=<ID=ALGORITHMS,Number=.,Type=String,Description="Source algorithms">
+##INFO=<ID=BOTHSIDES_SUPPORT,Number=0,Type=Flag,Description="Variant has read-level support for both sides of breakpoint. Indicates higher-confidence variants.">
+##INFO=<ID=CHR2,Number=1,Type=String,Description="Chromosome of second breakpoint position.">
+##INFO=<ID=CPX_INTERVALS,Number=.,Type=String,Description="Genomic intervals constituting complex variant.">
+##INFO=<ID=CPX_TYPE,Number=1,Type=String,Description="Class of complex variant.">
+##INFO=<ID=END2,Number=1,Type=Integer,Description="End coordinate of second breakpoint position.">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the structural variant">
+##INFO=<ID=EVIDENCE,Number=.,Type=String,Description="Classes of random forest support.">
+##INFO=<ID=HIGH_SR_BACKGROUND,Number=0,Type=Flag,Description="Suspicious accumulation of split reads in predicted non-carrier samples. Flags sites more prone to false discoveries and where breakpoint precision is reduced.">
+##INFO=<ID=PCRPLUS_DEPLETED,Number=0,Type=Flag,Description="Site depleted for non-reference genotypes among PCR+ samples. Likely reflects technical batch effects. All PCR+ samples have been assigned null GTs for these sites.">
+##INFO=<ID=PESR_GT_OVERDISPERSION,Number=0,Type=Flag,Description="PESR genotyping data is overdispersed. Flags sites where genotypes are likely noisier.">
+##INFO=<ID=POS2,Number=1,Type=Integer,Description="Start coordinate of second breakpoint position.">
+##INFO=<ID=PROTEIN_CODING__COPY_GAIN,Number=.,Type=String,Description="Gene(s) on which the SV is predicted to have a copy-gain effect.">
+##INFO=<ID=PROTEIN_CODING__DUP_LOF,Number=.,Type=String,Description="Gene(s) on which the SV is predicted to have a loss-of-function effect via intragenic exonic duplication.">
+##INFO=<ID=PROTEIN_CODING__DUP_PARTIAL,Number=.,Type=String,Description="Gene(s) which are partially overlapped by an SV's duplication, such that an unaltered copy is preserved.">
+##INFO=<ID=PROTEIN_CODING__INTERGENIC,Number=0,Type=Flag,Description="SV does not overlap coding sequence.">
+##INFO=<ID=PROTEIN_CODING__INTRONIC,Number=.,Type=String,Description="Gene(s) where the SV was found to lie entirely within an intron.">
+##INFO=<ID=PROTEIN_CODING__INV_SPAN,Number=.,Type=String,Description="Gene(s) which are entirely spanned by an SV's inversion.">
+##INFO=<ID=PROTEIN_CODING__LOF,Number=.,Type=String,Description="Gene(s) on which the SV is predicted to have a loss-of-function effect.">
+##INFO=<ID=PROTEIN_CODING__MSV_EXON_OVR,Number=.,Type=String,Description="Gene(s) on which the multiallelic SV would be predicted to have a LOF, DUP_LOF, COPY_GAIN, or DUP_PARTIAL annotation if the SV were biallelic.">
+##INFO=<ID=PROTEIN_CODING__NEAREST_TSS,Number=.,Type=String,Description="Nearest transcription start site to intragenic variants.">
+##INFO=<ID=PROTEIN_CODING__PROMOTER,Number=.,Type=String,Description="Genes whose promoter sequence (1 kb) was disrupted by SV.">
+##INFO=<ID=PROTEIN_CODING__UTR,Number=.,Type=String,Description="Gene(s) for which the SV is predicted to disrupt a UTR.">
+##INFO=<ID=SOURCE,Number=1,Type=String,Description="Source of inserted sequence.">
+##INFO=<ID=STRANDS,Number=1,Type=String,Description="Breakpoint strandedness [++,+-,-+,--]">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="SV length">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=UNRESOLVED_TYPE,Number=1,Type=String,Description="Class of unresolved variant.">
+##INFO=<ID=UNSTABLE_AF_PCRPLUS,Number=0,Type=Flag,Description="Allele frequency for this variant in PCR+ samples is sensitive to choice of GQ filtering thresholds. All PCR+ samples have been  assigned null GTs for these sites.">
+##INFO=<ID=VARIABLE_ACROSS_BATCHES,Number=0,Type=Flag,Description="Site appears at variable frequencies across batches. Accuracy of allele frequency estimates for these sites may be reduced.">
+##contig=<ID=1,length=249250621>
+##contig=<ID=2,length=243199373>
+##contig=<ID=3,length=198022430>
+##contig=<ID=4,length=191154276>
+##contig=<ID=5,length=180915260>
+##contig=<ID=6,length=171115067>
+##contig=<ID=7,length=159138663>
+##contig=<ID=8,length=146364022>
+##contig=<ID=9,length=141213431>
+##contig=<ID=10,length=135534747>
+##contig=<ID=11,length=135006516>
+##contig=<ID=12,length=133851895>
+##contig=<ID=13,length=115169878>
+##contig=<ID=14,length=107349540>
+##contig=<ID=15,length=102531392>
+##contig=<ID=16,length=90354753>
+##contig=<ID=17,length=81195210>
+##contig=<ID=18,length=78077248>
+##contig=<ID=19,length=59128983>
+##contig=<ID=20,length=63025520>
+##contig=<ID=21,length=48129895>
+##contig=<ID=22,length=51304566>
+##contig=<ID=X,length=155270560>
+##contig=<ID=Y,length=59373566>
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles genotyped (for biallelic sites) or individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Number of non-reference alleles observed (for biallelic sites) or individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele frequency (for biallelic sites) or copy-state frequency (for multiallelic sites).">
+##INFO=<ID=N_BI_GENOS,Number=1,Type=Integer,Description="Total number of individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=N_HOMREF,Number=1,Type=Integer,Description="Number of individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=N_HET,Number=1,Type=Integer,Description="Number of individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=N_HOMALT,Number=1,Type=Integer,Description="Number of individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=FREQ_HOMREF,Number=1,Type=Float,Description="Homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=FREQ_HET,Number=1,Type=Float,Description="Heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=FREQ_HOMALT,Number=1,Type=Float,Description="Homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=MALE_AN,Number=1,Type=Integer,Description="Total number of MALE alleles genotyped (for biallelic sites) or MALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=MALE_AC,Number=A,Type=Integer,Description="Number of non-reference MALE alleles observed (for biallelic sites) or MALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=MALE_AF,Number=A,Type=Float,Description="MALE allele frequency (for biallelic sites) or MALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=MALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of MALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=MALE_N_HOMREF,Number=1,Type=Integer,Description="Number of MALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=MALE_N_HET,Number=1,Type=Integer,Description="Number of MALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=MALE_N_HOMALT,Number=1,Type=Integer,Description="Number of MALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=MALE_FREQ_HOMREF,Number=1,Type=Float,Description="MALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=MALE_FREQ_HET,Number=1,Type=Float,Description="MALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=MALE_FREQ_HOMALT,Number=1,Type=Float,Description="MALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=MALE_N_HEMIREF,Number=1,Type=Integer,Description="Number of MALE individuals with hemizygous reference genotypes (biallelic sites only).">
+##INFO=<ID=MALE_N_HEMIALT,Number=1,Type=Integer,Description="Number of MALE individuals with hemizygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=MALE_FREQ_HEMIREF,Number=1,Type=Float,Description="MALE hemizygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=MALE_FREQ_HEMIALT,Number=1,Type=Float,Description="MALE hemizygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=PAR,Number=0,Type=Flag,Description="Variant overlaps pseudoautosomal region.">
+##INFO=<ID=FEMALE_AN,Number=1,Type=Integer,Description="Total number of FEMALE alleles genotyped (for biallelic sites) or FEMALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=FEMALE_AC,Number=A,Type=Integer,Description="Number of non-reference FEMALE alleles observed (for biallelic sites) or FEMALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=FEMALE_AF,Number=A,Type=Float,Description="FEMALE allele frequency (for biallelic sites) or FEMALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=FEMALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of FEMALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=FEMALE_N_HOMREF,Number=1,Type=Integer,Description="Number of FEMALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=FEMALE_N_HET,Number=1,Type=Integer,Description="Number of FEMALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=FEMALE_N_HOMALT,Number=1,Type=Integer,Description="Number of FEMALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=FEMALE_FREQ_HOMREF,Number=1,Type=Float,Description="FEMALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=FEMALE_FREQ_HET,Number=1,Type=Float,Description="FEMALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=FEMALE_FREQ_HOMALT,Number=1,Type=Float,Description="FEMALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=POPMAX_AF,Number=1,Type=Float,Description="Maximum allele frequency across any population (biallelic sites only).">
+##INFO=<ID=AFR_AN,Number=1,Type=Integer,Description="Total number of AFR alleles genotyped (for biallelic sites) or AFR individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=AFR_AC,Number=A,Type=Integer,Description="Number of non-reference AFR alleles observed (for biallelic sites) or AFR individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=AFR_AF,Number=A,Type=Float,Description="AFR allele frequency (for biallelic sites) or AFR copy-state frequency (for multiallelic sites).">
+##INFO=<ID=AFR_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of AFR individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=AFR_N_HOMREF,Number=1,Type=Integer,Description="Number of AFR individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=AFR_N_HET,Number=1,Type=Integer,Description="Number of AFR individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=AFR_N_HOMALT,Number=1,Type=Integer,Description="Number of AFR individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=AFR_FREQ_HOMREF,Number=1,Type=Float,Description="AFR homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_FREQ_HET,Number=1,Type=Float,Description="AFR heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_FREQ_HOMALT,Number=1,Type=Float,Description="AFR homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_MALE_AN,Number=1,Type=Integer,Description="Total number of AFR MALE alleles genotyped (for biallelic sites) or AFR MALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=AFR_MALE_AC,Number=A,Type=Integer,Description="Number of non-reference AFR MALE alleles observed (for biallelic sites) or AFR MALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=AFR_MALE_AF,Number=A,Type=Float,Description="AFR MALE allele frequency (for biallelic sites) or AFR MALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=AFR_MALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of AFR MALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=AFR_MALE_N_HOMREF,Number=1,Type=Integer,Description="Number of AFR MALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=AFR_MALE_N_HET,Number=1,Type=Integer,Description="Number of AFR MALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=AFR_MALE_N_HOMALT,Number=1,Type=Integer,Description="Number of AFR MALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=AFR_MALE_FREQ_HOMREF,Number=1,Type=Float,Description="AFR MALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_MALE_FREQ_HET,Number=1,Type=Float,Description="AFR MALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_MALE_FREQ_HOMALT,Number=1,Type=Float,Description="AFR MALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_MALE_N_HEMIREF,Number=1,Type=Integer,Description="Number of AFR MALE individuals with hemizygous reference genotypes (biallelic sites only).">
+##INFO=<ID=AFR_MALE_N_HEMIALT,Number=1,Type=Integer,Description="Number of AFR MALE individuals with hemizygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=AFR_MALE_FREQ_HEMIREF,Number=1,Type=Float,Description="AFR MALE hemizygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_MALE_FREQ_HEMIALT,Number=1,Type=Float,Description="AFR MALE hemizygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_FEMALE_AN,Number=1,Type=Integer,Description="Total number of AFR FEMALE alleles genotyped (for biallelic sites) or AFR FEMALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=AFR_FEMALE_AC,Number=A,Type=Integer,Description="Number of non-reference AFR FEMALE alleles observed (for biallelic sites) or AFR FEMALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=AFR_FEMALE_AF,Number=A,Type=Float,Description="AFR FEMALE allele frequency (for biallelic sites) or AFR FEMALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=AFR_FEMALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of AFR FEMALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=AFR_FEMALE_N_HOMREF,Number=1,Type=Integer,Description="Number of AFR FEMALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=AFR_FEMALE_N_HET,Number=1,Type=Integer,Description="Number of AFR FEMALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=AFR_FEMALE_N_HOMALT,Number=1,Type=Integer,Description="Number of AFR FEMALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=AFR_FEMALE_FREQ_HOMREF,Number=1,Type=Float,Description="AFR FEMALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_FEMALE_FREQ_HET,Number=1,Type=Float,Description="AFR FEMALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=AFR_FEMALE_FREQ_HOMALT,Number=1,Type=Float,Description="AFR FEMALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_AN,Number=1,Type=Integer,Description="Total number of AMR alleles genotyped (for biallelic sites) or AMR individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=AMR_AC,Number=A,Type=Integer,Description="Number of non-reference AMR alleles observed (for biallelic sites) or AMR individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=AMR_AF,Number=A,Type=Float,Description="AMR allele frequency (for biallelic sites) or AMR copy-state frequency (for multiallelic sites).">
+##INFO=<ID=AMR_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of AMR individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=AMR_N_HOMREF,Number=1,Type=Integer,Description="Number of AMR individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=AMR_N_HET,Number=1,Type=Integer,Description="Number of AMR individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=AMR_N_HOMALT,Number=1,Type=Integer,Description="Number of AMR individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=AMR_FREQ_HOMREF,Number=1,Type=Float,Description="AMR homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_FREQ_HET,Number=1,Type=Float,Description="AMR heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_FREQ_HOMALT,Number=1,Type=Float,Description="AMR homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_MALE_AN,Number=1,Type=Integer,Description="Total number of AMR MALE alleles genotyped (for biallelic sites) or AMR MALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=AMR_MALE_AC,Number=A,Type=Integer,Description="Number of non-reference AMR MALE alleles observed (for biallelic sites) or AMR MALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=AMR_MALE_AF,Number=A,Type=Float,Description="AMR MALE allele frequency (for biallelic sites) or AMR MALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=AMR_MALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of AMR MALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=AMR_MALE_N_HOMREF,Number=1,Type=Integer,Description="Number of AMR MALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=AMR_MALE_N_HET,Number=1,Type=Integer,Description="Number of AMR MALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=AMR_MALE_N_HOMALT,Number=1,Type=Integer,Description="Number of AMR MALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=AMR_MALE_FREQ_HOMREF,Number=1,Type=Float,Description="AMR MALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_MALE_FREQ_HET,Number=1,Type=Float,Description="AMR MALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_MALE_FREQ_HOMALT,Number=1,Type=Float,Description="AMR MALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_MALE_N_HEMIREF,Number=1,Type=Integer,Description="Number of AMR MALE individuals with hemizygous reference genotypes (biallelic sites only).">
+##INFO=<ID=AMR_MALE_N_HEMIALT,Number=1,Type=Integer,Description="Number of AMR MALE individuals with hemizygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=AMR_MALE_FREQ_HEMIREF,Number=1,Type=Float,Description="AMR MALE hemizygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_MALE_FREQ_HEMIALT,Number=1,Type=Float,Description="AMR MALE hemizygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_FEMALE_AN,Number=1,Type=Integer,Description="Total number of AMR FEMALE alleles genotyped (for biallelic sites) or AMR FEMALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=AMR_FEMALE_AC,Number=A,Type=Integer,Description="Number of non-reference AMR FEMALE alleles observed (for biallelic sites) or AMR FEMALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=AMR_FEMALE_AF,Number=A,Type=Float,Description="AMR FEMALE allele frequency (for biallelic sites) or AMR FEMALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=AMR_FEMALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of AMR FEMALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=AMR_FEMALE_N_HOMREF,Number=1,Type=Integer,Description="Number of AMR FEMALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=AMR_FEMALE_N_HET,Number=1,Type=Integer,Description="Number of AMR FEMALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=AMR_FEMALE_N_HOMALT,Number=1,Type=Integer,Description="Number of AMR FEMALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=AMR_FEMALE_FREQ_HOMREF,Number=1,Type=Float,Description="AMR FEMALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_FEMALE_FREQ_HET,Number=1,Type=Float,Description="AMR FEMALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=AMR_FEMALE_FREQ_HOMALT,Number=1,Type=Float,Description="AMR FEMALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_AN,Number=1,Type=Integer,Description="Total number of EAS alleles genotyped (for biallelic sites) or EAS individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=EAS_AC,Number=A,Type=Integer,Description="Number of non-reference EAS alleles observed (for biallelic sites) or EAS individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=EAS_AF,Number=A,Type=Float,Description="EAS allele frequency (for biallelic sites) or EAS copy-state frequency (for multiallelic sites).">
+##INFO=<ID=EAS_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of EAS individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=EAS_N_HOMREF,Number=1,Type=Integer,Description="Number of EAS individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=EAS_N_HET,Number=1,Type=Integer,Description="Number of EAS individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=EAS_N_HOMALT,Number=1,Type=Integer,Description="Number of EAS individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=EAS_FREQ_HOMREF,Number=1,Type=Float,Description="EAS homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_FREQ_HET,Number=1,Type=Float,Description="EAS heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_FREQ_HOMALT,Number=1,Type=Float,Description="EAS homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_MALE_AN,Number=1,Type=Integer,Description="Total number of EAS MALE alleles genotyped (for biallelic sites) or EAS MALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=EAS_MALE_AC,Number=A,Type=Integer,Description="Number of non-reference EAS MALE alleles observed (for biallelic sites) or EAS MALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=EAS_MALE_AF,Number=A,Type=Float,Description="EAS MALE allele frequency (for biallelic sites) or EAS MALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=EAS_MALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of EAS MALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=EAS_MALE_N_HOMREF,Number=1,Type=Integer,Description="Number of EAS MALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=EAS_MALE_N_HET,Number=1,Type=Integer,Description="Number of EAS MALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=EAS_MALE_N_HOMALT,Number=1,Type=Integer,Description="Number of EAS MALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=EAS_MALE_FREQ_HOMREF,Number=1,Type=Float,Description="EAS MALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_MALE_FREQ_HET,Number=1,Type=Float,Description="EAS MALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_MALE_FREQ_HOMALT,Number=1,Type=Float,Description="EAS MALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_MALE_N_HEMIREF,Number=1,Type=Integer,Description="Number of EAS MALE individuals with hemizygous reference genotypes (biallelic sites only).">
+##INFO=<ID=EAS_MALE_N_HEMIALT,Number=1,Type=Integer,Description="Number of EAS MALE individuals with hemizygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=EAS_MALE_FREQ_HEMIREF,Number=1,Type=Float,Description="EAS MALE hemizygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_MALE_FREQ_HEMIALT,Number=1,Type=Float,Description="EAS MALE hemizygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_FEMALE_AN,Number=1,Type=Integer,Description="Total number of EAS FEMALE alleles genotyped (for biallelic sites) or EAS FEMALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=EAS_FEMALE_AC,Number=A,Type=Integer,Description="Number of non-reference EAS FEMALE alleles observed (for biallelic sites) or EAS FEMALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=EAS_FEMALE_AF,Number=A,Type=Float,Description="EAS FEMALE allele frequency (for biallelic sites) or EAS FEMALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=EAS_FEMALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of EAS FEMALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=EAS_FEMALE_N_HOMREF,Number=1,Type=Integer,Description="Number of EAS FEMALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=EAS_FEMALE_N_HET,Number=1,Type=Integer,Description="Number of EAS FEMALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=EAS_FEMALE_N_HOMALT,Number=1,Type=Integer,Description="Number of EAS FEMALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=EAS_FEMALE_FREQ_HOMREF,Number=1,Type=Float,Description="EAS FEMALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_FEMALE_FREQ_HET,Number=1,Type=Float,Description="EAS FEMALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=EAS_FEMALE_FREQ_HOMALT,Number=1,Type=Float,Description="EAS FEMALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_AN,Number=1,Type=Integer,Description="Total number of EUR alleles genotyped (for biallelic sites) or EUR individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=EUR_AC,Number=A,Type=Integer,Description="Number of non-reference EUR alleles observed (for biallelic sites) or EUR individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=EUR_AF,Number=A,Type=Float,Description="EUR allele frequency (for biallelic sites) or EUR copy-state frequency (for multiallelic sites).">
+##INFO=<ID=EUR_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of EUR individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=EUR_N_HOMREF,Number=1,Type=Integer,Description="Number of EUR individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=EUR_N_HET,Number=1,Type=Integer,Description="Number of EUR individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=EUR_N_HOMALT,Number=1,Type=Integer,Description="Number of EUR individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=EUR_FREQ_HOMREF,Number=1,Type=Float,Description="EUR homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_FREQ_HET,Number=1,Type=Float,Description="EUR heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_FREQ_HOMALT,Number=1,Type=Float,Description="EUR homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_MALE_AN,Number=1,Type=Integer,Description="Total number of EUR MALE alleles genotyped (for biallelic sites) or EUR MALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=EUR_MALE_AC,Number=A,Type=Integer,Description="Number of non-reference EUR MALE alleles observed (for biallelic sites) or EUR MALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=EUR_MALE_AF,Number=A,Type=Float,Description="EUR MALE allele frequency (for biallelic sites) or EUR MALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=EUR_MALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of EUR MALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=EUR_MALE_N_HOMREF,Number=1,Type=Integer,Description="Number of EUR MALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=EUR_MALE_N_HET,Number=1,Type=Integer,Description="Number of EUR MALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=EUR_MALE_N_HOMALT,Number=1,Type=Integer,Description="Number of EUR MALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=EUR_MALE_FREQ_HOMREF,Number=1,Type=Float,Description="EUR MALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_MALE_FREQ_HET,Number=1,Type=Float,Description="EUR MALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_MALE_FREQ_HOMALT,Number=1,Type=Float,Description="EUR MALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_MALE_N_HEMIREF,Number=1,Type=Integer,Description="Number of EUR MALE individuals with hemizygous reference genotypes (biallelic sites only).">
+##INFO=<ID=EUR_MALE_N_HEMIALT,Number=1,Type=Integer,Description="Number of EUR MALE individuals with hemizygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=EUR_MALE_FREQ_HEMIREF,Number=1,Type=Float,Description="EUR MALE hemizygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_MALE_FREQ_HEMIALT,Number=1,Type=Float,Description="EUR MALE hemizygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_FEMALE_AN,Number=1,Type=Integer,Description="Total number of EUR FEMALE alleles genotyped (for biallelic sites) or EUR FEMALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=EUR_FEMALE_AC,Number=A,Type=Integer,Description="Number of non-reference EUR FEMALE alleles observed (for biallelic sites) or EUR FEMALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=EUR_FEMALE_AF,Number=A,Type=Float,Description="EUR FEMALE allele frequency (for biallelic sites) or EUR FEMALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=EUR_FEMALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of EUR FEMALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=EUR_FEMALE_N_HOMREF,Number=1,Type=Integer,Description="Number of EUR FEMALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=EUR_FEMALE_N_HET,Number=1,Type=Integer,Description="Number of EUR FEMALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=EUR_FEMALE_N_HOMALT,Number=1,Type=Integer,Description="Number of EUR FEMALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=EUR_FEMALE_FREQ_HOMREF,Number=1,Type=Float,Description="EUR FEMALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_FEMALE_FREQ_HET,Number=1,Type=Float,Description="EUR FEMALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=EUR_FEMALE_FREQ_HOMALT,Number=1,Type=Float,Description="EUR FEMALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_AN,Number=1,Type=Integer,Description="Total number of OTH alleles genotyped (for biallelic sites) or OTH individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=OTH_AC,Number=A,Type=Integer,Description="Number of non-reference OTH alleles observed (for biallelic sites) or OTH individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=OTH_AF,Number=A,Type=Float,Description="OTH allele frequency (for biallelic sites) or OTH copy-state frequency (for multiallelic sites).">
+##INFO=<ID=OTH_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of OTH individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=OTH_N_HOMREF,Number=1,Type=Integer,Description="Number of OTH individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=OTH_N_HET,Number=1,Type=Integer,Description="Number of OTH individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=OTH_N_HOMALT,Number=1,Type=Integer,Description="Number of OTH individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=OTH_FREQ_HOMREF,Number=1,Type=Float,Description="OTH homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_FREQ_HET,Number=1,Type=Float,Description="OTH heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_FREQ_HOMALT,Number=1,Type=Float,Description="OTH homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_MALE_AN,Number=1,Type=Integer,Description="Total number of OTH MALE alleles genotyped (for biallelic sites) or OTH MALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=OTH_MALE_AC,Number=A,Type=Integer,Description="Number of non-reference OTH MALE alleles observed (for biallelic sites) or OTH MALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=OTH_MALE_AF,Number=A,Type=Float,Description="OTH MALE allele frequency (for biallelic sites) or OTH MALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=OTH_MALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of OTH MALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=OTH_MALE_N_HOMREF,Number=1,Type=Integer,Description="Number of OTH MALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=OTH_MALE_N_HET,Number=1,Type=Integer,Description="Number of OTH MALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=OTH_MALE_N_HOMALT,Number=1,Type=Integer,Description="Number of OTH MALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=OTH_MALE_FREQ_HOMREF,Number=1,Type=Float,Description="OTH MALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_MALE_FREQ_HET,Number=1,Type=Float,Description="OTH MALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_MALE_FREQ_HOMALT,Number=1,Type=Float,Description="OTH MALE homozygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_MALE_N_HEMIREF,Number=1,Type=Integer,Description="Number of OTH MALE individuals with hemizygous reference genotypes (biallelic sites only).">
+##INFO=<ID=OTH_MALE_N_HEMIALT,Number=1,Type=Integer,Description="Number of OTH MALE individuals with hemizygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=OTH_MALE_FREQ_HEMIREF,Number=1,Type=Float,Description="OTH MALE hemizygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_MALE_FREQ_HEMIALT,Number=1,Type=Float,Description="OTH MALE hemizygous alternate genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_FEMALE_AN,Number=1,Type=Integer,Description="Total number of OTH FEMALE alleles genotyped (for biallelic sites) or OTH FEMALE individuals with copy-state estimates (for multiallelic sites).">
+##INFO=<ID=OTH_FEMALE_AC,Number=A,Type=Integer,Description="Number of non-reference OTH FEMALE alleles observed (for biallelic sites) or OTH FEMALE individuals at each copy state (for multiallelic sites).">
+##INFO=<ID=OTH_FEMALE_AF,Number=A,Type=Float,Description="OTH FEMALE allele frequency (for biallelic sites) or OTH FEMALE copy-state frequency (for multiallelic sites).">
+##INFO=<ID=OTH_FEMALE_N_BI_GENOS,Number=1,Type=Integer,Description="Total number of OTH FEMALE individuals with complete genotypes (biallelic sites only).">
+##INFO=<ID=OTH_FEMALE_N_HOMREF,Number=1,Type=Integer,Description="Number of OTH FEMALE individuals with homozygous reference genotypes (biallelic sites only).">
+##INFO=<ID=OTH_FEMALE_N_HET,Number=1,Type=Integer,Description="Number of OTH FEMALE individuals with heterozygous genotypes (biallelic sites only).">
+##INFO=<ID=OTH_FEMALE_N_HOMALT,Number=1,Type=Integer,Description="Number of OTH FEMALE individuals with homozygous alternate genotypes (biallelic sites only).">
+##INFO=<ID=OTH_FEMALE_FREQ_HOMREF,Number=1,Type=Float,Description="OTH FEMALE homozygous reference genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_FEMALE_FREQ_HET,Number=1,Type=Float,Description="OTH FEMALE heterozygous genotype frequency (biallelic sites only).">
+##INFO=<ID=OTH_FEMALE_FREQ_HOMALT,Number=1,Type=Float,Description="OTH FEMALE homozygous alternate genotype frequency (biallelic sites only).">
+1	10642	gnomAD-SV_v2.1_BND_1_1	N	<BND>	261	UNRESOLVED	END=10643;SVTYPE=BND;SVLEN=-1;CHR2=15;POS2=10642;END2=10643;ALGORITHMS=manta;EVIDENCE=PE,SR;PESR_GT_OVERDISPERSION;UNRESOLVED_TYPE=SINGLE_ENDER_--;AN=21366;AC=145;AF=0.006786;N_BI_GENOS=10683;N_HOMREF=10543;N_HET=135;N_HOMALT=5;FREQ_HOMREF=0.986895;FREQ_HET=0.0126369;FREQ_HOMALT=0.000468033;MALE_AN=10866;MALE_AC=69;MALE_AF=0.00635;MALE_N_BI_GENOS=5433;MALE_N_HOMREF=5366;MALE_N_HET=65;MALE_N_HOMALT=2;MALE_FREQ_HOMREF=0.987668;MALE_FREQ_HET=0.0119639;MALE_FREQ_HOMALT=0.000368121;FEMALE_AN=10454;FEMALE_AC=76;FEMALE_AF=0.00727;FEMALE_N_BI_GENOS=5227;FEMALE_N_HOMREF=5154;FEMALE_N_HET=70;FEMALE_N_HOMALT=3;FEMALE_FREQ_HOMREF=0.986034;FEMALE_FREQ_HET=0.013392;FEMALE_FREQ_HOMALT=0.000573943;AFR_AN=9398;AFR_AC=72;AFR_AF=0.007661;AFR_N_BI_GENOS=4699;AFR_N_HOMREF=4629;AFR_N_HET=68;AFR_N_HOMALT=2;AFR_FREQ_HOMREF=0.985103;AFR_FREQ_HET=0.0144712;AFR_FREQ_HOMALT=0.000425622;AFR_MALE_AN=5154;AFR_MALE_AC=33;AFR_MALE_AF=0.006403;AFR_MALE_N_BI_GENOS=2577;AFR_MALE_N_HOMREF=2544;AFR_MALE_N_HET=33;AFR_MALE_N_HOMALT=0;AFR_MALE_FREQ_HOMREF=0.987194;AFR_MALE_FREQ_HET=0.0128056;AFR_MALE_FREQ_HOMALT=0;AFR_FEMALE_AN=4232;AFR_FEMALE_AC=39;AFR_FEMALE_AF=0.009216;AFR_FEMALE_N_BI_GENOS=2116;AFR_FEMALE_N_HOMREF=2079;AFR_FEMALE_N_HET=35;AFR_FEMALE_N_HOMALT=2;AFR_FEMALE_FREQ_HOMREF=0.982514;AFR_FEMALE_FREQ_HET=0.0165406;AFR_FEMALE_FREQ_HOMALT=0.00094518;AMR_AN=1910;AMR_AC=7;AMR_AF=0.003665;AMR_N_BI_GENOS=955;AMR_N_HOMREF=949;AMR_N_HET=5;AMR_N_HOMALT=1;AMR_FREQ_HOMREF=0.993717;AMR_FREQ_HET=0.0052356;AMR_FREQ_HOMALT=0.00104712;AMR_MALE_AN=950;AMR_MALE_AC=4;AMR_MALE_AF=0.004211;AMR_MALE_N_BI_GENOS=475;AMR_MALE_N_HOMREF=472;AMR_MALE_N_HET=2;AMR_MALE_N_HOMALT=1;AMR_MALE_FREQ_HOMREF=0.993684;AMR_MALE_FREQ_HET=0.00421053;AMR_MALE_FREQ_HOMALT=0.00210526;AMR_FEMALE_AN=952;AMR_FEMALE_AC=3;AMR_FEMALE_AF=0.003151;AMR_FEMALE_N_BI_GENOS=476;AMR_FEMALE_N_HOMREF=473;AMR_FEMALE_N_HET=3;AMR_FEMALE_N_HOMALT=0;AMR_FEMALE_FREQ_HOMREF=0.993697;AMR_FEMALE_FREQ_HET=0.00630252;AMR_FEMALE_FREQ_HOMALT=0;EAS_AN=2296;EAS_AC=31;EAS_AF=0.013502;EAS_N_BI_GENOS=1148;EAS_N_HOMREF=1117;EAS_N_HET=31;EAS_N_HOMALT=0;EAS_FREQ_HOMREF=0.972997;EAS_FREQ_HET=0.0270035;EAS_FREQ_HOMALT=0;EAS_MALE_AN=1312;EAS_MALE_AC=13;EAS_MALE_AF=0.009909;EAS_MALE_N_BI_GENOS=656;EAS_MALE_N_HOMREF=643;EAS_MALE_N_HET=13;EAS_MALE_N_HOMALT=0;EAS_MALE_FREQ_HOMREF=0.980183;EAS_MALE_FREQ_HET=0.0198171;EAS_MALE_FREQ_HOMALT=0;EAS_FEMALE_AN=976;EAS_FEMALE_AC=18;EAS_FEMALE_AF=0.018443;EAS_FEMALE_N_BI_GENOS=488;EAS_FEMALE_N_HOMREF=470;EAS_FEMALE_N_HET=18;EAS_FEMALE_N_HOMALT=0;EAS_FEMALE_FREQ_HOMREF=0.963115;EAS_FEMALE_FREQ_HET=0.0368852;EAS_FEMALE_FREQ_HOMALT=0;EUR_AN=7574;EUR_AC=32;EUR_AF=0.004225;EUR_N_BI_GENOS=3787;EUR_N_HOMREF=3757;EUR_N_HET=28;EUR_N_HOMALT=2;EUR_FREQ_HOMREF=0.992078;EUR_FREQ_HET=0.00739372;EUR_FREQ_HOMALT=0.000528123;EUR_MALE_AN=3374;EUR_MALE_AC=17;EUR_MALE_AF=0.005039;EUR_MALE_N_BI_GENOS=1687;EUR_MALE_N_HOMREF=1671;EUR_MALE_N_HET=15;EUR_MALE_N_HOMALT=1;EUR_MALE_FREQ_HOMREF=0.990516;EUR_MALE_FREQ_HET=0.00889152;EUR_MALE_FREQ_HOMALT=0.000592768;EUR_FEMALE_AN=4182;EUR_FEMALE_AC=15;EUR_FEMALE_AF=0.003587;EUR_FEMALE_N_BI_GENOS=2091;EUR_FEMALE_N_HOMREF=2077;EUR_FEMALE_N_HET=13;EUR_FEMALE_N_HOMALT=1;EUR_FEMALE_FREQ_HOMREF=0.993305;EUR_FEMALE_FREQ_HET=0.00621712;EUR_FEMALE_FREQ_HOMALT=0.00047824;OTH_AN=188;OTH_AC=3;OTH_AF=0.015957;OTH_N_BI_GENOS=94;OTH_N_HOMREF=91;OTH_N_HET=3;OTH_N_HOMALT=0;OTH_FREQ_HOMREF=0.968085;OTH_FREQ_HET=0.0319149;OTH_FREQ_HOMALT=0;OTH_MALE_AN=76;OTH_MALE_AC=2;OTH_MALE_AF=0.026316;OTH_MALE_N_BI_GENOS=38;OTH_MALE_N_HOMREF=36;OTH_MALE_N_HET=2;OTH_MALE_N_HOMALT=0;OTH_MALE_FREQ_HOMREF=0.947368;OTH_MALE_FREQ_HET=0.0526316;OTH_MALE_FREQ_HOMALT=0;OTH_FEMALE_AN=112;OTH_FEMALE_AC=1;OTH_FEMALE_AF=0.008929;OTH_FEMALE_N_BI_GENOS=56;OTH_FEMALE_N_HOMREF=55;OTH_FEMALE_N_HET=1;OTH_FEMALE_N_HOMALT=0;OTH_FEMALE_FREQ_HOMREF=0.982143;OTH_FEMALE_FREQ_HET=0.0178571;OTH_FEMALE_FREQ_HOMALT=0;POPMAX_AF=0.015957

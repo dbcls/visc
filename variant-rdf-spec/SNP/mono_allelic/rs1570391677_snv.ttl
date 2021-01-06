@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gvo: <http://genomevariant.org/ns> .       #TODO
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+#NC_000001.10	10001	rs1570391677	T	A	.	.	RS=1570391677;dbSNPBuildID=154;SSR=0;PSEUDOGENEINFO=DDX11L1:100287102;VC=SNV;GNO;FREQ=KOREAN:0.9891,0.0109|SGDP_PRJ:0,1;COMMON
+#SeqID→HCO
+
+[ 
+  rdf:type gvo:SNV ;                               # variant type
+  # http://purl.obolibrary.org/obo/SO_0001483
+  # sequence_feature > sequence_comparison> sequence_alteration > substitution > SNV
+  rdfs:subClassOf obo:SO_0001483 ;                 # obo:SO_0001483 (SNV) 
+  dcterms:identifiers "rs1570391677" ;             #$ID  or {"name": "dbSNP", "indentifier": "rs1570391677"}   
+  
+  # REF
+  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:ReferenceFeature ;                # REF 
+    rdfs:subClassOf obo:SO_0001236 ;               # obo:SO_0001236 (base)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:ExactPosition ;                      # faldo:ExactPosition
+      faldo:position 10001 ;                       #faldo:position $POS
+      faldo:reference hco:1:GRCh37 ;               #CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "T"                             #has value $REF
+  ];
+
+  # ALT
+  gvo:alt [                                        #gvo:alt or sio:SIO_000223 (has property)
+    rdf:type gvo:AlternativeFeature ;              #ALT
+    rdfs:subClassOf obo:SO_0001236 ;               #obo:SO_0001236 (base)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:ExactPosition ;                      # faldo:ExactPosition
+      faldo:position 10001 ;                       #faldo:position $POS
+      faldo:reference hco:1:GRCh37 ;               #CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "A"                             #has value $ALT   
+  ];
+
+  gvo:qual "." ;                                   #$QUAL
+  gvo:filter "." ;                                 #$FILTER
+  gvo:info [ rdf:label "RS"; sio:SIO_000300 "1570391677"]; # gvo:info or sio:SIO_000223 (has property)
+  gvo:info [ rdf:label "dbSNPBuildID"; sio:SIO_000300 "154"];
+  gvo:info [ rdf:label "SSR"; sio:SIO_000300 "0"];
+  gvo:info [ rdf:label "PSEUDOGENEINFO"; sio:SIO_000300 "DDX11L1:100287102"];
+  gvo:info [ rdf:label "VC"; sio:SIO_000300 "SNV"];
+  gvo:info [ rdf:label "GNO"; sio:SIO_000300 true];
+  gvo:info [ rdf:label "FREQ"; sio:SIO_000300 "KOREAN:0.9891,0.0109|SGDP_PRJ:0,1"];
+  gvo:info [ rdf:label "COMMON"; sio:SIO_000300 true] 
+]
+.
