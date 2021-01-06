@@ -1,0 +1,54 @@
+# https://github.com/dbcls/visc/blob/main/variant-rdf-spec/SNP/mono_allelic/rs869033224_mnv.ttl
+
+- VariantMNV []:
+  - a: gvo:MNV
+  - rdfs:subClassOf:
+    - subclass: obo:SO_0002007  # MNV
+  - dct:identifier:
+    - id: "rs869033224"  # $ID or {"name": "dbSNP", "indentifier": "rs1570391677"}
+  # REF
+  - gvo:ref:  # gvo:ref or sio:SIO_000223 (has property)
+    - []:
+      - a: gvo:ReferenceFeature
+      - rdfs:subClassOf:
+        - ref_subclass: obo:SO_0000001  # region
+      - faldo:location:  # or sio:SIO_000061 (is located in)
+        - []:
+          - a: faldo:Region
+          - faldo:begin:
+            - ref_begin: 63738
+          - faldo:end:
+            - ref_end: 63740
+          - faldo:reference:
+            - ref_reference: hco:1\/GRCh37
+      - sio:SIO_000300:  # has value
+        - ref_allele: "ACT"
+  # ALT
+  - gvo:alt:  # gvo:alt or sio:SIO_000223 (has property)
+    - []:
+      - a: gvo:AlternativeFeature 
+      - rdfs:subClassOf:
+        - alt_subclass: obo:SO_0000001  # region
+      - faldo:location:
+        - []:  # or sio:SIO_000061 (is located in)
+          - a: faldo:Region
+          - faldo:begin:
+            - alt_begin: 63738
+          - faldo:end:
+            - alt_end: 63740
+          - faldo:reference:
+            - alt_reference: hco:1\/GRCh37
+      - sio:SIO_000300:  # has value
+        - alt_allele: "CTA"
+  # INFO
+  - gvo:qual:
+    - qual: "."
+  - gvo:filter:
+    - filter: "."
+  - gvo:info:
+    - []:
+      - rdf:label:
+        - info_label: "VC"
+      - sio:SIO_000300:  # has value or sio:SIO_000223 (has property)?
+        - info_value: "MNV"
+
