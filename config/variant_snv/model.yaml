@@ -44,7 +44,7 @@
   - gvo:info:
     - []:
       - rdf:label:
-        - info_label: "RS"
+        - info_label: "VC"
       - sio:SIO_000300:  # has value or sio:SIO_000223 (has property)?
-        - info_value: "1570391677"
+        - info_value: "SNV"
 
