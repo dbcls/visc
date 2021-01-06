@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix gvo: <http://genomevariant.org/ns> .
+@prefix m2r: <http://med2rdf.org/ontology/med2rdf#> .
+
+# 1	2811131	gnomAD-SV_v2.1_CPX_1_6	N	<CPX>	912	PASS , INFO =>  END=2812147, SVLEN=1016, CPX_INTERVALS=INV_1:2811131-2812147,DUP_1:2811953-2812147, CPX_TYPE=INVdup
+
+[ 
+  a gvo:InversionWith3FlankingDuplication, m2r:Variation ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 2811953 ;                       #DUP_1:2811953-2812147 
+    faldo:before 2811954 ;                      #
+    faldo:reference hco:1\/GRCh37
+  ] ; 
+  m2r:reference_allele "" ;
+  m2r:alternative_allele [
+    a gvo:SourceRegion ;
+    faldo:location [
+      a faldo:Region ;
+      faldo:begin [
+        a faldo:Position ;
+        faldo:position 2812147 ;                #INV_1:2811131-2812147
+        faldo:reference hco:1\/GRCh37
+      ] ;
+      faldo:end [
+        a faldo:Position ;
+        faldo:position 2811131 ;
+        faldo:reference hco:1\/GRCh37
+      ]
+    ]
+  ]
+]
+.

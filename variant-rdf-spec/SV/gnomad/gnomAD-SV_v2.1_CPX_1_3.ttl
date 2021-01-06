@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix gvo: <http://genomevariant.org/ns> .
+@prefix m2r: <http://med2rdf.org/ontology/med2rdf#> .
+
+#1	1435277	gnomAD-SV_v2.1_CPX_1_3	N	<CPX>	210	UNSTABLE_AF_PCRMINUS , INFO =>  END=1435913, SVLEN=636, CPX_INTERVALS=DUP_1:1435277-1435356,INV_1:1435277-1435913, CPX_TYPE=dupINV
+
+
+[ 
+  a gvo:InversionWith5FlankingDuplication, m2r:Variation ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 1435277 ;                       #DUP_1:1435277-1435356 
+    faldo:before 1435278 ;                      #
+    faldo:reference hco:1\/GRCh37
+  ] ; 
+  m2r:reference_allele "" ;
+  m2r:alternative_allele [
+    a gvo:SourceRegion ;
+    faldo:location [
+      a faldo:Region ;
+      faldo:begin [
+        a faldo:Position ;
+        faldo:position 1435913 ;                #INV_1:1435277-1435913
+        faldo:reference hco:1\/GRCh37
+      ] ;
+      faldo:end [
+        a faldo:Position ;
+        faldo:position 1435277 ;
+        faldo:reference hco:1\/GRCh37
+      ]
+    ]
+  ]
+]
+.
