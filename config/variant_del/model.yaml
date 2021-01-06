@@ -1,4 +1,4 @@
-# https://github.com/tfuji/variant-rdf-spec/blob/main/SNP/mono_allelic/rs1156821933_del.ttl
+# https://github.com/dbcls/visc/blob/main/variant-rdf-spec/SNP/mono_allelic/rs1156821933_del.ttl
 
 - VariantDel []:
   - a: gvo:Deletion

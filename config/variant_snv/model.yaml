@@ -1,4 +1,4 @@
-# https://github.com/tfuji/variant-rdf-spec/blob/main/SNP/mono_allelic/rs1570391677_snv.ttl
+# https://github.com/dbcls/visc/blob/main/variant-rdf-spec/SNP/mono_allelic/rs1570391677_snv.ttl
 
 - VariantSNV [], <https://togovar.biosciencedbc.jp/variant/tgv66423707>:
   - a: gvo:SNV
