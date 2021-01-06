@@ -7,69 +7,69 @@
   - dct:identifier:
     - id: "rs1322538365"
   # Normalized REF
-  - gvo:norm_ref:  # gvo:ref or sio:SIO_000223 (has property)
+  - gvo:ref:  # gvo:ref or sio:SIO_000223 (has property)
     - []:
       - a: gvo:NormalizedReferenceFeature
       - rdfs:subClassOf:
-        - norm_ref_subclass: obo:SO_0000366  # insertion_site
+        - ref_subclass: obo:SO_0000366  # insertion_site
       - faldo:location:  # or sio:SIO_000061 (is located in)
         - []:
           - a: faldo:InBetweenPosition
           - faldo:after:
-            - norm_ref_after: 10108
+            - ref_after: 10108
           - faldo:before:
-            - norm_ref_before: 10109
+            - ref_before: 10109
           - faldo:reference:
-            - norm_ref_reference: hco:1\/GRCh37
+            - ref_reference: hco:1\/GRCh37
       - sio:SIO_000300:  # has value
-        - norm_ref_allele: ""
+        - ref_allele: ""
   # Normalized ALT
-  - gvo:norm_alt:
+  - gvo:alt:
     - []:
       - a: gvo:NormalizedAlternativeFeature
       - rdfs:subClassOf:
-        - norm_alt_subclass: obo:SO_0000667  # insertion
+        - alt_subclass: obo:SO_0000667  # insertion
       - faldo:location:  # or sio:SIO_000061 (is located in)
         - []:
           - a: faldo:InBetweenPosition
           - faldo:after:
-            - norm_alt_after: 10108
+            - alt_after: 10108
           - faldo:before:
-            - norm_alt_before: 10109
-          - faldo:reference:
-            - norm_alt_reference: hco:1\/GRCh37
-      - sio:SIO_000300:  # has value
-        - norm_alt_allele: "T"
-  # REF
-  - gvo:ref:  # gvo:ref or sio:SIO_000223 (has property)
-    - []:
-      - a: gvo:ReferenceFeature
-      - rdfs:subClassOf:
-        - ref_subclass: obo:SO_0001236  # base
-      - faldo:location:  # or sio:SIO_000061 (is located in)
-        - []:
-          - a: faldo:ExactPosition
-          - faldo:position:
-            - ref_position:  10008
-          - faldo:reference:
-            - ref_referene: hco:1\/GRCh37
-      - sio:SIO_000300:  # has value
-        - ref_allele: "C"
-  # ALT
-  - gvo:alt:  # gvo:alt or sio:SIO_000223 (has property)
-    - []:
-      - a: gvo:AlternativeFeature
-      - rdfs:subClassOf:
-        - alt_sublass: obo:SO_0000667  # insertion
-      - faldo:location:  # or sio:SIO_000061 (is located in)
-        - []:
-          - a: faldo:ExactPosition
-          - faldo:position:
-            - alt_position: 10008
+            - alt_before: 10109
           - faldo:reference:
             - alt_reference: hco:1\/GRCh37
       - sio:SIO_000300:  # has value
-        - alt_allele: "CT"
+        - alt_allele: "T"
+  # REF
+  - gvo:orig_ref:  # gvo:ref or sio:SIO_000223 (has property)
+    - []:
+      - a: gvo:ReferenceFeature
+      - rdfs:subClassOf:
+        - orig_ref_subclass: obo:SO_0001236  # base
+      - faldo:location:  # or sio:SIO_000061 (is located in)
+        - []:
+          - a: faldo:ExactPosition
+          - faldo:position:
+            - orig_ref_position:  10008
+          - faldo:reference:
+            - orig_ref_referene: hco:1\/GRCh37
+      - sio:SIO_000300:  # has value
+        - orig_ref_allele: "C"
+  # ALT
+  - gvo:orig_alt:  # gvo:alt or sio:SIO_000223 (has property)
+    - []:
+      - a: gvo:AlternativeFeature
+      - rdfs:subClassOf:
+        - orig_alt_sublass: obo:SO_0000667  # insertion
+      - faldo:location:  # or sio:SIO_000061 (is located in)
+        - []:
+          - a: faldo:ExactPosition
+          - faldo:position:
+            - orig_alt_position: 10008
+          - faldo:reference:
+            - orig_alt_reference: hco:1\/GRCh37
+      - sio:SIO_000300:  # has value
+        - orig_alt_allele: "CT"
   # INFO
   - gvo:qual:
     - info_qual: "."

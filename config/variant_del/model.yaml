@@ -7,73 +7,73 @@
   - dct:identifier:
     - id: "rs1156821933"  # $ID or {"name": "dbSNP", "indentifier": "rs1570391677"}
   # Normalized REF
-  - gvo:norm_ref:  # gvo:ref or sio:SIO_000223 (has property)
-    - []:
-      - a: gvo:ReferenceFeature
-      - rdfs:subClassOf:
-        - norm_ref_subclass: obo:SO_0001236  # base
-      - faldo:location:  # or sio:SIO_000061 (is located in)
-        - []:
-          - a: faldo:InBetweenPosition
-          - faldo:after:
-            - norm_ref_after: 10108
-          - faldo:before:
-            - norm_ref_before: 10110
-          - faldo:reference:
-            - norm_ref_reference: hco:1\/GRCh37
-      - sio:SIO_000300:  # has value
-        - norm_ref_allele: "T"
-  # Normalized ALT
-  - gvo:norm_alt:  # gvo:alt or sio:SIO_000223 (has property)
-    - []:
-      - a: gvo:NormalizedAlternativeFeature
-      - rdfs:subClassOf:
-        - norm_alt_subclass: obo:SO_0000159  # deletion_junction
-      - faldo:location:
-        - []:  # or sio:SIO_000061 (is located in)
-          - a: faldo:InBetweenPosition
-          - faldo:after:
-            - norm_alt_after: 10108
-          - faldo:before:
-            - norm_alt_before: 10110
-          - faldo:reference:
-            - norm_alt_reference: hco:1\/GRCh37
-      - sio:SIO_000300:  # has value
-        - norm_alt_allele: ""
-  # REF
   - gvo:ref:  # gvo:ref or sio:SIO_000223 (has property)
     - []:
       - a: gvo:ReferenceFeature
       - rdfs:subClassOf:
-        - ref_subclass: obo:SO_0000001  # region
+        - ref_subclass: obo:SO_0001236  # base
+      - faldo:location:  # or sio:SIO_000061 (is located in)
+        - []:
+          - a: faldo:InBetweenPosition
+          - faldo:after:
+            - ref_after: 10108
+          - faldo:before:
+            - ref_before: 10110
+          - faldo:reference:
+            - ref_reference: hco:1\/GRCh37
+      - sio:SIO_000300:  # has value
+        - ref_allele: "T"
+  # Normalized ALT
+  - gvo:alt:  # gvo:alt or sio:SIO_000223 (has property)
+    - []:
+      - a: gvo:NormalizedAlternativeFeature
+      - rdfs:subClassOf:
+        - alt_subclass: obo:SO_0000159  # deletion_junction
+      - faldo:location:
+        - []:  # or sio:SIO_000061 (is located in)
+          - a: faldo:InBetweenPosition
+          - faldo:after:
+            - alt_after: 10108
+          - faldo:before:
+            - alt_before: 10110
+          - faldo:reference:
+            - alt_reference: hco:1\/GRCh37
+      - sio:SIO_000300:  # has value
+        - alt_allele: ""
+  # REF
+  - gvo:orig_ref:  # gvo:ref or sio:SIO_000223 (has property)
+    - []:
+      - a: gvo:ReferenceFeature
+      - rdfs:subClassOf:
+        - orig_ref_subclass: obo:SO_0000001  # region
       - faldo:location:  # or sio:SIO_000061 (is located in)
         - []:
           - a: faldo:Region
           - faldo:begin:
-            - ref_begin: 10119
+            - orig_ref_begin: 10119
           - faldo:end:
-            - ref_end: 10120
+            - orig_ref_end: 10120
           - faldo:reference:
-            - ref_reference: hco:1\/GRCh37
+            - orig_ref_reference: hco:1\/GRCh37
       - sio:SIO_000300:  # has value
-        - ref_allele: "CT"
+        - orig_ref_allele: "CT"
   # ALT
-  - gvo:alt:  # gvo:alt or sio:SIO_000223 (has property)
+  - gvo:orig_alt:  # gvo:alt or sio:SIO_000223 (has property)
     - []:
       - a: gvo:AlternativeFeature 
       - rdfs:subClassOf:
-        - alt_subclass: obo:SO_0000001
+        - orig_alt_subclass: obo:SO_0000001
       - faldo:location:
         - []:  # or sio:SIO_000061 (is located in)
           - a: faldo:Region
           - faldo:begin:
-            - alt_begin: 10119
+            - orig_alt_begin: 10119
           - faldo:end:
-            - alt_end: 10120
+            - orig_alt_end: 10120
           - faldo:reference:
-            - alt_reference: hco:1\/GRCh37
+            - orig_alt_reference: hco:1\/GRCh37
       - sio:SIO_000300:  # has value
-        - alt_allele: "C"
+        - orig_alt_allele: "C"
   # INFO
   - gvo:qual:
     - qual: "."
