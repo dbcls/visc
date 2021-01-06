@@ -40,7 +40,7 @@
             - norm_alt_before: 10109
           - faldo:reference:
             - norm_alt_reference: hco:1\/GRCh37
-      - sio:SIO_000300  # has value
+      - sio:SIO_000300:  # has value
         - norm_alt_allele: "T"
 
   # REF
