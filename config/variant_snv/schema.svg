@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns='http://www.w3.org/2000/svg' style='background-color: rgb(255, 255, 255);' width='1310px' height='1440px' viewBox='-0.5 -0.5 1310 1440'>
+  <style type='text/css'>
+     .st0 {fill:#FFCE9F;} .st1 {fill:none;stroke:#000000;stroke-width:2;} .st2
+    {opacity:0.6;} .st3 {font-family:&apos;Helvetica&apos;;} .st4
+    {font-size:11px;} .st5 {fill:#FFFFFF;} .st6
+    {font-family:&apos;Helvetica-Bold&apos;;} .st7 {font-size:12px;} .st8
+    {opacity:0.7;fill:#FFFFFF;} .st9
+    {fill:#F8CECC;stroke:#000000;stroke-width:2;} .st10 {fill:#FFF4C3;} .st11
+    {fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:4,4;} .st12 {fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;} .st13 {enable-background:new;} .st14 {fill:#F2F2E9;} .st15 {fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:3.926,3.926;} 
+  </style>
+  <g>
+    <g>
+      <path d='M230,52 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M230,52 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M50,30 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='48' class='st3 st4'>
+        [], &lt;https://togovar.biosciencedbc.jp/variant/tgv66423707&gt;
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='58' y='20' class='st5 st6 st7' dominant-baseline='middle'>
+        VariantSNV
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='222' y='20' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st11' points='230,35 250,35 250,35 465,35'/>
+  <polygon points='460.3,40.7 459.4,39.7 464.4,35.0 459.4,30.3 460.3,29.3 466.5,35.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 30)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='470' y='10' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 35px; margin-left: 471px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gvo:SNV
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='560' y='29' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gvo:SNV
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,105 465,105'/>
+  <polygon points='460.3,110.7 459.4,109.7 464.4,105.0 459.4,100.3 460.3,99.3 466.5,105.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 100)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <g>
+      <path d='M650,122 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M650,122 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M470,100 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='118' class='st3 st4'>
+        obo:SO_0001483
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='478' y='90' class='st5 st6 st7' dominant-baseline='middle'>
+        subclass
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='642' y='90' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,175 465,175'/>
+  <polygon points='460.3,180.7 459.4,179.7 464.4,175.0 459.4,170.3 460.3,169.3 466.5,175.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 170)'>
+    dct:identifier
+  </text>
+  <g>
+    <rect x='470' y='150' width='180' height='50' class='st9'/>
+    <polyline points='470,170 470,150 650,150 650,170' class='st2'/>
+    <g>
+      <text x='478' y='185' class='st3 st4' dominant-baseline='middle'>
+        rs1570391677
+      </text>
+    </g>
+    <g>
+      <text x='478' y='160' class='st5 st6 st7' dominant-baseline='middle'>
+        id
+      </text>
+    </g>
+    <g>
+      <text x='642' y='160' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,245 465,245'/>
+  <polygon points='460.3,250.7 459.4,249.7 464.4,245.0 459.4,240.3 460.3,239.3 466.5,245.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 240)'>
+    gvo:ref
+  </text>
+  <g>
+    <ellipse cx='490' cy='245' rx='20' ry='20' fill='#f2f2e9' stroke='#000000' stroke-dasharray='3 3' pointer-events='all'/>
+  </g>
+  <polyline class='st11' points='510,245 530,245 530,245 745,245'/>
+  <polygon points='740.3,250.7 739.4,249.7 744.4,245.0 739.4,240.3 740.3,239.3 746.5,245.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 240)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='750' y='220' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 245px; margin-left: 751px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gvo:ReferenceFeature
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='840' y='239' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gvo:ReferenceFeature
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='510,245 530,245 530,315 745,315'/>
+  <polygon points='740.3,320.7 739.4,319.7 744.4,315.0 739.4,310.3 740.3,309.3 746.5,315.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 310)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <g>
+      <path d='M930,332 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M930,332 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M750,310 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='758' y='328' class='st3 st4'>
+        obo:SO_0001236
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='758' y='300' class='st5 st6 st7' dominant-baseline='middle'>
+        ref_subclass
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='922' y='300' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='510,245 530,245 530,385 745,385'/>
+  <polygon points='740.3,390.7 739.4,389.7 744.4,385.0 739.4,380.3 740.3,379.3 746.5,385.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 380)'>
+    faldo:location
+  </text>
+  <g>
+    <ellipse cx='770' cy='385' rx='20' ry='20' fill='#f2f2e9' stroke='#000000' stroke-dasharray='3 3' pointer-events='all'/>
+  </g>
+  <polyline class='st11' points='790,385 810,385 810,385 1025,385'/>
+  <polygon points='1020.3,390.7 1019.4,389.7 1024.4,385.0 1019.4,380.3 1020.3,379.3 1026.5,385.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 820 380)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='1030' y='360' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 385px; margin-left: 1031px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  faldo:ExactPosition
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='1120' y='379' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          faldo:ExactPosition
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='790,385 810,385 810,455 1025,455'/>
+  <polygon points='1020.3,460.7 1019.4,459.7 1024.4,455.0 1019.4,450.3 1020.3,449.3 1026.5,455.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 820 450)'>
+    faldo:position
+  </text>
+  <g>
+    <rect x='1030' y='430' width='180' height='50' class='st9'/>
+    <polyline points='1030,450 1030,430 1210,430 1210,450' class='st2'/>
+    <g>
+      <text x='1038' y='465' class='st3 st4' dominant-baseline='middle'>
+        10001
+      </text>
+    </g>
+    <g>
+      <text x='1038' y='440' class='st5 st6 st7' dominant-baseline='middle'>
+        ref_position
+      </text>
+    </g>
+    <g>
+      <text x='1202' y='440' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='790,385 810,385 810,525 1025,525'/>
+  <polygon points='1020.3,530.7 1019.4,529.7 1024.4,525.0 1019.4,520.3 1020.3,519.3 1026.5,525.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 820 520)'>
+    faldo:reference
+  </text>
+  <g>
+    <g>
+      <path d='M1210,542 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M1210,542 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M1030,520 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='1038' y='538' class='st3 st4'>
+        hco:1\/GRCh37
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='1038' y='510' class='st5 st6 st7' dominant-baseline='middle'>
+        ref_reference
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='1202' y='510' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='510,245 530,245 530,595 745,595'/>
+  <polygon points='740.3,600.7 739.4,599.7 744.4,595.0 739.4,590.3 740.3,589.3 746.5,595.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 590)'>
+    sio:SIO_000300
+  </text>
+  <g>
+    <rect x='750' y='570' width='180' height='50' class='st9'/>
+    <polyline points='750,590 750,570 930,570 930,590' class='st2'/>
+    <g>
+      <text x='758' y='605' class='st3 st4' dominant-baseline='middle'>
+        T
+      </text>
+    </g>
+    <g>
+      <text x='758' y='580' class='st5 st6 st7' dominant-baseline='middle'>
+        ref_allele
+      </text>
+    </g>
+    <g>
+      <text x='922' y='580' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,665 465,665'/>
+  <polygon points='460.3,670.7 459.4,669.7 464.4,665.0 459.4,660.3 460.3,659.3 466.5,665.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 660)'>
+    gvo:alt
+  </text>
+  <g>
+    <ellipse cx='490' cy='665' rx='20' ry='20' fill='#f2f2e9' stroke='#000000' stroke-dasharray='3 3' pointer-events='all'/>
+  </g>
+  <polyline class='st11' points='510,665 530,665 530,665 745,665'/>
+  <polygon points='740.3,670.7 739.4,669.7 744.4,665.0 739.4,660.3 740.3,659.3 746.5,665.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 660)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='750' y='640' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 665px; margin-left: 751px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  gvo:AlternativeFeature
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='840' y='659' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          gvo:AlternativeFeature
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='510,665 530,665 530,735 745,735'/>
+  <polygon points='740.3,740.7 739.4,739.7 744.4,735.0 739.4,730.3 740.3,729.3 746.5,735.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 730)'>
+    rdfs:subClassOf
+  </text>
+  <g>
+    <g>
+      <path d='M930,752 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M930,752 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M750,730 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='758' y='748' class='st3 st4'>
+        obo:SO_0001236
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='758' y='720' class='st5 st6 st7' dominant-baseline='middle'>
+        alt_subclass
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='922' y='720' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='510,665 530,665 530,805 745,805'/>
+  <polygon points='740.3,810.7 739.4,809.7 744.4,805.0 739.4,800.3 740.3,799.3 746.5,805.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 800)'>
+    faldo:location
+  </text>
+  <g>
+    <ellipse cx='770' cy='805' rx='20' ry='20' fill='#f2f2e9' stroke='#000000' stroke-dasharray='3 3' pointer-events='all'/>
+  </g>
+  <polyline class='st11' points='790,805 810,805 810,805 1025,805'/>
+  <polygon points='1020.3,810.7 1019.4,809.7 1024.4,805.0 1019.4,800.3 1020.3,799.3 1026.5,805.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 820 800)'>
+    rdf:type
+  </text>
+  <g>
+    <rect x='1030' y='780' width='180' height='50' rx='7.5' ry='7.5' fill='#fff4c3' stroke='#000000' stroke-width='2' pointer-events='all'/>
+    <g transform='translate(-0.5 -0.5)'>
+      <switch>
+        <foreignObject style='overflow: visible; text-align: left' pointer-events='none' width='100%' height='100%' requiredFeatures='http://www.w3.org/TR/SVG11/feature#Extensibility'>
+          <div xmlns='http://www.w3.org/1999/xhtml' style='display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 805px; margin-left: 1031px'>
+            <div style='box-sizing: border-box; font-size: 0; text-align: center;'>
+              <div style='display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal'>
+                <div>
+                  faldo:ExactPosition
+                  <br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </foreignObject>
+        <text x='1120' y='799' fill='#000000' font-family='Helvetica' font-size='12px' text-anchor='middle'>
+          faldo:ExactPosition
+        </text>
+      </switch>
+    </g>
+  </g>
+  <polyline class='st12' points='790,805 810,805 810,875 1025,875'/>
+  <polygon points='1020.3,880.7 1019.4,879.7 1024.4,875.0 1019.4,870.3 1020.3,869.3 1026.5,875.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 820 870)'>
+    faldo:position
+  </text>
+  <g>
+    <rect x='1030' y='850' width='180' height='50' class='st9'/>
+    <polyline points='1030,870 1030,850 1210,850 1210,870' class='st2'/>
+    <g>
+      <text x='1038' y='885' class='st3 st4' dominant-baseline='middle'>
+        10001
+      </text>
+    </g>
+    <g>
+      <text x='1038' y='860' class='st5 st6 st7' dominant-baseline='middle'>
+        alt_position
+      </text>
+    </g>
+    <g>
+      <text x='1202' y='860' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        Int
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='790,805 810,805 810,945 1025,945'/>
+  <polygon points='1020.3,950.7 1019.4,949.7 1024.4,945.0 1019.4,940.3 1020.3,939.3 1026.5,945.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 820 940)'>
+    faldo:reference
+  </text>
+  <g>
+    <g>
+      <path d='M1210,962 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st0'/>
+      <path d='M1210,962 c0,4.4 -3.6,8 -8,8 h-164 c-4.4,0 -8,-3.6 -8,-8 v-34 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v34 z' class='st1'/>
+    </g>
+    <g class='st2'>
+      <path d='M1030,940 v-12 c0,-4.4 3.6,-8 8,-8 h164 c4.4,0 8,3.6 8,8 v12'/>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='1038' y='958' class='st3 st4'>
+        hco:1\/GRCh37
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='1038' y='930' class='st5 st6 st7' dominant-baseline='middle'>
+        alt_reference
+      </text>
+    </g>
+    <g transform='translate(-0.5 -0.5)'>
+      <text x='1202' y='930' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        URI
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='510,665 530,665 530,1015 745,1015'/>
+  <polygon points='740.3,1020.7 739.4,1019.7 744.4,1015.0 739.4,1010.3 740.3,1009.3 746.5,1015.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 1010)'>
+    sio:SIO_000300
+  </text>
+  <g>
+    <rect x='750' y='990' width='180' height='50' class='st9'/>
+    <polyline points='750,1010 750,990 930,990 930,1010' class='st2'/>
+    <g>
+      <text x='758' y='1025' class='st3 st4' dominant-baseline='middle'>
+        A
+      </text>
+    </g>
+    <g>
+      <text x='758' y='1000' class='st5 st6 st7' dominant-baseline='middle'>
+        alt_allele
+      </text>
+    </g>
+    <g>
+      <text x='922' y='1000' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1085 465,1085'/>
+  <polygon points='460.3,1090.7 459.4,1089.7 464.4,1085.0 459.4,1080.3 460.3,1079.3 466.5,1085.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1080)'>
+    gvo:qual
+  </text>
+  <g>
+    <rect x='470' y='1060' width='180' height='50' class='st9'/>
+    <polyline points='470,1080 470,1060 650,1060 650,1080' class='st2'/>
+    <g>
+      <text x='478' y='1095' class='st3 st4' dominant-baseline='middle'>
+        .
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1070' class='st5 st6 st7' dominant-baseline='middle'>
+        qual
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1070' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1155 465,1155'/>
+  <polygon points='460.3,1160.7 459.4,1159.7 464.4,1155.0 459.4,1150.3 460.3,1149.3 466.5,1155.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1150)'>
+    gvo:filter
+  </text>
+  <g>
+    <rect x='470' y='1130' width='180' height='50' class='st9'/>
+    <polyline points='470,1150 470,1130 650,1130 650,1150' class='st2'/>
+    <g>
+      <text x='478' y='1165' class='st3 st4' dominant-baseline='middle'>
+        .
+      </text>
+    </g>
+    <g>
+      <text x='478' y='1140' class='st5 st6 st7' dominant-baseline='middle'>
+        filter
+      </text>
+    </g>
+    <g>
+      <text x='642' y='1140' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='230,35 250,35 250,1225 465,1225'/>
+  <polygon points='460.3,1230.7 459.4,1229.7 464.4,1225.0 459.4,1220.3 460.3,1219.3 466.5,1225.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 260 1220)'>
+    gvo:info
+  </text>
+  <g>
+    <ellipse cx='490' cy='1225' rx='20' ry='20' fill='#f2f2e9' stroke='#000000' stroke-dasharray='3 3' pointer-events='all'/>
+  </g>
+  <polyline class='st12' points='510,1225 530,1225 530,1225 745,1225'/>
+  <polygon points='740.3,1230.7 739.4,1229.7 744.4,1225.0 739.4,1220.3 740.3,1219.3 746.5,1225.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 1220)'>
+    rdf:label
+  </text>
+  <g>
+    <rect x='750' y='1200' width='180' height='50' class='st9'/>
+    <polyline points='750,1220 750,1200 930,1200 930,1220' class='st2'/>
+    <g>
+      <text x='758' y='1235' class='st3 st4' dominant-baseline='middle'>
+        VC
+      </text>
+    </g>
+    <g>
+      <text x='758' y='1210' class='st5 st6 st7' dominant-baseline='middle'>
+        info_label
+      </text>
+    </g>
+    <g>
+      <text x='922' y='1210' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+  <polyline class='st12' points='510,1225 530,1225 530,1295 745,1295'/>
+  <polygon points='740.3,1300.7 739.4,1299.7 744.4,1295.0 739.4,1290.3 740.3,1289.3 746.5,1295.0'/>
+  <text class='st6 st4' transform='matrix(1 0 0 1 540 1290)'>
+    sio:SIO_000300
+  </text>
+  <g>
+    <rect x='750' y='1270' width='180' height='50' class='st9'/>
+    <polyline points='750,1290 750,1270 930,1270 930,1290' class='st2'/>
+    <g>
+      <text x='758' y='1305' class='st3 st4' dominant-baseline='middle'>
+        SNV
+      </text>
+    </g>
+    <g>
+      <text x='758' y='1280' class='st5 st6 st7' dominant-baseline='middle'>
+        info_value
+      </text>
+    </g>
+    <g>
+      <text x='922' y='1280' class='st8 st6 st7' text-anchor='end' dominant-baseline='middle'>
+        String
+      </text>
+    </g>
+  </g>
+</svg>
