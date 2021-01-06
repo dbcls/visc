@@ -1,0 +1,103 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gvo: <http://genomevariant.org/ns> .
+
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+#NC_000001.10	10291	rs1557426822	C	CCCT,CT	.	.	RS=1557426822;SSR=0;PSEUDOGENEINFO=DDX11L1:100287102;VC=INS;GNO
+
+[ 
+  # http://purl.obolibrary.org/obo/SO_0000667
+  # sequence_feature > sequence_comparison> sequence_alteration > insertion
+  
+  rdf:type gvo:Insertion ;                         # variant type
+  rdfs:subClassOf obo:SO_0000667 ;                 # obo:SO_0000667 (insertion) 
+  dcterms:identifier "rs1557426822" ;              #$ID  or {"name": "dbSNP", "indentifier": "rs1570391677"}   
+
+  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:NormalizedReferenceFeature ;      # Normalized REF 
+    rdfs:subClassOf obo:SO_0000366 ;               # obo:SO_0000366 (insertion_site)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:InBetweenPosition ;                  # faldo:InBetweenPosition
+      faldo:after 10291 ;                          # $POS
+      faldo:before 10292 ;                         # $POS + 1
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 ""                              #has value $REF
+  ];
+
+  gvo:alt [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:NormalizedAlternativeFeature ;    # Normalized ALT 
+    rdfs:subClassOf obo:SO_0000667 ;               # obo:SO_0000667 (insertion)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:InBetweenPosition ;                  # faldo:InBetweenPosition
+      faldo:after 10291 ;                          # $POS
+      faldo:before 10292 ;                         # $POS + 1
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "CCT"                           # has value $REF
+  ];
+
+  gvo:alt [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:NormalizedAlternativeFeature ;    # Normalized ALT 
+    rdfs:subClassOf obo:SO_0000667 ;               # obo:SO_0000667 (insertion)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:InBetweenPosition ;                  # faldo:InBetweenPosition
+      faldo:after 10291 ;                          # $POS
+      faldo:before 10292 ;                         # $POS + 1
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "T"                             # has value $REF
+  ];
+
+  # REF
+  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:ReferenceFeature ;                # REF 
+    rdfs:subClassOf obo:SO_0001236 ;               # obo:SO_0001236 (base)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:ExactPosition ;                      # faldo:ExactPosition
+      faldo:position 10291 ;                       # faldo:position $POS
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "C"                             # has value $REF
+  ];
+
+  # ALT
+  gvo:alt [                                        # gvo:alt or sio:SIO_000223 (has property)
+    rdf:type gvo:AlternativeFeature ;              # ALT
+    rdfs:subClassOf obo:SO_0000667 ;               # obo:SO_0000667 (insertion)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:ExactPosition ;                      # faldo:ExactPosition
+      faldo:position 10291 ;                       # faldo:position $POS
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "CCCT"                             #has value $ALT   
+  ];
+
+  # ALT
+  gvo:alt [                                        # gvo:alt or sio:SIO_000223 (has property)
+    rdf:type gvo:AlternativeFeature ;              # ALT
+    rdfs:subClassOf obo:SO_0000667 ;               # obo:SO_0000667 (insertion)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:ExactPosition ;                      # faldo:ExactPosition
+      faldo:position 10291 ;                       # faldo:position $POS
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "CT"                            # has value $ALT   
+  ];
+  
+  gvo:qual "." ;                                   # $QUAL
+  gvo:filter "." ;                                 # $FILTER
+  gvo:info [ rdf:label "VC"; sio:SIO_000300 "INS"] # gvo:info sio:SIO_000223 (has property)
+]
+.

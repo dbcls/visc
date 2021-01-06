@@ -1,0 +1,65 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gvo: <http://genomevariant.org/ns> .
+
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+#NC_000001.10  13020666  rs1553191074  TG  GG,TT . . RS=1553191074;dbSNPBuildID=152;SSR=0;VC=MNV
+
+[ 
+  # http://purl.obolibrary.org/obo/SO_0002007
+  # sequence_feature > sequence_comparison> sequence_alteration > substitution > MNV
+  rdf:type gvo:MNV ;                               # variant type
+  rdfs:subClassOf obo:SO_0002007 ;                 # obo:SO_0002007 (MNV) 
+  dcterms:identifier "rs1553191074" ;              #$ID  or {"name": "dbSNP", "indentifier": "rs1570391677"}   
+
+  # REF
+  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
+    rdf:type gvo:ReferenceFeature ;                # REF 
+    rdfs:subClassOf obo:SO_0000001 ;               # obo:SO_0000001 (region)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:Region ;                             # faldo:Region
+      faldo:begin 13020666 ;                          # faldo:position $POS
+      faldo:end 13020667 ;                            # faldo:position $POS + 2 (base) -1      
+      faldo:reference hco:1:GRCh37 ;               # CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "TG"                            # has value $REF
+  ];
+
+  # ALT
+  gvo:alt [                                        #gvo:alt or sio:SIO_000223 (has property)
+    rdf:type gvo:AlternativeFeature ;              #ALT
+    rdfs:subClassOf obo:SO_0000001 ;               # obo:SO_0000001 (region)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:Region ;                             # faldo:Region
+      faldo:begin 13020666 ;                       # faldo:position $POS
+      faldo:end 13020667 ;                         # faldo:position $POS + 2 (base) -1  
+      faldo:reference hco:1:GRCh37 ;               #CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "GG"                             #has value $ALT   
+  ];
+
+  # ALT
+  gvo:alt [                                        #gvo:alt or sio:SIO_000223 (has property)
+    rdf:type gvo:AlternativeFeature ;              #ALT
+    rdfs:subClassOf obo:SO_0000001 ;               # obo:SO_0000001 (region)
+    faldo:location [                               # or sio:SIO_000061 (is located in)
+      a faldo:Region ;                             # faldo:Region
+      faldo:begin 13020666 ;                       # faldo:position $POS
+      faldo:end 13020667 ;                         # faldo:position $POS + 2 (base) -1  
+      faldo:reference hco:1:GRCh37 ;               #CHROM→HCO
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10> #CHROM
+    ];
+    sio:SIO_000300 "TT"                            # has value $ALT   
+  ];  
+  gvo:qual "." ;                                   # $QUAL
+  gvo:filter "." ;                                 # $FILTER
+  gvo:info [ rdf:label "VC"; sio:SIO_000300 "MNV"] # gvo:info sio:SIO_000223 (has property)
+]
+.
