@@ -110,10 +110,13 @@ module VISC
 @prefix hco: <http://identifiers.org/hco/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gvo: <http://genome-variation.org/resource/> .
+
+
 '
       end
 
       def to_ttl(obj)
+        puts to_ttl_prefix
         faldo_ref = reference_uri(obj.chrom)
         @nref, @nalt, @npos =  normalized_alt(obj.ref, obj.alt.first, obj.pos)
         #pp @nref, @nalt, @npos
@@ -138,8 +141,7 @@ module VISC
       end
       def mnv
 "
-#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO
-#NC_000001.10    63738   rs869033224     ACT     CTA     .       .       RS=869033224;dbSNPBuildID=147;SSR=0;VC=MNV
+# #{@obj.fields.inspect}
 
 [ 
   rdf:type gvo:MNV ;
@@ -169,8 +171,7 @@ module VISC
       end
       def delins
 "
-#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
-#NC_000001.10	83119	rs1553123056	AA	ATAAC	.	.	RS=1553123056;dbSNPBuildID=147;SSR=0;VC=INDEL
+# #{@obj.fields.inspect}
 
 [ 
 
@@ -208,6 +209,8 @@ module VISC
       end
       def ins
 "
+# #{@obj.fields.inspect}
+
 [ 
   rdf:type gvo:Insertion ;
   faldo:location [
@@ -235,6 +238,8 @@ module VISC
       end
       def del
 "
+# #{@obj.fields.inspect}
+
 [ 
   rdf:type gvo:Deletion ; # vcf.info['VC']  = DEL
   faldo:location [
@@ -269,8 +274,7 @@ module VISC
       end
       def snv
 "
-#CHROM  POS ID  REF ALT QUAL  FILTER  INFO
-#NC_000001.10 10001 rs1570391677  T A . . RS=1570391677;dbSNPBuildID=154;SSR=0;PSEUDOGENEINFO=DDX11L1:100287102;VC=SNV;GNO;FREQ=KOREAN:0.9891,0.0109|SGDP_PRJ:0,1;COMMON
+# #{@obj.fields.inspect}
 
 [
   # dbSNP: vcf.info['VC'], ...
