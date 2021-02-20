@@ -1,0 +1,416 @@
+[
+  {
+    "id": "single_nucleotide_variant",
+    "name": "single nucleotide variant",
+    "synonyms": "SNV",
+    "so": "http://purl.obolibrary.org/obo/SO_0001483",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0136",
+    "hgvs": "http://varnomen.hgvs.org/recommendations/DNA/variant/substitution/",
+    "check": "TRUE"
+  },
+  {
+    "id": "deletion",
+    "name": "deletion",
+    "synonyms": "DEL",
+    "so": "http://purl.obolibrary.org/obo/SO_0000159",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0141",
+    "hgvs": "http://varnomen.hgvs.org/recommendations/DNA/variant/deletion/",
+    "check": "TRUE"
+  },
+  {
+    "id": "insertion",
+    "name": "insertion",
+    "synonyms": "INS",
+    "so": "http://purl.obolibrary.org/obo/SO_0000667",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0142",
+    "hgvs": "http://varnomen.hgvs.org/recommendations/DNA/variant/insertion/",
+    "check": "TRUE"
+  },
+  {
+    "id": "delins",
+    "name": "delins",
+    "synonyms": "INDEL",
+    "so": "http://purl.obolibrary.org/obo/SO_1000032",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0143",
+    "hgvs": "http://varnomen.hgvs.org/recommendations/DNA/variant/delins/",
+    "check": "TRUE"
+  },
+  {
+    "id": "tandem_repeat",
+    "name": "tandem repeat",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0000705",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0185",
+    "hgvs": "http://varnomen.hgvs.org/recommendations/DNA/variant/repeated/",
+    "check": "TRUE"
+  },
+  {
+    "id": "sequence_alteration ",
+    "name": "sequence alteration",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0001059",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0135",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "no_sequence_alteration",
+    "name": "no sequence alteration",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002073",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0135",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "multiple_nucleotide_variant",
+    "name": "multiple nucleotide variant (substitution)",
+    "synonyms": "MNV",
+    "so": "http://purl.obolibrary.org/obo/SO_0002007",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0136",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "multiallelic_copy_number_variation",
+    "name": "multiallelic copy number variation",
+    "synonyms": "MCNV",
+    "so": null,
+    "vario": "-",
+    "hgvs": null,
+    "check": null
+  },
+  {
+    "id": "complex_substitution",
+    "name": "complex_substitution",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_1000005",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "copy_number_gain",
+    "name": "copy_number_gain",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0001742",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0187",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "copy_number_loss",
+    "name": "copy_number_loss",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0001743",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0187",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "copy_number_variation",
+    "name": "copy number variation",
+    "synonyms": "CNV",
+    "so": "http://purl.obolibrary.org/obo/SO_0001019",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "duplication",
+    "name": "duplication",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_1000035",
+    "vario": "-",
+    "hgvs": "http://varnomen.hgvs.org/recommendations/DNA/variant/duplication/",
+    "check": "TRUE"
+  },
+  {
+    "id": "interchromosomal_translocation",
+    "name": "interchromosomal translocation",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002060",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "intrachromosomal_translocation",
+    "name": "intrachromosomal translocation",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002061",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "inversion",
+    "name": "inversion",
+    "synonyms": "INV",
+    "so": "http://purl.obolibrary.org/obo/SO_1000036",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0145",
+    "hgvs": "http://varnomen.hgvs.org/recommendations/DNA/variant/inversion/",
+    "check": "TRUE"
+  },
+  {
+    "id": "mobile_element_insertion",
+    "name": "mobile_element_insertion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0001837",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0192",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "Alu_insertion",
+    "name": "Alu insertion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002063",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "LINE1_insertion",
+    "name": "LINE1 insertion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002064",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "SVA_insertion",
+    "name": "SVA insertion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002065",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "HERV_insertion",
+    "name": "HERV insertion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002187",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "novel_sequence_insertion",
+    "name": "novel sequence insertion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0001838",
+    "vario": "-",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "mobile_element_deletion",
+    "name": "mobile element deletion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002066",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "Alu_deletion",
+    "name": "Alu deletion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002070",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "LINE1_deletion",
+    "name": "LINE1 deletion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002069",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "SVA_deletion",
+    "name": "SVA deletion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002068",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "HERV_deletion",
+    "name": "HERV deletion",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002067",
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "sequence_alteration",
+    "name": "sequence alteration",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0001059",
+    "vario": "-",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "short_tandem_repeat_variation",
+    "name": "short tandem repeat variation",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0002096",
+    "vario": "-",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "tandem_duplication",
+    "name": "tandem duplication",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_1000173",
+    "vario": "-",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "intrachromosomal_breakpoint",
+    "name": "intrachromosomal_breakpoint",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0001874",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0198",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "interchromosomal_breakpoint",
+    "name": "interchromosomal_breakpoint",
+    "synonyms": null,
+    "so": "http://purl.obolibrary.org/obo/SO_0001873",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0202",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "translocation",
+    "name": "translocation",
+    "synonyms": "CTX",
+    "so": "http://purl.obolibrary.org/obo/SO_0000199",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0197",
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "complex_structural_alteration",
+    "name": "complex structural alteration",
+    "synonyms": "CPX",
+    "so": "http://purl.obolibrary.org/obo/SO_0001784",
+    "vario": "http://purl.obolibrary.org/obo/VariO_0196",
+    "hgvs": "http://varnomen.hgvs.org/recommendations/DNA/variant/complex/",
+    "check": "TRUE"
+  },
+  {
+    "id": "dupINVdup",
+    "name": "Paired-duplication inversion",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "delINVdel",
+    "name": "Paired-deletion inversion",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "delINVdup",
+    "name": "Paired-deletion/duplication inversion",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "dupINVdel",
+    "name": "",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "delINV",
+    "name": "Deletion-flanked inversion",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "INVdel",
+    "name": "",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "dDUP-iDEL",
+    "name": "Insertion with insertion site deletion",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "INS-iDEL",
+    "name": "",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "dupINV",
+    "name": "Duplication-flanked inversion",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "INVdup",
+    "name": "",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  },
+  {
+    "id": "dDUP",
+    "name": "Dispersed duplication",
+    "synonyms": null,
+    "so": null,
+    "vario": null,
+    "hgvs": null,
+    "check": "TRUE"
+  }
+]
