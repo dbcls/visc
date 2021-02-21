@@ -9,9 +9,9 @@
 @prefix gvo: <http://genome-variation.org/resource/> .
 
 
+### ["NC_000001.10", "83119", "rs1553123056", "AA", "ATAAC", ".", ".", "RS=1553123056;dbSNPBuildID=147;SSR=0;VC=INDEL"]
 ### "A", "TAAC", 83120 = normalized_alt( "AA", "ATAAC", 83119)
 
-# ["NC_000001.10", "83119", "rs1553123056", "AA", "ATAAC", ".", ".", "RS=1553123056;dbSNPBuildID=147;SSR=0;VC=INDEL"]
 
 [ 
 
@@ -40,4 +40,3 @@
   gvo:filter "." ;
   gvo:info []
 ].
-

@@ -36,4 +36,4 @@
 ##INFO=<ID=CLNREVSTAT,Number=.,Type=String,Description="ClinVar Review Status: no_assertion - No asserition provided by submitter, no_criteria - No assertion criteria provided by submitter, single - Classified by single submitter, mult - Classified by multiple submitters, conf - Criteria provided conflicting interpretations, exp - Reviewed by expert panel, guideline - Practice guideline">
 ##INFO=<ID=CLNACC,Number=.,Type=String,Description="For each allele (comma delimited), this is a pipe-delimited list of the Clinvar RCV phenotype accession.version strings associated with that allele.">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
-NC_000001.10  13020666  rs1553191074  TG  GG,TT . . RS=1553191074;dbSNPBuildID=152;SSR=0;VC=MNV
+NC_000001.10	13020666	rs1553191074	TG	GG,TT	.	.	RS=1553191074;dbSNPBuildID=152;SSR=0;VC=MNV
