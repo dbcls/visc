@@ -1,7 +1,6 @@
 require 'bio-vcf'
 require 'bio-vcf/vcffile'
 require 'erb'
-require 'pp'
 
 module BioVcf
   class VcfRecord
@@ -116,32 +115,36 @@ module VISC
       end
 
       def to_ttl(obj)
-        puts to_ttl_prefix
-        faldo_ref = reference_uri(obj.chrom)
-        @nref, @nalt, @npos =  normalized_alt(obj.ref, obj.alt.first, obj.pos)
-        #pp @nref, @nalt, @npos
-
         @obj = obj
-        #pp @obj
-        case obj.info['VC']
-        when 'DEL'
+        puts to_ttl_prefix
+        puts "### " + @obj.fields.inspect
 
-           ERB.new(del).run
-        when 'SNV'
-           ERB.new(snv).run
-        when 'INS'
-           ERB.new(ins).run
-        when 'INDEL'
-           ERB.new(delins).run 
-        when 'MNV'
-           ERB.new(mnv).run                                
-        else
-          #pp obj
+        obj.alt.each do |alt_mono|
+          faldo_ref = reference_uri(obj.chrom)
+          #@nref, @nalt, @npos =  normalized_alt(obj.ref, obj.alt.first, obj.pos)
+          @nref, @nalt, @npos =  normalized_alt(obj.ref, alt_mono, obj.pos)
+
+          #@obj = obj
+          @alt_mono_vcf = alt_mono
+          #@alt_mono = alt_mono
+          case obj.info['VC']
+          when 'DEL'
+            ERB.new(del).run
+          when 'SNV'
+            ERB.new(snv).run
+          when 'INS'
+            ERB.new(ins).run
+          when 'INDEL'
+            ERB.new(delins).run 
+          when 'MNV'
+            ERB.new(mnv).run                                
+          else
+          #p obj
+          end
         end
       end
       def mnv
 "
-# #{@obj.fields.inspect}
 
 [ 
   rdf:type gvo:MNV ;
@@ -171,7 +174,6 @@ module VISC
       end
       def delins
 "
-# #{@obj.fields.inspect}
 
 [ 
 
@@ -195,7 +197,7 @@ module VISC
   gvo:ref \"#{@nref}\" ;
   gvo:alt \"#{@alt}\" ;
   gvo:ref_vcf \"#{@obj.ref}\" ;
-  gvo:alt_vcf  \"#{@obj.alt.first}\" ;
+  gvo:alt_vcf  \"#{@alt_mono_vcf}\" ;
   gvo:qual \"#{@obj.qual}\" ;
   gvo:filter \"#{@obj.filter}\" ;
   gvo:info []
@@ -209,7 +211,6 @@ module VISC
       end
       def ins
 "
-# #{@obj.fields.inspect}
 
 [ 
   rdf:type gvo:Insertion ;
@@ -224,7 +225,7 @@ module VISC
   gvo:ref \"#{@nref}\" ;
   gvo:alt \"#{@nalt}\" ;
   gvo:ref_vcf \"#{@obj.ref}\" ;
-  gvo:alt_vcf  \"#{@obj.alt.first}\" ;
+  gvo:alt_vcf  \"#{@alt_mono_vcf}\" ;
   gvo:qual \"#{@obj.qual}\" ;
   gvo:filter \"#{@obj.filter}\" ;
   gvo:info []
@@ -238,7 +239,6 @@ module VISC
       end
       def del
 "
-# #{@obj.fields.inspect}
 
 [ 
   rdf:type gvo:Deletion ; # vcf.info['VC']  = DEL
@@ -274,7 +274,6 @@ module VISC
       end
       def snv
 "
-# #{@obj.fields.inspect}
 
 [
   # dbSNP: vcf.info['VC'], ...
@@ -282,9 +281,9 @@ module VISC
   faldo:location [
     a faldo:ExactPosition ;
     faldo:position #{@npos} ;
-    faldo:reference <#{reference_uri(@obj.chrom)}> 
+    faldo:reference <#{reference_uri(@obj.chrom)}> ;
     # TODO
-    faldo:reference hco:1:GRCh37 ;
+    #faldo:reference hco:1:GRCh37 ;
   ];
 
   # vcf.id 
@@ -313,5 +312,6 @@ end
 
 vcf = VISC::VCF.new(ARGV[0])
 vcf.each do |v|
- puts v.to_ttl
+ #puts v.to_ttl
+ v.to_ttl
 end
