@@ -1,0 +1,41 @@
+##fileformat=VCFv4.1
+##fileDate=20210107
+##reference=GCF_000001405.26
+##ALT=<ID=<CNV>,Description="Copy number variable region">
+##ALT=<ID=<DEL>,Description="Deletion relative to the reference">
+##ALT=<ID=<DUP>,Description="Region of elevated copy number relative to the reference">
+##ALT=<ID=<INS>,Description="Insertion of sequence relative to the reference">
+##ALT=<ID=<INV>,Description="Inversion of reference sequence">
+##INFO=<ID=DBVARID,Number=0,Type=Flag,Description="ID is a dbVar accession">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="Confidence interval around END for imprecise variants">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Confidence interval around POS for imprecise variants">
+##INFO=<ID=DESC,Number=1,Type=String,Description="Any additional information about this call (free text, enclose in double quotes)">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the variant described in this record">
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SVLEN,Number=.,Type=String,Description="Difference in length between REF and ALT alleles">
+##INFO=<ID=CHR2,Number=1,Type=String,Description="Second (To) Chromosome in a translocation pair">
+##INFO=<ID=REGIONID,Number=.,Type=String,Description="The parent variant region accession(s)">
+##INFO=<ID=EXPERIMENT,Number=1,Type=Integer,Description="The experiment_id (from EXPERIMENTS tab) of the experiment that was used to generate this call">
+##INFO=<ID=EVENT,Number=.,Type=String,Description="The parent variant region accession of a mutation event">
+##INFO=<ID=LINKS,Number=.,Type=String,Description="Link(s) to external database(s) - see LINKS tab of dbVar submission template for examples">
+##INFO=<ID=CLNSIG,Number=.,Type=String,Description="Clinical significance for this single variant">
+##INFO=<ID=CLNACC,Number=.,Type=String,Description="Accessions and version numbers assigned by ClinVar">
+##INFO=<ID=clinical_source,Number=1,Type=String,Description="Source of clinical significance">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Indicates that the record is a somatic mutation. NOT for clinical assertions, i.e. cancer. See also ORIGIN.">
+##INFO=<ID=ORIGIN,Number=1,Type=String,Description="Origin of allele, if known; should be one of (biparental, de novo, germline, inherited, maternal, not applicable, not provided, not-reported, paternal, tested-inconclusive, uniparental, unknown, see ClinVar for details). See also SOMATIC">
+##INFO=<ID=PHENO,Number=.,Type=String,Description="Phenotype(s) thought to associated with this call. NOT for clinical assertions (submit to ClinVar). (free text, enclose in double quotes)">
+##INFO=<ID=SAMPLE,Number=1,Type=String,Description="sample_id from dbVar submission; every call must have SAMPLE or SAMPLESET, but NOT BOTH">
+##INFO=<ID=SAMPLESET,Number=1,Type=Integer,Description="sampleset_id from dbVar submission; every call must have SAMPLESET or SAMPLE but NOT BOTH">
+##INFO=<ID=VALIDATED,Number=0,Type=Flag,Description="Validated by follow-up experiment">
+##INFO=<ID=SEQ,Number=1,Type=String,Description="Variation sequence">
+##INFO=<ID=AC,Number=.,Type=Integer,Description="Global Allele count">
+##INFO=<ID=AF,Number=.,Type=Float,Description="Global Allele frequency">
+##INFO=<ID=AN,Number=.,Type=String,Description="Global Allele name">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+1	90259	nssv14474986	G	<INS>	.	.	DBVARID;SVTYPE=INS;END=90259;SVLEN=59;EXPERIMENT=1;SAMPLE=HG02818;REGIONID=nsv3325310
+1	90259	nssv14482211	G	<INS>	.	.	DBVARID;SVTYPE=INS;END=90259;SVLEN=59;EXPERIMENT=1;SAMPLE=HG02106;REGIONID=nsv3325310
+1	90259	nssv14488477	G	<INS>	.	.	DBVARID;SVTYPE=INS;END=90259;SVLEN=59;EXPERIMENT=1;SAMPLE=NA19434;REGIONID=nsv3325310
+1	90259	nssv14489513	G	<INS>	.	.	DBVARID;SVTYPE=INS;END=90259;SVLEN=59;EXPERIMENT=1;SAMPLE=HG02059;REGIONID=nsv3325310
+1	90259	nssv14489823	G	<INS>	.	.	DBVARID;SVTYPE=INS;END=90259;SVLEN=59;EXPERIMENT=1;SAMPLE=HX1;REGIONID=nsv3325310
+1	90259	nssv14492017	G	<INS>	.	.	DBVARID;SVTYPE=INS;END=90259;SVLEN=59;EXPERIMENT=1;SAMPLE=NA19240;REGIONID=nsv3325310
