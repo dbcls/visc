@@ -10,18 +10,15 @@
 
 
 ### ["NC_000001.10", "10027", "rs1570391716", "A", "C,G", ".", ".", "RS=1570391716;dbSNPBuildID=154;SSR=0;PSEUDOGENEINFO=DDX11L1:100287102;VC=SNV;GNO;FREQ=KOREAN:0.9942,0.001371,0.004455"]
-### "A", "C", 10027 = normalized_alt( "A", "C", 10027)
+### "A", "C", 10027, "SNV" = normalized( "A", "C", 10027, "SNV")
 
 
 [
-  # dbSNP: vcf.info['VC'], ...
   rdf:type gvo:SNV ;
   faldo:location [
     a faldo:ExactPosition ;
     faldo:position 10027 ;
     faldo:reference <http://identifiers.org/refseq:NC_000001.10> ;
-    # TODO
-    #faldo:reference hco:1:GRCh37 ;
   ];
 
   # vcf.id 
@@ -38,18 +35,15 @@
   gvo:info []
 
 ].
-### "A", "G", 10027 = normalized_alt( "A", "G", 10027)
+### "A", "G", 10027, "SNV" = normalized( "A", "G", 10027, "SNV")
 
 
 [
-  # dbSNP: vcf.info['VC'], ...
   rdf:type gvo:SNV ;
   faldo:location [
     a faldo:ExactPosition ;
     faldo:position 10027 ;
     faldo:reference <http://identifiers.org/refseq:NC_000001.10> ;
-    # TODO
-    #faldo:reference hco:1:GRCh37 ;
   ];
 
   # vcf.id 

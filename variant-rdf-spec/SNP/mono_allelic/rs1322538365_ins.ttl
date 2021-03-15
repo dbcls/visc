@@ -10,15 +10,15 @@
 
 
 ### ["NC_000001.10", "10108", "rs1322538365", "C", "CT", ".", ".", "RS=1322538365;dbSNPBuildID=151;SSR=0;PSEUDOGENEINFO=DDX11L1:100287102;VC=INS"]
-### "", "T", 10109 = normalized_alt( "C", "CT", 10108)
+### "", "T", 10109, "INS" = normalized( "C", "CT", 10108, "INS")
 
 
 [ 
   rdf:type gvo:Insertion ;
   faldo:location [
     a faldo:InBetweenPosition ;
-    faldo:after 10108 ; # info.pos - 1 
-    faldo:before 10109 ;   # info.pos
+    faldo:after 10108 ;
+    faldo:before 10109 ;
     faldo:reference <http://identifiers.org/refseq:NC_000001.10> 
   ];
 

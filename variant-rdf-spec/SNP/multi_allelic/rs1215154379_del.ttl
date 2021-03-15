@@ -10,25 +10,16 @@
 
 
 ### ["NC_000001.10", "1570917", "rs1215154379", "TG", "TGTCCACCCTCTCCG,T", ".", ".", "RS=1215154379;dbSNPBuildID=151;SSR=0;GENEINFO=CDK11B:984;VC=DEL"]
-### "", "TCCACCCTCTCCG", 1570919 = normalized_alt( "TG", "TGTCCACCCTCTCCG", 1570917)
+### "", "TCCACCCTCTCCG", 1570919, "INS" = normalized( "TG", "TGTCCACCCTCTCCG", 1570917, "DEL")
 
 
 [ 
-  rdf:type gvo:Deletion ; # vcf.info['VC']  = DEL
+  rdf:type gvo:Insertion ;
   faldo:location [
-    a faldo:Region ;
-    faldo:begin [
-      a faldo:InBetweenPosition ;
-      faldo:after 1570919 ;
-      faldo:before 1570920 ;
-      faldo:reference <http://identifiers.org/refseq:NC_000001.10>
-    ] ;
-    faldo:end [
-      a faldo:InBetweenPosition ;
-      faldo:after 1570919 ;
-      faldo:before 1570920 ;
-      faldo:reference <http://identifiers.org/refseq:NC_000001.10>
-    ] 
+    a faldo:InBetweenPosition ;
+    faldo:after 1570918 ;
+    faldo:before 1570919 ;
+    faldo:reference <http://identifiers.org/refseq:NC_000001.10> 
   ];
 
   rdfs:seeAlso "rs1215154379" ;
@@ -39,24 +30,25 @@
   gvo:qual "0.0" ;
   gvo:filter "." ;
   gvo:info []
+
 ].
-### "G", "", 1570918 = normalized_alt( "TG", "T", 1570917)
+### "G", "", 1570918, "DEL" = normalized( "TG", "T", 1570917, "DEL")
 
 
 [ 
-  rdf:type gvo:Deletion ; # vcf.info['VC']  = DEL
+  rdf:type gvo:Deletion ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
       a faldo:InBetweenPosition ;
-      faldo:after 1570918 ;
-      faldo:before 1570919 ;
+      faldo:after 1570917 ;
+      faldo:before 1570918 ;
       faldo:reference <http://identifiers.org/refseq:NC_000001.10>
     ] ;
     faldo:end [
       a faldo:InBetweenPosition ;
-      faldo:after 1570919 ;
-      faldo:before 1570920 ;
+      faldo:after 1570918 ;
+      faldo:before 1570919 ;
       faldo:reference <http://identifiers.org/refseq:NC_000001.10>
     ] 
   ];
@@ -65,7 +57,7 @@
   gvo:ref "G" ;
   gvo:alt "" ;
   gvo:ref_vcf "TG" ;
-  gvo:alt_vcf  "TGTCCACCCTCTCCG" ;
+  gvo:alt_vcf  "T" ;
   gvo:qual "0.0" ;
   gvo:filter "." ;
   gvo:info []
