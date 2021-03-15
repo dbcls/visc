@@ -35,7 +35,7 @@
   gvo:ref "CC" ;
   gvo:alt "" ;
   gvo:ref_vcf "ACC" ;
-  gvo:alt_vcf  "" ;
+  gvo:alt_vcf  "A" ;
   gvo:qual "0.0" ;
   gvo:filter "." ;
   gvo:info []
@@ -65,7 +65,7 @@
   gvo:ref "C" ;
   gvo:alt "" ;
   gvo:ref_vcf "ACC" ;
-  gvo:alt_vcf  "" ;
+  gvo:alt_vcf  "AC" ;
   gvo:qual "0.0" ;
   gvo:filter "." ;
   gvo:info []
