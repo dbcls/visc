@@ -78,15 +78,19 @@ module VISC
           case chrom
           when /NC_/
             "http://identifiers.org/refseq:#{chrom}"
+          when /[1-9]+/
+             #FIXME
+             "http://identifiers.org/hco/#{chrom}:GRCh37"
           else
             # TODO HCO hco:1:GRCh37
           end
       end
 
-      def normalized_alt(ref_vcf, alt_vcf, pos_vcf)
+      def normalized(ref_vcf, alt_vcf, pos_vcf, type_vcf)
           ref = ref_vcf
           alt = alt_vcf
           pos = pos_vcf
+          type = type_vcf
 
           ref_vcf.each_char do |chr|
               if ref.length > 0 and alt.length > 0 and alt.start_with?(chr)
@@ -97,8 +101,19 @@ module VISC
                  break 
               end
           end
-          puts "### #{ref.inspect}, #{alt.inspect}, #{pos.inspect} = normalized_alt( #{ref_vcf.inspect}, #{alt_vcf.inspect}, #{pos_vcf.inspect})"
-          return ref, alt, pos
+
+          if ref.length == alt.length and ref.length == 1 
+              type = "SNV"
+          elsif ref.length == alt.length and ref.length > 1 
+              type = "MNV"
+          elsif ref.length > 0 and alt.length == 0 
+              type = "DEL"
+          elsif ref.length == 0 and alt.length > 0
+              type = "INS"
+          end
+
+          puts "### #{ref.inspect}, #{alt.inspect}, #{pos.inspect}, #{type.inspect} = normalized( #{ref_vcf.inspect}, #{alt_vcf.inspect}, #{pos_vcf.inspect}, #{type_vcf.inspect})"
+          return ref, alt, pos, type
       end
 
       def to_ttl_prefix
@@ -117,10 +132,7 @@ module VISC
       end
 
       def template2ttl(type)
-        #root = Pathname.getwd #=> #<Pathname:/home/zzak/projects/ruby>
         template = File.read(File.expand_path("../template/#{type.downcase}.erb", __FILE__))
-        #template = File.read("#{root}/template/#{type.downcase}.erb")
-        #ttl = ERB.new(template).run
         ttl = ERB.new(template).result( binding )
         puts ttl
         
@@ -135,18 +147,19 @@ module VISC
 
         obj.alt.each do |alt_mono|
           faldo_ref = reference_uri(obj.chrom)
-          #@nref, @nalt, @npos =  normalized_alt(obj.ref, obj.alt.first, obj.pos)
-          @nref, @nalt, @npos =  normalized_alt(obj.ref, alt_mono, obj.pos)
+          #@nref, @nalt, @npos, @ntype =  normalized(obj.ref, alt_mono, obj.pos, obj.info['VC'])
 
-          #@obj = obj
           @alt_mono_vcf = alt_mono
-          #@alt_mono = alt_mono
+
           case obj.info['VC']
           when 'DEL','SNV','INS','INDEL','MNV'
-            template2ttl(obj.info['VC'])
+            @nref, @nalt, @npos, @ntype =  normalized(obj.ref, alt_mono, obj.pos, obj.info['VC'])
+            template2ttl(@ntype)
           else
             case obj.info['SVTYPE']
-              #CNV, BND
+              when 'CNV', 'BND'
+                @nref, @nalt, @npos, @ntype =  normalized(obj.ref, alt_mono, obj.pos, obj.info['SVTYPE'])
+                template2ttl(@ntype)
                 pp obj
               else
             begin 

@@ -4,8 +4,8 @@
   rdf:type gvo:Insertion ;
   faldo:location [
     a faldo:InBetweenPosition ;
-    faldo:after <%= @npos -1  %> ; # info.pos - 1 
-    faldo:before <%= @npos  %> ;   # info.pos
+    faldo:after <%= @npos -1  %> ;
+    faldo:before <%= @npos  %> ;
     faldo:reference <<%= reference_uri(@obj.chrom) %>> 
   ];
 

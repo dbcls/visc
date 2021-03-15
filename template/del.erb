@@ -1,19 +1,19 @@
 
 
 [ 
-  rdf:type gvo:Deletion ; # vcf.info['VC']  = DEL
+  rdf:type gvo:Deletion ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
       a faldo:InBetweenPosition ;
-      faldo:after <%= @npos %> ;
-      faldo:before <%= @npos + 1 %> ;
+      faldo:after <%= @npos - 1 %> ;
+      faldo:before <%= @npos %> ;
       faldo:reference <<%= reference_uri(@obj.chrom) %>>
     ] ;
     faldo:end [
       a faldo:InBetweenPosition ;
-      faldo:after <%= @npos + @nref.length %> ;
-      faldo:before <%= @npos + 1 + @nref.length %> ;
+      faldo:after <%= @npos -1 + @nref.length %> ;
+      faldo:before <%= @npos + @nref.length %> ;
       faldo:reference <<%=reference_uri(@obj.chrom) %>>
     ] 
   ];

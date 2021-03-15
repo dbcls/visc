@@ -1,14 +1,11 @@
 
 
 [
-  # dbSNP: vcf.info['VC'], ...
   rdf:type gvo:SNV ;
   faldo:location [
     a faldo:ExactPosition ;
     faldo:position <%= @npos %> ;
     faldo:reference <<%= reference_uri(@obj.chrom) %>> ;
-    # TODO
-    #faldo:reference hco:1:GRCh37 ;
   ];
 
   # vcf.id 
