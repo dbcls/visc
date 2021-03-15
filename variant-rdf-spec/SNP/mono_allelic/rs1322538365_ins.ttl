@@ -17,8 +17,8 @@
   rdf:type gvo:Insertion ;
   faldo:location [
     a faldo:InBetweenPosition ;
-    faldo:after 10109 ;      # info.pos
-    faldo:before 10110 ; # info.pos + 1
+    faldo:after 10108 ; # info.pos - 1 
+    faldo:before 10109 ;   # info.pos
     faldo:reference <http://identifiers.org/refseq:NC_000001.10> 
   ];
 
