@@ -1,0 +1,43 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gvo: <http://genome-variation.org/resource/> .
+
+
+### ["1", "865008", "nssv15214728", "G", "G[5:181440729[", ".", ".", "DBVARID;SVTYPE=BND;END=181440729;CHR2=5;EXPERIMENT=1;SAMPLESET=1;REGIONID=nsv3971561;EVENT=nsv3971561"]
+### "", "[5:181440729[", 865009, "BND" = normalized( "G", "G[5:181440729[", 865008, "BND")
+
+
+[ 
+  rdf:type gvo:BND ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 865008 ;
+    faldo:before 865009 ;
+    faldo:reference <http://identifiers.org/hco/1> 
+  ];
+
+  faldo:location [
+      a faldo:ForwardStrandPosition ;
+      a faldo:InBetweenPosition ;
+      faldo:after 181440728 ;
+      faldo:before 181440729 ;
+      faldo:reference <http://identifiers.org/hco/5> 
+  ];
+ 
+
+  rdfs:seeAlso "nssv15214728" ;
+  gvo:ref "" ;
+  gvo:alt "[5:181440729[" ;
+  gvo:ref_vcf "G" ;
+  gvo:alt_vcf  "G[5:181440729[" ;
+  gvo:qual "0.0" ;
+  gvo:filter "." ;
+  gvo:info []
+
+].

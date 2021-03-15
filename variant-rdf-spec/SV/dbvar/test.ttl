@@ -1,0 +1,203 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gvo: <http://genome-variation.org/resource/> .
+
+
+### ["2", "321681", "bnd_W", "G", "G]17:198982]", "6", "PASS", "SVTYPE=BND"]
+### "", "]17:198982]", 321682, "BND" = normalized( "G", "G]17:198982]", 321681, "BND")
+
+
+[ 
+  rdf:type gvo:BND ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 321681 ;
+    faldo:before 321682 ;
+    faldo:reference <http://identifiers.org/hco/2> 
+  ];
+
+  faldo:location [
+      a faldo:ReverseStrandPostion ;
+      a faldo:InBetweenPosition ;
+      faldo:after 198982 ;
+      faldo:before 198981 ;
+      faldo:reference <http://identifiers.org/hco/17> 
+  ];
+ 
+
+  rdfs:seeAlso "bnd_W" ;
+  gvo:ref "" ;
+  gvo:alt "]17:198982]" ;
+  gvo:ref_vcf "G" ;
+  gvo:alt_vcf  "G]17:198982]" ;
+  gvo:qual "6.0" ;
+  gvo:filter "PASS" ;
+  gvo:info []
+
+].
+### ["2", "321682", "bnd_V", "T", "]13:123456]T", "6", "PASS", "SVTYPE=BND"]
+### "", "]13:123456]", 321683, "BND" = normalized( "T", "]13:123456]T", 321682, "BND")
+
+
+[ 
+  rdf:type gvo:BND ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 321682 ;
+    faldo:before 321683 ;
+    faldo:reference <http://identifiers.org/hco/2> 
+  ];
+
+  faldo:location [
+      a faldo:ForwardStrandPosition ;
+      a faldo:InBetweenPosition ;
+      faldo:after 123455 ;
+      faldo:before 123456 ;
+      faldo:reference <http://identifiers.org/hco/13> 
+  ];
+ 
+
+  rdfs:seeAlso "bnd_V" ;
+  gvo:ref "" ;
+  gvo:alt "]13:123456]" ;
+  gvo:ref_vcf "T" ;
+  gvo:alt_vcf  "]13:123456]T" ;
+  gvo:qual "6.0" ;
+  gvo:filter "PASS" ;
+  gvo:info []
+
+].
+### ["13", "123456", "bnd_U", "C", "C[2:321682[", "6", "PASS", "SVTYPE=BND"]
+### "", "[2:321682[", 123457, "BND" = normalized( "C", "C[2:321682[", 123456, "BND")
+
+
+[ 
+  rdf:type gvo:BND ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 123456 ;
+    faldo:before 123457 ;
+    faldo:reference <http://identifiers.org/hco/13> 
+  ];
+
+  faldo:location [
+      a faldo:ForwardStrandPosition ;
+      a faldo:InBetweenPosition ;
+      faldo:after 321681 ;
+      faldo:before 321682 ;
+      faldo:reference <http://identifiers.org/hco/2> 
+  ];
+ 
+
+  rdfs:seeAlso "bnd_U" ;
+  gvo:ref "" ;
+  gvo:alt "[2:321682[" ;
+  gvo:ref_vcf "C" ;
+  gvo:alt_vcf  "C[2:321682[" ;
+  gvo:qual "6.0" ;
+  gvo:filter "PASS" ;
+  gvo:info []
+
+].
+### ["13", "123457", "bnd_X", "A", "[17:198983[A", "6", "PASS", "SVTYPE=BND"]
+### "", "[17:198983[", 123458, "BND" = normalized( "A", "[17:198983[A", 123457, "BND")
+
+
+[ 
+  rdf:type gvo:BND ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 123457 ;
+    faldo:before 123458 ;
+    faldo:reference <http://identifiers.org/hco/13> 
+  ];
+
+  faldo:location [
+      a faldo:ReverseStrandPostion ;
+      a faldo:InBetweenPosition ;
+      faldo:after 198983 ;
+      faldo:before 198982 ;
+      faldo:reference <http://identifiers.org/hco/17> 
+  ];
+ 
+
+  rdfs:seeAlso "bnd_X" ;
+  gvo:ref "" ;
+  gvo:alt "[17:198983[" ;
+  gvo:ref_vcf "A" ;
+  gvo:alt_vcf  "[17:198983[A" ;
+  gvo:qual "6.0" ;
+  gvo:filter "PASS" ;
+  gvo:info []
+
+].
+### ["17", "198982", "bnd_Y", "A", "A]2:321681]", "6", "PASS", "SVTYPE=BND"]
+### "", "]2:321681]", 198983, "BND" = normalized( "A", "A]2:321681]", 198982, "BND")
+
+
+[ 
+  rdf:type gvo:BND ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 198982 ;
+    faldo:before 198983 ;
+    faldo:reference <http://identifiers.org/hco/17> 
+  ];
+
+  faldo:location [
+      a faldo:ReverseStrandPostion ;
+      a faldo:InBetweenPosition ;
+      faldo:after 321681 ;
+      faldo:before 321680 ;
+      faldo:reference <http://identifiers.org/hco/2> 
+  ];
+ 
+
+  rdfs:seeAlso "bnd_Y" ;
+  gvo:ref "" ;
+  gvo:alt "]2:321681]" ;
+  gvo:ref_vcf "A" ;
+  gvo:alt_vcf  "A]2:321681]" ;
+  gvo:qual "6.0" ;
+  gvo:filter "PASS" ;
+  gvo:info []
+
+].
+### ["17", "198983", "bnd_Z", "C", "[13:123457[C", "6", "PASS", "SVTYPE=BND"]
+### "", "[13:123457[", 198984, "BND" = normalized( "C", "[13:123457[C", 198983, "BND")
+
+
+[ 
+  rdf:type gvo:BND ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 198983 ;
+    faldo:before 198984 ;
+    faldo:reference <http://identifiers.org/hco/17> 
+  ];
+
+  faldo:location [
+      a faldo:ReverseStrandPostion ;
+      a faldo:InBetweenPosition ;
+      faldo:after 123457 ;
+      faldo:before 123456 ;
+      faldo:reference <http://identifiers.org/hco/13> 
+  ];
+ 
+
+  rdfs:seeAlso "bnd_Z" ;
+  gvo:ref "" ;
+  gvo:alt "[13:123457[" ;
+  gvo:ref_vcf "C" ;
+  gvo:alt_vcf  "[13:123457[C" ;
+  gvo:qual "6.0" ;
+  gvo:filter "PASS" ;
+  gvo:info []
+
+].
