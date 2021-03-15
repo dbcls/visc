@@ -1,0 +1,30 @@
+
+
+[ 
+  rdf:type gvo:BND ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after <%= @npos - 1 %> ;
+    faldo:before <%= @npos %> ;
+    faldo:reference <<%= reference_uri(@obj.chrom) %>> 
+  ];
+
+  faldo:location [
+      a faldo:<%= @strand_type2 %> ;
+      a faldo:InBetweenPosition ;
+      faldo:after <%= @strand_type2 == 'ReverseStrandPostion' ? @pos2 : @pos2 - 1 %> ;
+      faldo:before <%= @strand_type2 == 'ReverseStrandPostion' ? @pos2 - 1 : @pos2 %> ;
+      faldo:reference <<%= reference_uri(@chr2) %>> 
+  ];
+ 
+
+  rdfs:seeAlso "<%= @obj.id %>" ;
+  gvo:ref "<%= @nref %>" ;
+  gvo:alt "<%= @nalt %>" ;
+  gvo:ref_vcf "<%= @obj.ref %>" ;
+  gvo:alt_vcf  "<%= @alt_mono_vcf %>" ;
+  gvo:qual "<%= @obj.qual %>" ;
+  gvo:filter "<%= @obj.filter %>" ;
+  gvo:info []
+
+].

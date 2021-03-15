@@ -77,13 +77,17 @@ module VISC
       def reference_uri(chrom)
           case chrom
           when /NC_/
-            "http://identifiers.org/refseq:#{chrom}"
-          when /[1-9]+/
-             #FIXME
-             "http://identifiers.org/hco/#{chrom}:GRCh37"
+            uri = "http://identifiers.org/refseq:#{chrom}"
+          when "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","X","Y"
+             #FIXME Add Assembly
+             #TODO HCO hco:1:GRCh37
+             uri= "http://identifiers.org/hco/#{chrom.to_s}"
           else
             # TODO HCO hco:1:GRCh37
+            uri ='HOGE'
           end
+          #pp uri
+          uri
       end
 
       def normalized(ref_vcf, alt_vcf, pos_vcf, type_vcf)
@@ -92,24 +96,68 @@ module VISC
           pos = pos_vcf
           type = type_vcf
 
-          ref_vcf.each_char do |chr|
+          case alt 
+          when /^(.+)\[(.+)\[$/
+              t,p, where, coord,strand = $1, $2,'after', '+',''
+          when /^(.+)\](.+)\]$/
+              t, p, where, coord,strand = $1, $2,'after', '-','revcon'
+          when /^\](.+)\](.+)$/  
+              t, p, where, coord,strand = $2, $1,'before','-',''
+          when /^\[(.+)\[(.+)$/
+              t, p, where, coord,strand = $2, $1,'before', '+','revcon'
+          end    
+          chr2, pos2 = p.split(":")
+          #pp [t, chr2, pos2, where, coord, strand]
+          pos2 = pos2.to_i 
+
+          @strand_type2 = strand == 'revcon' ? 'ReverseStrandPostion' : 'ForwardStrandPosition' 
+          
+# breakend
+#REF ALT Meaning
+#s t[p[ piece extending to the right of p is joined after t
+#s t]p] reverse comp piece extending left of p is joined after t
+#s ]p]t piece extending to the left of p is joined before t
+#s [p[t reverse comp piece extending right of p is joined before t
+          if where == 'before'
+            ref_vcf.each_char do |chr|
+              if ref.length > 0 and alt.length > 0 and alt.end_with?(chr)  
+                  ref = ref.to_s.delete_prefix(chr)
+                  alt = alt.to_s.delete_suffix(chr)
+                  pos = pos + 1
+                  #pos2 = strand == 'revcon' ? pos2 - 1 : pos2 + 1
+              else
+                  break
+              end
+            end
+          else    
+            ref_vcf.each_char do |chr|
               if ref.length > 0 and alt.length > 0 and alt.start_with?(chr)
                   ref = ref.to_s.delete_prefix(chr)
                   alt = alt.to_s.delete_prefix(chr)
                   pos = pos + 1
+                  #pos2 = strand == 'revcon' ? pos2 - 1 : pos2 + 1
               else
                  break 
               end
+            end
           end
+          #pp [t, chr2, pos2, where, coord, strand]
+          @chr2 = chr2
+          @pos2 = pos2
 
-          if ref.length == alt.length and ref.length == 1 
+
+          case alt
+          when /^\d+$/, ""
+            if ref.length == alt.length and ref.length == 1 
               type = "SNV"
-          elsif ref.length == alt.length and ref.length > 1 
+            elsif ref.length == alt.length and ref.length > 1 
               type = "MNV"
-          elsif ref.length > 0 and alt.length == 0 
+            elsif ref.length > 0 and alt.length == 0 
               type = "DEL"
-          elsif ref.length == 0 and alt.length > 0
+            elsif ref.length == 0 and alt.length > 0
               type = "INS"
+            end
+          else
           end
 
           puts "### #{ref.inspect}, #{alt.inspect}, #{pos.inspect}, #{type.inspect} = normalized( #{ref_vcf.inspect}, #{alt_vcf.inspect}, #{pos_vcf.inspect}, #{type_vcf.inspect})"
@@ -146,7 +194,7 @@ module VISC
         puts "### " + @obj.fields.inspect
 
         obj.alt.each do |alt_mono|
-          faldo_ref = reference_uri(obj.chrom)
+          #faldo_ref = reference_uri(obj.chrom)
           #@nref, @nalt, @npos, @ntype =  normalized(obj.ref, alt_mono, obj.pos, obj.info['VC'])
 
           @alt_mono_vcf = alt_mono
@@ -160,7 +208,7 @@ module VISC
               when 'CNV', 'BND'
                 @nref, @nalt, @npos, @ntype =  normalized(obj.ref, alt_mono, obj.pos, obj.info['SVTYPE'])
                 template2ttl(@ntype)
-                pp obj
+                #pp obj
               else
             begin 
               raise # エラーを発生させます。
@@ -183,3 +231,6 @@ vcf.each do |v|
  #puts v.to_ttl
  v.to_ttl
 end
+
+#convert SNP-RDF 
+# for i in variant-rdf-spec/SNP/*/*.vcf; do f=${i%.*}; echo $f; ruby convert-rdf.rb $i > $i.ttl; done
