@@ -10,12 +10,41 @@
 
 
 ### ["NC_000001.10", "10230", "rs775928745", "ACC", "A,AC", ".", ".", "RS=775928745;dbSNPBuildID=144;SSR=0;PSEUDOGENEINFO=DDX11L1:100287102;VC=INDEL;GNO"]
-### "CC", "", 10231 = normalized_alt( "ACC", "A", 10230)
+### "CC", "", 10231, "DEL" = normalized( "ACC", "A", 10230, "INDEL")
 
 
 [ 
+  rdf:type gvo:Deletion ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:InBetweenPosition ;
+      faldo:after 10230 ;
+      faldo:before 10231 ;
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10>
+    ] ;
+    faldo:end [
+      a faldo:InBetweenPosition ;
+      faldo:after 10232 ;
+      faldo:before 10233 ;
+      faldo:reference <http://identifiers.org/refseq:NC_000001.10>
+    ] 
+  ];
 
-  rdf:type gvo:INDEL ;
+  rdfs:seeAlso "rs775928745" ;
+  gvo:ref "CC" ;
+  gvo:alt "" ;
+  gvo:ref_vcf "ACC" ;
+  gvo:alt_vcf  "A" ;
+  gvo:qual "0.0" ;
+  gvo:filter "." ;
+  gvo:info []
+].
+### "C", "", 10232, "DEL" = normalized( "ACC", "AC", 10230, "INDEL")
+
+
+[ 
+  rdf:type gvo:Deletion ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
@@ -26,41 +55,12 @@
     ] ;
     faldo:end [
       a faldo:InBetweenPosition ;
-      faldo:after 10233 ;
-      faldo:before 10234 ;
-      faldo:reference <http://identifiers.org/refseq:NC_000001.10>
-    ] 
-  ];
-  rdfs:seeAlso "rs775928745" ;
-  gvo:ref "CC" ;
-  gvo:alt "" ;
-  gvo:ref_vcf "ACC" ;
-  gvo:alt_vcf  "A" ;
-  gvo:qual "0.0" ;
-  gvo:filter "." ;
-  gvo:info []
-].
-### "C", "", 10232 = normalized_alt( "ACC", "AC", 10230)
-
-
-[ 
-
-  rdf:type gvo:INDEL ;
-  faldo:location [
-    a faldo:Region ;
-    faldo:begin [
-      a faldo:InBetweenPosition ;
       faldo:after 10232 ;
       faldo:before 10233 ;
       faldo:reference <http://identifiers.org/refseq:NC_000001.10>
-    ] ;
-    faldo:end [
-      a faldo:InBetweenPosition ;
-      faldo:after 10233 ;
-      faldo:before 10234 ;
-      faldo:reference <http://identifiers.org/refseq:NC_000001.10>
     ] 
   ];
+
   rdfs:seeAlso "rs775928745" ;
   gvo:ref "C" ;
   gvo:alt "" ;

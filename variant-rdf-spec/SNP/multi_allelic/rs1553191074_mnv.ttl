@@ -10,7 +10,7 @@
 
 
 ### ["NC_000001.10", "13020666", "rs1553191074", "TG", "GG,TT", ".", ".", "RS=1553191074;dbSNPBuildID=152;SSR=0;VC=MNV"]
-### "TG", "GG", 13020666 = normalized_alt( "TG", "GG", 13020666)
+### "TG", "GG", 13020666, "MNV" = normalized( "TG", "GG", 13020666, "MNV")
 
 
 [ 
@@ -31,24 +31,28 @@
   ];
 
 ] .
-### "G", "T", 13020667 = normalized_alt( "TG", "TT", 13020666)
+### "G", "T", 13020667, "SNV" = normalized( "TG", "TT", 13020666, "MNV")
 
 
-[ 
-  rdf:type gvo:MNV ;
+[
+  rdf:type gvo:SNV ;
   faldo:location [
-    a faldo:Region ;
-    faldo:begin 13020666 ;
-    faldo:end 13020667 ;
-    faldo:reference <http://identifiers.org/refseq:NC_000001.10>
+    a faldo:ExactPosition ;
+    faldo:position 13020667 ;
+    faldo:reference <http://identifiers.org/refseq:NC_000001.10> ;
   ];
 
+  # vcf.id 
   rdfs:seeAlso "rs1553191074" ;
+  # vcf.ref.normalized
   gvo:ref "G" ;
-  gvo:alt  "T" ;
+  # vcf.alt.normalized
+  gvo:alt "T" ;
+  # vcf.qual
   gvo:qual "0.0" ;
+  # vcf.filter
   gvo:filter "." ;
+  # TODO
   gvo:info []
-  ];
 
-] .
+].

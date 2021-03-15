@@ -10,7 +10,7 @@
 
 
 ### ["NC_000001.10", "83119", "rs1553123056", "AA", "ATAAC", ".", ".", "RS=1553123056;dbSNPBuildID=147;SSR=0;VC=INDEL"]
-### "A", "TAAC", 83120 = normalized_alt( "AA", "ATAAC", 83119)
+### "A", "TAAC", 83120, "INDEL" = normalized( "AA", "ATAAC", 83119, "INDEL")
 
 
 [ 
@@ -20,20 +20,20 @@
     a faldo:Region ;
     faldo:begin [
       a faldo:InBetweenPosition ;
-      faldo:after 83120 ;
-      faldo:before 83121 ;
+      faldo:after 83119 ;
+      faldo:before 83120 ;
       faldo:reference <http://identifiers.org/refseq:NC_000001.10>
     ] ;
     faldo:end [
       a faldo:InBetweenPosition ;
-      faldo:after 83121 ;
-      faldo:before 83122 ;
+      faldo:after 83120 ;
+      faldo:before 83121 ;
       faldo:reference <http://identifiers.org/refseq:NC_000001.10>
     ] 
   ];
   rdfs:seeAlso "rs1553123056" ;
   gvo:ref "A" ;
-  gvo:alt "" ;
+  gvo:alt "TAAC" ;
   gvo:ref_vcf "AA" ;
   gvo:alt_vcf  "ATAAC" ;
   gvo:qual "0.0" ;

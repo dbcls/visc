@@ -10,15 +10,15 @@
 
 
 ### ["NC_000001.10", "10291", "rs1557426822", "C", "CCCT,CT", ".", ".", "RS=1557426822;SSR=0;PSEUDOGENEINFO=DDX11L1:100287102;VC=INS;GNO"]
-### "", "CCT", 10292 = normalized_alt( "C", "CCCT", 10291)
+### "", "CCT", 10292, "INS" = normalized( "C", "CCCT", 10291, "INS")
 
 
 [ 
   rdf:type gvo:Insertion ;
   faldo:location [
     a faldo:InBetweenPosition ;
-    faldo:after 10291 ; # info.pos - 1 
-    faldo:before 10292 ;   # info.pos
+    faldo:after 10291 ;
+    faldo:before 10292 ;
     faldo:reference <http://identifiers.org/refseq:NC_000001.10> 
   ];
 
@@ -32,15 +32,15 @@
   gvo:info []
 
 ].
-### "", "T", 10292 = normalized_alt( "C", "CT", 10291)
+### "", "T", 10292, "INS" = normalized( "C", "CT", 10291, "INS")
 
 
 [ 
   rdf:type gvo:Insertion ;
   faldo:location [
     a faldo:InBetweenPosition ;
-    faldo:after 10291 ; # info.pos - 1 
-    faldo:before 10292 ;   # info.pos
+    faldo:after 10291 ;
+    faldo:before 10292 ;
     faldo:reference <http://identifiers.org/refseq:NC_000001.10> 
   ];
 

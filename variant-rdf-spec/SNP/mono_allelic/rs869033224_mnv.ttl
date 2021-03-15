@@ -10,7 +10,7 @@
 
 
 ### ["NC_000001.10", "63738", "rs869033224", "ACT", "CTA", ".", ".", "RS=869033224;dbSNPBuildID=147;SSR=0;VC=MNV"]
-### "ACT", "CTA", 63738 = normalized_alt( "ACT", "CTA", 63738)
+### "ACT", "CTA", 63738, "MNV" = normalized( "ACT", "CTA", 63738, "MNV")
 
 
 [ 

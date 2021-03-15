@@ -10,23 +10,23 @@
 
 
 ### ["NC_000001.10", "10119", "rs1156821933", "CT", "C", ".", ".", "RS=1156821933;dbSNPBuildID=151;SSR=0;PSEUDOGENEINFO=DDX11L1:100287102;VC=DEL"]
-### "T", "", 10120 = normalized_alt( "CT", "C", 10119)
+### "T", "", 10120, "DEL" = normalized( "CT", "C", 10119, "DEL")
 
 
 [ 
-  rdf:type gvo:Deletion ; # vcf.info['VC']  = DEL
+  rdf:type gvo:Deletion ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
       a faldo:InBetweenPosition ;
-      faldo:after 10120 ;
-      faldo:before 10121 ;
+      faldo:after 10119 ;
+      faldo:before 10120 ;
       faldo:reference <http://identifiers.org/refseq:NC_000001.10>
     ] ;
     faldo:end [
       a faldo:InBetweenPosition ;
-      faldo:after 10121 ;
-      faldo:before 10122 ;
+      faldo:after 10120 ;
+      faldo:before 10121 ;
       faldo:reference <http://identifiers.org/refseq:NC_000001.10>
     ] 
   ];
