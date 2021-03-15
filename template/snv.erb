@@ -1,0 +1,27 @@
+
+
+[
+  # dbSNP: vcf.info['VC'], ...
+  rdf:type gvo:SNV ;
+  faldo:location [
+    a faldo:ExactPosition ;
+    faldo:position <%= @npos %> ;
+    faldo:reference <<%= reference_uri(@obj.chrom) %>> ;
+    # TODO
+    #faldo:reference hco:1:GRCh37 ;
+  ];
+
+  # vcf.id 
+  rdfs:seeAlso "<%= @obj.id %>" ;
+  # vcf.ref.normalized
+  gvo:ref "<%= @nref %>" ;
+  # vcf.alt.normalized
+  gvo:alt "<%= @nalt %>" ;
+  # vcf.qual
+  gvo:qual "<%= @obj.qual %>" ;
+  # vcf.filter
+  gvo:filter "<%= @obj.filter %>" ;
+  # TODO
+  gvo:info []
+
+].
