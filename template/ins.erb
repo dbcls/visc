@@ -1,0 +1,21 @@
+
+
+[ 
+  rdf:type gvo:Insertion ;
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after <%= @npos %> ;      # info.pos
+    faldo:before <%= @npos + 1 %> ; # info.pos + 1
+    faldo:reference <<%= reference_uri(@obj.chrom) %>> 
+  ];
+
+  rdfs:seeAlso "<%= @obj.id %>" ;
+  gvo:ref "<%= @nref %>" ;
+  gvo:alt "<%= @nalt %>" ;
+  gvo:ref_vcf "<%= @obj.ref %>" ;
+  gvo:alt_vcf  "<%= @alt_mono_vcf %>" ;
+  gvo:qual "<%= @obj.qual %>" ;
+  gvo:filter "<%= @obj.filter %>" ;
+  gvo:info []
+
+].

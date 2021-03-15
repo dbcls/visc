@@ -1,0 +1,20 @@
+
+
+[ 
+  rdf:type gvo:MNV ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin <%= @obj.pos %> ;
+    faldo:end <%= @obj.pos + @obj.ref.length - 1 %> ;
+    faldo:reference <<%= reference_uri(@obj.chrom) %>>
+  ];
+
+  rdfs:seeAlso "<%= @obj.id %>" ;
+  gvo:ref "<%= @nref %>" ;
+  gvo:alt  "<%= @nalt %>" ;
+  gvo:qual "<%= @obj.qual %>" ;
+  gvo:filter "<%= @obj.filter %>" ;
+  gvo:info []
+  ];
+
+] .
