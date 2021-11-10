@@ -44,7 +44,7 @@ gvo:pos_vcf
 
 gvo:lft
     a owl:DatatypeProperty ;
-    rdfs:label "Left most position"@en ;
+    rdfs:label "Left most position"@en .
 
 gvo:rgt
     a owl:DatatypeProperty ;
