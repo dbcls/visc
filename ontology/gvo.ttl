@@ -283,6 +283,10 @@ gvo:info
     a owl:DatatypeProperty ;
     rdfs:label "info"^^xsd:string .
 
+gvo:lft
+    a owl:DatatypeProperty ;
+    rdfs:label "lft"^^xsd:string .
+
 gvo:pos
     a owl:DatatypeProperty ;
     rdfs:label "pos"^^xsd:string .
@@ -302,4 +306,8 @@ gvo:ref
 gvo:ref_vcf
     a owl:DatatypeProperty ;
     rdfs:label "ref_vcf"^^xsd:string .
+
+gvo:rgt
+    a owl:DatatypeProperty ;
+    rdfs:label "rgt"^^xsd:string .
 
