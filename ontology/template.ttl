@@ -1,4 +1,4 @@
-@prefix gvo: <http://genome-variation.org/resource#> .
+@prefix gvo: <http://genome-variation.org/resource/gvo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -9,12 +9,12 @@
 
 # baseURI: http://genome-variation.org/reosurce
 
-<http://genome-variation.org/resource>
+<http://genome-variation.org/resource/gvo>
     dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
     a owl:Ontology ;
     rdfs:label "Genome Variation ontology" ;
     rdfs:comment "GVO: Genome Variation ontology for semantic representation of the Genome variation" ;
     owl:versionIRI <http://genome-variation.org/reosurce/20210220> ;
-    owl:versionInfo "2021.02.20"^^xsd:date .
+    owl:versionInfo "2021-11-10"^^xsd:date .
  
 
