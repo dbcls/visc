@@ -34,7 +34,7 @@ class Writer
   def write_class
     text = <<~"EOS"
       gvo:Variation rdf:type owl:Class ;
-        rdfs:label "variation" .
+        rdfs:label "variation"@en .
 
     EOS
 #   {
@@ -71,7 +71,7 @@ class Writer
         #{c['rdf_type']} rdf:type owl:Class ;
           #{write_line_synonym(c['skos_altLable'])}
           rdfs:subClassOf #{write_subclass(c)} ;
-          rdfs:label "#{c['name']}" .
+          rdfs:label "#{c['rdfs_label']}"@en .
           
       EOS
     end
@@ -83,7 +83,7 @@ class Writer
   end
 
   def write_line_synonym(synonym)
-    synonym.nil? ? "" : "skos:altLabel \"#{synonym}\";"
+    synonym.nil? ? "" : "skos:altLabel \"#{synonym}\"@en ;"
   end
   
 

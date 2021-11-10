@@ -416,7 +416,7 @@
   {
     "id": "novel_sequence_insertion",
     "rdf_type": "gvo:InsNS",
-    "rdfs_label": null,
+    "rdfs_label": "Novel sequence insertion",
     "rdfs_subClassOf": null,
     "name": "novel sequence insertion",
     "skos_altLable": null,
@@ -560,7 +560,7 @@
   {
     "id": "breakpoint",
     "rdf_type": "gvo:Bnd",
-    "rdfs_label": null,
+    "rdfs_label": "Breakend",
     "rdfs_subClassOf": null,
     "name": null,
     "skos_altLable": "BND",
