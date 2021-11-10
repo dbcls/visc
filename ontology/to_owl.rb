@@ -28,7 +28,6 @@ class Writer
     end
     puts @ttl
     puts write_class
-    puts write_property
   end
 
   def write_class
@@ -86,19 +85,6 @@ class Writer
     synonym.nil? ? "" : "skos:altLabel \"#{synonym}\"@en ;"
   end
   
-
-  def write_property
-    props = %w(chrom id pos ref alt qual filter info ref_vcf alt_vcf pos_vcf lft rgt)
-    text =''
-    props.each do |prop|
-      text += <<~"EOS"
-        gvo:#{prop} rdf:type owl:DatatypeProperty ;
-          rdfs:label "#{prop}"^^xsd:string .
-
-      EOS
-     end
-     text
-  end
 end
 end
 
