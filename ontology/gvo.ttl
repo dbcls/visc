@@ -123,7 +123,7 @@ gvo:DelSVA
 gvo:Dup
     a owl:Class ;
     rdfs:label "Duplication"@en ;
-    rdfs:seeAlso <file:///Users/tf/github/visc/ontology/->, <http://purl.obolibrary.org/obo/SO_1000035>, <http://varnomen.hgvs.org/recommendations/DNA/variant/duplication/> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_1000035>, <http://varnomen.hgvs.org/recommendations/DNA/variant/duplication/> ;
     rdfs:subClassOf gvo:Variation .
 
 gvo:DupInv
@@ -182,7 +182,7 @@ gvo:InsME
 gvo:InsNS
     a owl:Class ;
     rdfs:label "Novel sequence insertion"@en ;
-    rdfs:seeAlso <file:///Users/tf/github/visc/ontology/->, <http://purl.obolibrary.org/obo/SO_0001838> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001838> ;
     rdfs:subClassOf gvo:Variation .
 
 gvo:InsSVA
@@ -240,7 +240,6 @@ gvo:InvIDel
 gvo:MCNV
     a owl:Class ;
     rdfs:label "Multiallelic copy number variation"@en ;
-    rdfs:seeAlso <file:///Users/tf/github/visc/ontology/-> ;
     rdfs:subClassOf gvo:Variation ;
     skos:altLabel "MCNV"@en .
 
@@ -273,13 +272,13 @@ gvo:SNV
 gvo:STRV
     a owl:Class ;
     rdfs:label "Short tandem repeat variation"@en ;
-    rdfs:seeAlso <file:///Users/tf/github/visc/ontology/->, <http://purl.obolibrary.org/obo/SO_0002096> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002096> ;
     rdfs:subClassOf gvo:Variation .
 
 gvo:TDup
     a owl:Class ;
     rdfs:label "Tandem duplication"@en ;
-    rdfs:seeAlso <file:///Users/tf/github/visc/ontology/->, <http://purl.obolibrary.org/obo/SO_1000173> ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_1000173> ;
     rdfs:subClassOf gvo:Variation .
 
 gvo:TR

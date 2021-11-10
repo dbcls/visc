@@ -85,7 +85,7 @@ class Writer
   end
 
   def write_vario c
-     c['VariO'].nil? ? "" : "rdfs:seeAlso <#{c['VariO']}> ;"
+    ( c['VariO'].nil? || c['VariO'] == '-') ? "" : "rdfs:seeAlso <#{c['VariO']}> ;"
   end
 
   def write_hgvs c
