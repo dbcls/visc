@@ -242,13 +242,13 @@ _:path-alt
   vg:node _:node-C ;
   faldo:begin [
     a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
+    a faldo:ReverseStrandPosition ;
     faldo:positon 8161 ;
     faldo:reference _:path-alt
   ] ;
   faldo:end [
     a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
+    a faldo:ReverseStrandPosition ;
     faldo:positon 155464 ;
     faldo:reference _:path-alt
   ]
@@ -261,13 +261,13 @@ _:path-alt
   vg:node _:node-B ;
   faldo:begin [
     a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
+    a faldo:ReverseStrandPosition ;
     faldo:positon 155465 ;
     faldo:reference _:path-alt
   ] ;
   faldo:end [
     a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
+    a faldo:ReverseStrandPosition ;
     faldo:positon 157282 ;
     faldo:reference _:path-alt
   ]
@@ -280,13 +280,13 @@ _:path-alt
   vg:node _:node-A ;
   faldo:begin [
     a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
+    a faldo:ReverseStrandPosition ;
     faldo:positon 157283 ;
     faldo:reference _:path-alt
   ] ;
   faldo:end [
     a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
+    a faldo:ReverseStrandPosition ;
     faldo:positon 165443 ;
     faldo:reference _:path-alt
   ]
