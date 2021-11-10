@@ -15,240 +15,245 @@
     owl:versionIRI <http://genome-variation.org/reosurce/20210220> ;
     owl:versionInfo "2021.02.20"^^xsd:date .
 
-gvo:Alu_deletion
+gvo:Bnd
     a owl:Class ;
-    rdfs:label "Alu deletion" ;
-    rdfs:subClassOf gvo:Variation .
+    rdfs:label "" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "BND" .
 
-gvo:Alu_insertion
-    a owl:Class ;
-    rdfs:label "Alu insertion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Complex_structural_alteration
-    a owl:Class ;
-    rdfs:label "complex structural alteration" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "CPX" .
-
-gvo:Complex_substitution
-    a owl:Class ;
-    rdfs:label "complex_substitution" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Copy_number_gain
+gvo:CNG
     a owl:Class ;
     rdfs:label "copy_number_gain" ;
-    rdfs:subClassOf gvo:Variation .
+    rdfs:subClassOf gvo:Variant .
 
-gvo:Copy_number_loss
+gvo:CNL
     a owl:Class ;
     rdfs:label "copy_number_loss" ;
-    rdfs:subClassOf gvo:Variation .
+    rdfs:subClassOf gvo:Variant .
 
-gvo:Copy_number_variation
+gvo:CNV
     a owl:Class ;
     rdfs:label "copy number variation" ;
-    rdfs:subClassOf gvo:Variation ;
+    rdfs:subClassOf gvo:Variant ;
     skos:altLabel "CNV" .
 
-gvo:Ddup
+gvo:CS
     a owl:Class ;
-    rdfs:label "Dispersed duplication" ;
-    rdfs:subClassOf gvo:Variation .
+    rdfs:label "complex_substitution" ;
+    rdfs:subClassOf gvo:Variant .
 
-gvo:Ddup-idel
+gvo:Cpx
     a owl:Class ;
-    rdfs:label "Insertion with insertion site deletion" ;
-    rdfs:subClassOf gvo:Variation .
+    rdfs:label "complex structural alteration" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "CPX" .
 
-gvo:Deletion
-    a owl:Class ;
-    rdfs:label "deletion" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "DEL" .
-
-gvo:Delins
-    a owl:Class ;
-    rdfs:label "delins" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "INDEL" .
-
-gvo:Delinv
-    a owl:Class ;
-    rdfs:label "Deletion-flanked inversion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Delinvdel
-    a owl:Class ;
-    rdfs:label "Paired-deletion inversion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Delinvdup
-    a owl:Class ;
-    rdfs:label "Paired-deletion/duplication inversion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Dupinv
-    a owl:Class ;
-    rdfs:label "Duplication-flanked inversion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Dupinvdel
-    a owl:Class ;
-    rdfs:label "" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Dupinvdup
-    a owl:Class ;
-    rdfs:label "Paired-duplication inversion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Duplication
-    a owl:Class ;
-    rdfs:label "duplication" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Herv_deletion
-    a owl:Class ;
-    rdfs:label "HERV deletion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Herv_insertion
-    a owl:Class ;
-    rdfs:label "HERV insertion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Ins-idel
-    a owl:Class ;
-    rdfs:label "" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Insertion
-    a owl:Class ;
-    rdfs:label "insertion" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "INS" .
-
-gvo:Interchromosomal_breakpoint
-    a owl:Class ;
-    rdfs:label "interchromosomal_breakpoint" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Interchromosomal_translocation
-    a owl:Class ;
-    rdfs:label "interchromosomal translocation" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Intrachromosomal_breakpoint
-    a owl:Class ;
-    rdfs:label "intrachromosomal_breakpoint" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Intrachromosomal_translocation
-    a owl:Class ;
-    rdfs:label "intrachromosomal translocation" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Invdel
-    a owl:Class ;
-    rdfs:label "" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Invdup
-    a owl:Class ;
-    rdfs:label "" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Inversion
-    a owl:Class ;
-    rdfs:label "inversion" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "INV" .
-
-gvo:Line1_deletion
-    a owl:Class ;
-    rdfs:label "LINE1 deletion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Line1_insertion
-    a owl:Class ;
-    rdfs:label "LINE1 insertion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Mobile_element_deletion
-    a owl:Class ;
-    rdfs:label "mobile element deletion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Mobile_element_insertion
-    a owl:Class ;
-    rdfs:label "mobile_element_insertion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Multiallelic_copy_number_variation
-    a owl:Class ;
-    rdfs:label "multiallelic copy number variation" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "MCNV" .
-
-gvo:Multiple_nucleotide_variant
-    a owl:Class ;
-    rdfs:label "multiple nucleotide variant (substitution)" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "MNV" .
-
-gvo:No_sequence_alteration
-    a owl:Class ;
-    rdfs:label "no sequence alteration" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Novel_sequence_insertion
-    a owl:Class ;
-    rdfs:label "novel sequence insertion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Sequence_alteration
-    a owl:Class ;
-    rdfs:label "sequence alteration" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Short_tandem_repeat_variation
-    a owl:Class ;
-    rdfs:label "short tandem repeat variation" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Single_nucleotide_variant
-    a owl:Class ;
-    rdfs:label "single nucleotide variant" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "SNV" .
-
-gvo:Sva_deletion
-    a owl:Class ;
-    rdfs:label "SVA deletion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Sva_insertion
-    a owl:Class ;
-    rdfs:label "SVA insertion" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Tandem_duplication
-    a owl:Class ;
-    rdfs:label "tandem duplication" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Tandem_repeat
-    a owl:Class ;
-    rdfs:label "tandem repeat" ;
-    rdfs:subClassOf gvo:Variation .
-
-gvo:Translocation
+gvo:Ctx
     a owl:Class ;
     rdfs:label "translocation" ;
-    rdfs:subClassOf gvo:Variation ;
-    skos:altLabel "CTX" .
+    rdfs:subClassOf gvo:Variant .
+
+gvo:DDup
+    a owl:Class ;
+    rdfs:label "Dispersed duplication" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:DDupIdel
+    a owl:Class ;
+    rdfs:label "Insertion with insertion site deletion" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:Del
+    a owl:Class ;
+    rdfs:label "deletion" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "DEL" .
+
+gvo:DelAlu
+    a owl:Class ;
+    rdfs:label "Alu deletion" ;
+    rdfs:subClassOf gvo:DelME .
+
+gvo:DelHERV
+    a owl:Class ;
+    rdfs:label "HERV deletion" ;
+    rdfs:subClassOf gvo:DelME .
+
+gvo:DelInv
+    a owl:Class ;
+    rdfs:label "Deletion-flanked inversion" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:DelInvDel
+    a owl:Class ;
+    rdfs:label "Paired-deletion inversion" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:DelInvDup
+    a owl:Class ;
+    rdfs:label "Paired-deletion/duplication inversion" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:DelLINE1
+    a owl:Class ;
+    rdfs:label "LINE1 deletion" ;
+    rdfs:subClassOf gvo:DelME .
+
+gvo:DelME
+    a owl:Class ;
+    rdfs:label "mobile element deletion" ;
+    rdfs:subClassOf gvo:Del .
+
+gvo:DelSVA
+    a owl:Class ;
+    rdfs:label "SVA deletion" ;
+    rdfs:subClassOf gvo:DelME .
+
+gvo:Dup
+    a owl:Class ;
+    rdfs:label "duplication" ;
+    rdfs:subClassOf gvo:Variant .
+
+gvo:DupInv
+    a owl:Class ;
+    rdfs:label "Duplication-flanked inversion" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:DupInvDel
+    a owl:Class ;
+    rdfs:label "" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:DupInvDup
+    a owl:Class ;
+    rdfs:label "Paired-duplication inversion" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:Indel
+    a owl:Class ;
+    rdfs:label "delins" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "INDEL" .
+
+gvo:Ins
+    a owl:Class ;
+    rdfs:label "insertion" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "INS" .
+
+gvo:InsAlu
+    a owl:Class ;
+    rdfs:label "Alu insertion" ;
+    rdfs:subClassOf gvo:InsME .
+
+gvo:InsHERV
+    a owl:Class ;
+    rdfs:label "HERV insertion" ;
+    rdfs:subClassOf gvo:InsME .
+
+gvo:InsLINE1
+    a owl:Class ;
+    rdfs:label "LINE1 insertion" ;
+    rdfs:subClassOf gvo:InsME .
+
+gvo:InsME
+    a owl:Class ;
+    rdfs:label "mobile_element_insertion" ;
+    rdfs:subClassOf gvo:Ins .
+
+gvo:InsNS
+    a owl:Class ;
+    rdfs:label "novel sequence insertion" ;
+    rdfs:subClassOf gvo:Variant .
+
+gvo:InsSVA
+    a owl:Class ;
+    rdfs:label "SVA insertion" ;
+    rdfs:subClassOf gvo:InsME .
+
+gvo:InterBnd
+    a owl:Class ;
+    rdfs:label "interchromosomal_breakpoint" ;
+    rdfs:subClassOf gvo:Bnd .
+
+gvo:InterCtx
+    a owl:Class ;
+    rdfs:label "interchromosomal translocation" ;
+    rdfs:subClassOf gvo:Ctx .
+
+gvo:IntraBnd
+    a owl:Class ;
+    rdfs:label "intrachromosomal_breakpoint" ;
+    rdfs:subClassOf gvo:Bnd .
+
+gvo:IntraCtx
+    a owl:Class ;
+    rdfs:label "intrachromosomal translocation" ;
+    rdfs:subClassOf gvo:Ctx .
+
+gvo:Inv
+    a owl:Class ;
+    rdfs:label "inversion" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "INV" .
+
+gvo:InvDel
+    a owl:Class ;
+    rdfs:label "" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:InvDup
+    a owl:Class ;
+    rdfs:label "" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:InvIDel
+    a owl:Class ;
+    rdfs:label "" ;
+    rdfs:subClassOf gvo:Cpx .
+
+gvo:MCNV
+    a owl:Class ;
+    rdfs:label "multiallelic copy number variation" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "MCNV" .
+
+gvo:MNV
+    a owl:Class ;
+    rdfs:label "multiple nucleotide variant (substitution)" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "MNV" .
+
+gvo:NSA
+    a owl:Class ;
+    rdfs:label "no sequence alteration" ;
+    rdfs:subClassOf gvo:Variant .
+
+gvo:SA
+    a owl:Class ;
+    rdfs:label "sequence alteration" ;
+    rdfs:subClassOf gvo:Variant .
+
+gvo:SNV
+    a owl:Class ;
+    rdfs:label "single nucleotide variant" ;
+    rdfs:subClassOf gvo:Variant ;
+    skos:altLabel "SNV" .
+
+gvo:STRV
+    a owl:Class ;
+    rdfs:label "short tandem repeat variation" ;
+    rdfs:subClassOf gvo:Variant .
+
+gvo:TDup
+    a owl:Class ;
+    rdfs:label "tandem duplication" ;
+    rdfs:subClassOf gvo:Variant .
+
+gvo:TR
+    a owl:Class ;
+    rdfs:label "tandem repeat" ;
+    rdfs:subClassOf gvo:Variant .
 
 gvo:Variation
     a owl:Class ;
