@@ -1,0 +1,249 @@
+@prefix gvo: <http://genome-variation.org/resource/gvo.ttl#>
+@prefix vg: <http://biohackathon.org/resource/vg#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/>
+@prefix dct: <http://purl.org/dc/terms/> .
+
+# 1	6460677	gnomAD-SV_v2.1_CPX_1_11	N	<CPX>	842	PASS	END=6467418;SVTYPE=CPX;SVLEN=6741;ALGORITHMS=delly,manta;BOTHSIDES_SUPPORT;CPX_INTERVALS=DEL_1:6460677-6462571,INV_1:6462571-6463867,DEL_1:6463867-6467418;CPX_TYPE=delINVdel;
+
+[
+  a gvo:DelInvDel ;
+  dct:ideitifier "gnomAD-SV_v2.1_CPX_1_11" ;
+  gvo:ref _:path-ref ;
+  gvo:alt _:path-alt ;
+  gvo:chrom hco:1 ;	
+  gvo:lft 6460677 ;	
+  gvo:rgt 6467418 ;
+  faldo:location [
+    faldo:begin [
+      a faldo:InBetweenPosition ;
+      faldo:after 6460677 ;
+      faldo:before 6460678 ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:InBetweenPosition ;
+      faldo:after 6467418 ;
+      faldo:before 6467419 ;
+      faldo:reference hco:1
+    ]
+  ]
+] .
+
+# nodes
+_:node-beforeSV a vg:Node ;
+  vg:linksForwardToForward _:node-A ;
+  vg:linksForwardToReverse _:node-B ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:ExactPosition ;
+      faldo:position 6460677 ;
+      faldo:reference hco:1
+    ]
+  ] .	
+_:node-A
+  a vg:Node ;
+  vg:linksForwardToForward _:node-B ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:ExactPosition ;
+      faldo:position 6460678 ;
+      faldo:reference	hco:1
+    ] ;
+    faldo:end [
+      a faldo:ExactPosition ;
+      faldo:position 6462571 ;
+      faldo:reference hco:1
+    ]
+  ] .
+_:node-B
+  a vg:Node ;
+  vg:linksForwardToForward _:node-C ;
+  vg:linksReverseToForward _:node-afterSV ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:ExactPosition ;
+      faldo:position 6462572 ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:ExactPosition ;
+      faldo:position 6463867 ;
+      faldo:reference hco:1 ;
+    ]
+  ] .	
+_:node-C
+  a vg:Node ;
+  vg:linksForwardToForward _:node-afterSV ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:ExactPosition ;
+      faldo:position 6463868 ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:ExactPosition ;
+      faldo:position 6467418 ;
+      faldo:reference hco:1
+    ]
+  ] .
+_:node-afterSV
+  a vg:Node ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:ExactPosition ;
+      faldo:position 6467419 ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:1
+    ]
+  ] .
+
+  
+# ref path
+_:path-ref
+  a vg:Path .
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 1 ;
+  vg:node _:node-beforeSV ;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ]
+] .
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 2 ;
+  vg:node _:node-A ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ] ;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 8160 ;
+    faldo:reference _:path-ref
+  ]
+] .
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 3 ;
+  vg:node _:node-B ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 8161 ;
+    faldo:reference _:path-ref
+  ] ;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 9978 ;
+    faldo:reference _:path-ref
+  ]
+] .
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 4 ;
+  vg:node _:node-C ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 9979 ;
+    faldo:reference _:path-ref
+  ] ;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 157282 ;
+    faldo:reference _:path-ref
+  ]
+] .
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 5 ;
+  vg:node _:node-afterSV ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 157283 ;
+    faldo:reference _:path-ref
+  ]
+] .
+
+  
+# alt path
+_:path-alt
+  a vg:Path .
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-alt ;
+  vg:rank 1 ;
+  vg:node _:node-beforeSV ;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-alt
+  ]
+] .
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-alt ;
+  vg:rank 2 ;
+  vg:node _:node-B ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ReverseStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-alt
+  ] ;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ReverseStrandPosition ;
+    faldo:positon 1295 ;
+    faldo:reference _:path-alt
+  ]
+] .
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-alt ;
+  vg:rank 3 ;
+  vg:node _:node-afterSV ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 1296 ;
+    faldo:reference _:path-alt
+  ]
+] .
