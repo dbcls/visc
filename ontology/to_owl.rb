@@ -69,12 +69,27 @@ class Writer
       text += <<~"EOS"
         #{c['rdf_type']} rdf:type owl:Class ;
           #{write_line_synonym(c['skos_altLable'])}
+          #{write_so(c)}
+          #{write_vario(c)}
+          #{write_hgvs(c)}
           rdfs:subClassOf #{write_subclass(c)} ;
           rdfs:label "#{c['rdfs_label']}"@en .
           
       EOS
     end
     text
+  end
+
+  def write_so c
+     c['SO'].nil? ? "" : "rdfs:seeAlso <#{c['SO']}> ;"
+  end
+
+  def write_vario c
+     c['VariO'].nil? ? "" : "rdfs:seeAlso <#{c['VariO']}> ;"
+  end
+
+  def write_hgvs c
+     c['hgvs'].nil? ? "" : "rdfs:seeAlso <#{c['hgvs']}> ;"
   end
 
   def write_subclass c
