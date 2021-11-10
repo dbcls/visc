@@ -88,7 +88,7 @@ class Writer
   
 
   def write_property
-    props = %w(chrom id pos ref alt qual filter info ref_vcf alt_vcf pos_vcf)
+    props = %w(chrom id pos ref alt qual filter info ref_vcf alt_vcf pos_vcf lft rgt)
     text =''
     props.each do |prop|
       text += <<~"EOS"
