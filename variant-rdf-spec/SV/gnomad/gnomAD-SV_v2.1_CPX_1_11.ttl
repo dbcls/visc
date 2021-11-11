@@ -11,10 +11,11 @@
   dct:ideitifier "gnomAD-SV_v2.1_CPX_1_11" ;
   gvo:ref _:path-ref ;
   gvo:alt _:path-alt ;
-  gvo:chrom hco:1 ;	
-  gvo:lft 6460677 ;	
-  gvo:rgt 6467418 ;
   faldo:location [
+    a faldo:Region ;
+    gvo:chrom hco:1 ;	
+    gvo:lft 6460677 ;	
+    gvo:rgt 6467418 ;
     faldo:begin [
       a faldo:InBetweenPosition ;
       faldo:after 6460677 ;
