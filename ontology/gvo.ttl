@@ -18,314 +18,313 @@
 :Bnd
     a owl:Class ;
     rdfs:label "BND"@en ;
-    skos:definition "Breakend"@en ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Breakend"@en .
 
 :CNG
     a owl:Class ;
     rdfs:label "CNG"@en ;
-    skos:definition "Copy number gain"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001742>, <http://purl.obolibrary.org/obo/VariO_0187> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Copy number gain"@en .
 
 :CNL
     a owl:Class ;
     rdfs:label "CNL"@en ;
-    skos:definition "Copy number loss"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001743>, <http://purl.obolibrary.org/obo/VariO_0187> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Copy number loss"@en .
 
 :CNV
     a owl:Class ;
     rdfs:label "CNV"@en ;
-    skos:definition "Copy number variation"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001019> ;
     rdfs:subClassOf :Variation ;
-    skos:altLabel "CNV"@en .
+    skos:altLabel "CNV"@en ;
+    skos:definition "Copy number variation"@en .
 
 :CS
     a owl:Class ;
     rdfs:label "CS"@en ;
-    skos:definition "Complex substitution"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_1000005> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Complex substitution"@en .
 
 :Cpx
     a owl:Class ;
     rdfs:label "Cpx"@en ;
-    skos:definition "Complex structural alteration"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001784>, <http://purl.obolibrary.org/obo/VariO_0196>, <http://varnomen.hgvs.org/recommendations/DNA/variant/complex/> ;
     rdfs:subClassOf :Variation ;
     skos:altLabel "CPX"@en ;
-    skos:definition "Complex structual variation"@en .
+    skos:definition "Complex structual variation"@en, "Complex structural alteration"@en .
 
 :Ctx
     a owl:Class ;
     rdfs:label "Ctx"@en ;
-    skos:definition "Translocation"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000199>, <http://purl.obolibrary.org/obo/VariO_0197> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Translocation"@en .
 
 :DDup
     a owl:Class ;
     rdfs:label "dDUP"@en ;
-    skos:definition "Dispersed duplication"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Dispersed duplication"@en .
 
 :DDupIdel
     a owl:Class ;
     rdfs:label "dDUP-iDEL"@en ;
-    skos:definition "Dispersed duplication with deletion at insertion site"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Dispersed duplication with deletion at insertion site"@en .
 
 :Del
     a owl:Class ;
     rdfs:label "Del"@en ;
-    skos:definition "Deletion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000159>, <http://purl.obolibrary.org/obo/VariO_0141>, <http://varnomen.hgvs.org/recommendations/DNA/variant/deletion/> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Deletion"@en .
 
 :DelAlu
     a owl:Class ;
     rdfs:label "delAlu"@en ;
-    skos:definition "Alu deletion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002070> ;
-    rdfs:subClassOf :DelME .
+    rdfs:subClassOf :DelME ;
+    skos:definition "Alu deletion"@en .
 
 :DelHERV
     a owl:Class ;
     rdfs:label "delHERV"@en ;
-    skos:definition "HERV deletion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002067> ;
-    rdfs:subClassOf :DelME .
+    rdfs:subClassOf :DelME ;
+    skos:definition "HERV deletion"@en .
 
 :DelInv
     a owl:Class ;
     rdfs:label "delINV"@en ;
-    skos:definition "Complex inversion with 5' flanking deletion"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Complex inversion with 5' flanking deletion"@en .
 
 :DelInvDel
     a owl:Class ;
     rdfs:label "delINVdel"@en ;
-    skos:definition "Complex inversion with 5' and 3' flanking deletions"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Complex inversion with 5' and 3' flanking deletions"@en .
 
 :DelInvDup
     a owl:Class ;
     rdfs:label "delINVdup"@en ;
-    skos:definition "Complex inversion with 5' flanking deletion and 3' flanking duplication"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Complex inversion with 5' flanking deletion and 3' flanking duplication"@en .
 
 :DelLINE1
     a owl:Class ;
     rdfs:label "delLINE1"@en ;
-    skos:definition "LINE1 deletion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002069> ;
-    rdfs:subClassOf :DelME .
+    rdfs:subClassOf :DelME ;
+    skos:definition "LINE1 deletion"@en .
 
 :DelME
     a owl:Class ;
     rdfs:label "delME"@en ;
-    skos:definition "Mobile element deletion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002066> ;
-    rdfs:subClassOf :Del .
+    rdfs:subClassOf :Del ;
+    skos:definition "Mobile element deletion"@en .
 
 :DelSVA
     a owl:Class ;
     rdfs:label "delSVA"@en ;
-    skos:definition "SVA deletion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002068> ;
-    rdfs:subClassOf :DelME .
+    rdfs:subClassOf :DelME ;
+    skos:definition "SVA deletion"@en .
 
 :Dup
     a owl:Class ;
     rdfs:label "Dup"@en ;
-    skos:definition "Duplication"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_1000035>, <http://varnomen.hgvs.org/recommendations/DNA/variant/duplication/> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Duplication"@en .
 
 :DupInv
     a owl:Class ;
     rdfs:label "dupINV"@en ;
-    skos:definition "Complex inversion with 5' flanking duplication"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Complex inversion with 5' flanking duplication"@en .
 
 :DupInvDel
     a owl:Class ;
     rdfs:label "dupINVdel"@en ;
-    skos:definition "Complex inversion with 5' flanking duplication and 3' flanking deletion"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Complex inversion with 5' flanking duplication and 3' flanking deletion"@en .
 
 :DupInvDup
     a owl:Class ;
     rdfs:label "dupINVdup"@en ;
-    skos:definition "Complex inversion with 5' and 3' flanking duplications"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Complex inversion with 5' and 3' flanking duplications"@en .
 
 :Indel
     a owl:Class ;
     rdfs:label "Indel"@en ;
-    skos:definition "Sequence alteration which included an insertion and a deletion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_1000032>, <http://purl.obolibrary.org/obo/VariO_0143>, <http://varnomen.hgvs.org/recommendations/DNA/variant/delins/> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Sequence alteration which included an insertion and a deletion"@en .
 
 :Ins
     a owl:Class ;
     rdfs:label "Ins"@en ;
-    skos:definition "Insertion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000667>, <http://purl.obolibrary.org/obo/VariO_0142>, <http://varnomen.hgvs.org/recommendations/DNA/variant/insertion/> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Insertion"@en .
 
 :InsAlu
     a owl:Class ;
     rdfs:label "insAlu"@en ;
-    skos:definition "Alu insertion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002063> ;
-    rdfs:subClassOf :InsME .
+    rdfs:subClassOf :InsME ;
+    skos:definition "Alu insertion"@en .
 
 :InsHERV
     a owl:Class ;
     rdfs:label "insHERV"@en ;
-    skos:definition "HERV insertion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002187> ;
-    rdfs:subClassOf :InsME .
+    rdfs:subClassOf :InsME ;
+    skos:definition "HERV insertion"@en .
+
+:InsIDel
+    a owl:Class ;
+    rdfs:label "INS-iDEL"@en ;
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Insertion with deletion at insertion site"@en .
 
 :InsLINE1
     a owl:Class ;
     rdfs:label "insLINE1"@en ;
-    skos:definition "LINE1 insertion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002064> ;
-    rdfs:subClassOf :InsME .
+    rdfs:subClassOf :InsME ;
+    skos:definition "LINE1 insertion"@en .
 
 :InsME
     a owl:Class ;
     rdfs:label "insME"@en ;
-    skos:definition "Mobile element insertion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001837>, <http://purl.obolibrary.org/obo/VariO_0192> ;
-    rdfs:subClassOf :Ins .
+    rdfs:subClassOf :Ins ;
+    skos:definition "Mobile element insertion"@en .
 
 :InsNS
     a owl:Class ;
     rdfs:label "insNS"@en ;
-    skos:definition "Novel sequence insertion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001838> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Novel sequence insertion"@en .
 
 :InsSVA
     a owl:Class ;
     rdfs:label "insSVA"@en ;
-    skos:definition "SVA insertion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002065> ;
-    rdfs:subClassOf :InsME .
+    rdfs:subClassOf :InsME ;
+    skos:definition "SVA insertion"@en .
 
 :InterBnd
     a owl:Class ;
     rdfs:label "InterBnd"@en ;
-    skos:definition "Interchromosomal breakpoint"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001873>, <http://purl.obolibrary.org/obo/VariO_0202> ;
-    rdfs:subClassOf :Bnd .
+    rdfs:subClassOf :Bnd ;
+    skos:definition "Interchromosomal breakpoint"@en .
 
 :InterCtx
     a owl:Class ;
     rdfs:label "InterCtx"@en ;
-    skos:definition "Interchromosomal translocation"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002060> ;
-    rdfs:subClassOf :Ctx .
+    rdfs:subClassOf :Ctx ;
+    skos:definition "Interchromosomal translocation"@en .
 
 :IntraBnd
     a owl:Class ;
     rdfs:label "IntraBnd"@en ;
-    skos:definition "Intrachromosomal breakpoint"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001874>, <http://purl.obolibrary.org/obo/VariO_0198> ;
-    rdfs:subClassOf :Bnd .
+    rdfs:subClassOf :Bnd ;
+    skos:definition "Intrachromosomal breakpoint"@en .
 
 :IntraCtx
     a owl:Class ;
     rdfs:label "IntraCtx"@en ;
-    skos:definition "Intrachromosomal translocation"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002061> ;
-    rdfs:subClassOf :Ctx .
+    rdfs:subClassOf :Ctx ;
+    skos:definition "Intrachromosomal translocation"@en .
 
 :Inv
     a owl:Class ;
     rdfs:label "Inv"@en ;
-    skos:definition "Inversion"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_1000036>, <http://purl.obolibrary.org/obo/VariO_0145>, <http://varnomen.hgvs.org/recommendations/DNA/variant/inversion/> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Inversion"@en .
 
 :InvDel
     a owl:Class ;
     rdfs:label "INVdel"@en ;
-    skos:definition "Complex inversion with 3' flanking deletion"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Complex inversion with 3' flanking deletion"@en .
 
 :InvDup
     a owl:Class ;
     rdfs:label "INVdup"@en ;
-    skos:definition "Complex inversion with 3' flanking duplication"@en ;
-    rdfs:subClassOf :Cpx .
-
-:InvIDel
-    a owl:Class ;
-    rdfs:label "INS-iDEL"@en ;
-    skos:definition "Insertion with deletion at insertion site"@en ;
-    rdfs:subClassOf :Cpx .
+    rdfs:subClassOf :Cpx ;
+    skos:definition "Complex inversion with 3' flanking duplication"@en .
 
 :MCNV
     a owl:Class ;
     rdfs:label "MCNV"@en ;
-    skos:definition "Multiallelic copy number variation"@en ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Multiallelic copy number variation"@en .
 
 :MNV
     a owl:Class ;
     rdfs:label "MNV"@en ;
-    skos:definition "Multiple nucleotide variant"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002007>, <http://purl.obolibrary.org/obo/VariO_0136> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Multiple nucleotide variant"@en .
 
 :NSA
     a owl:Class ;
     rdfs:label "NSA"@en ;
-    skos:definition "No sequence alteration"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002073>, <http://purl.obolibrary.org/obo/VariO_0135> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "No sequence alteration"@en .
 
 :SA
     a owl:Class ;
     rdfs:label "SA"@en ;
-    skos:definition "Sequence alteration"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001059>, <http://purl.obolibrary.org/obo/VariO_0135> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Sequence alteration"@en .
 
 :SNV
     a owl:Class ;
     rdfs:label "SNV"@en ;
-    skos:definition "Single nucleotide variant"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001483>, <http://purl.obolibrary.org/obo/VariO_0136>, <http://varnomen.hgvs.org/recommendations/DNA/variant/substitution/> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Single nucleotide variant"@en .
 
 :STRV
     a owl:Class ;
     rdfs:label "STRV"@en ;
-    skos:definition "Short tandem repeat variation"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002096> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Short tandem repeat variation"@en .
 
 :TDup
     a owl:Class ;
     rdfs:label "TDup"@en ;
-    skos:definition "Tandem duplication"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_1000173> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Tandem duplication"@en .
 
 :TR
     a owl:Class ;
     rdfs:label "TR"@en ;
-    skos:definition "Tandem repeat"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000705>, <http://purl.obolibrary.org/obo/VariO_0185>, <http://varnomen.hgvs.org/recommendations/DNA/variant/repeated/> ;
-    rdfs:subClassOf :Variation .
+    rdfs:subClassOf :Variation ;
+    skos:definition "Tandem repeat"@en .
 
 :Variation
     a owl:Class ;
