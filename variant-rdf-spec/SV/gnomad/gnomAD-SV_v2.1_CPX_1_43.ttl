@@ -9,6 +9,8 @@
 [
   a gvo:DelInvDel ;
   dct:ideitifier "gnomAD-SV_v2.1_CPX_1_43" ;
+  gvo:ref_vcf "N" ;
+  gvo:alt_vcf "<CPX>" ;
   gvo:ref _:path-ref ;
   gvo:alt _:path-alt ;
   faldo:location [
