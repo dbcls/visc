@@ -1,7 +1,7 @@
-@prefix gvo: <http://genome-variation.org/resource/gvo.ttl#>
+@prefix gvo: <http://genome-variation.org/resource/gvo#> .
 @prefix vg: <http://biohackathon.org/resource/vg#> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
-@prefix hco: <http://identifiers.org/hco/>
+@prefix hco: <http://identifiers.org/hco/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
 # 1	2988393	gnomAD-SV_v2.1_CPX_1_8	N	<CPX>	999	PASS	END=3145676;SVTYPE=CPX;SVLEN=157283;ALGORITHMS=delly;BOTHSIDES_SUPPORT;CPX_INTERVALS=DUP_1:2988393-2996554,INV_1:2988393-3145676,DUP_1:2998372-3145676;CPX_TYPE=dupINVdup;

@@ -4,7 +4,7 @@
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
 @prefix hco: <http://identifiers.org/hco/> .
-@prefix gvo: <http://genomevariant.org/ns> .
+@prefix gvo: <http://genome-variation.org/resource/gvo#> .
 @prefix m2r: <http://med2rdf.org/ontology/med2rdf#> .
 
 # 1	2946981	gnomAD-SV_v2.1_CPX_1_7	N	<CPX>	872	PASS , INFO =>  END=2946982, SVLEN=593, CHR2=1, POS2=2946958, END2=2946959, CPX_INTERVALS=DUP_1:2945025-2945618, CPX_TYPE=dDUP, SOURCE=DUP_1:2945025-2945618

@@ -4,7 +4,8 @@
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
 @prefix hco: <http://identifiers.org/hco/> .
-@prefix gvo: <http://genomevariant.org/ns> .
+@prefix gvo: <http://genome-variation.org/resource/gvo#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 #1	56651907	gnomAD-SV_v2.1_CTX_1_1	N	<CTX>	999	PASS , 
 # INFO =>  END=56651908, SVLEN=-1, CHR2=5, POS2=12754270, END2=12754271
@@ -16,7 +17,7 @@
   rdfs:subClassOf obo:SO_0002060 ; #interchromosomal_translocation
   # sequence_feature > sequence_comparison> sequence_alteration > structural_alteration > translocation > chromosomal_translocation> interchromosomal_translocation
   # http://purl.obolibrary.org/obo/SO_0002060
-  dcterms:identifiers "gnomAD-SV_v2.1_CTX_1_1" ;
+  dct:identifier "gnomAD-SV_v2.1_CTX_1_1" ;
 
   # REF
   gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)

@@ -4,7 +4,7 @@
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
 @prefix hco: <http://identifiers.org/hco/> .
-@prefix gvo: <http://genomevariant.org/ns> .
+@prefix gvo: <http://genome-variation.org/resource/gvo#> .
 @prefix m2r: <http://med2rdf.org/ontology/med2rdf#> .
 
 #1	1435277	gnomAD-SV_v2.1_CPX_1_3	N	<CPX>	210	UNSTABLE_AF_PCRMINUS , INFO =>  END=1435913, SVLEN=636, CPX_INTERVALS=DUP_1:1435277-1435356,INV_1:1435277-1435913, CPX_TYPE=dupINV
