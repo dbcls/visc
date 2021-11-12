@@ -37,7 +37,6 @@
 
 _:nodebeforeSV a vg:Node ;
   vg:linksForwardToForward _:nodeA ;
-  vg:linksForwardToReverse _:nodeC ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
@@ -54,6 +53,8 @@ _:nodebeforeSV a vg:Node ;
 _:nodeA
   a vg:Node ;
   vg:linksForwardToForward _:nodeB ;
+  vg:linksForwardToReverse _:nodeB ;
+  vg:linksReverseToForward _:nodeafterSV;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
@@ -71,6 +72,7 @@ _:nodeA
 _:nodeB
   a vg:Node ;
   vg:linksForwardToForward _:nodeC ;
+  vg:linksReverseToReverse _:nodeA ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
