@@ -6,29 +6,38 @@
 
 # 1	23595987	gnomAD-SV_v2.1_CPX_1_43	N	<CPX>	233	PASS	END=23597738;SVTYPE=CPX;SVLEN=1751;ALGORITHMS=delly,manta;BOTHSIDES_SUPPORT;CPX_INTERVALS=DEL_1:23595987-23597379,INV_1:23597379-23597738,DUP_1:23597541-23597738;CPX_TYPE=delINVdup;
 
+# variation
 [
-  a gvo:DelInvDel ;
+  a gvo:DelInvDup ;
   dct:ideitifier "gnomAD-SV_v2.1_CPX_1_43" ;
   gvo:ref_vcf "N" ;
   gvo:alt_vcf "<CPX>" ;
   faldo:location [
+<<<<<<< HEAD
+    gvo:ref _:path-ref ;
+    gvo:alt _:path-alt ;
+    gvo:chrom hco:1\/GRCh38 ;
+    gvo:lft 23595988 ;
+=======
     a faldo:Region ;
     gvo:ref _:path-ref ;
     gvo:alt _:path-alt ;
     gvo:chrom hco:1 ;	
     gvo:lft 23595988 ;	
+>>>>>>> 279114bd0097649ba30f0c5668fbc018374b9890
     gvo:rgt 23597738 ;
+    a faldo:Region ;
     faldo:begin [
       a faldo:InBetweenPosition ;
       faldo:after 23595987 ;
       faldo:before 23595988 ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ] ;
     faldo:end [
       a faldo:InBetweenPosition ;
       faldo:after 23597738 ;
       faldo:before 23597739 ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ]
   ]
 ] .
@@ -41,32 +50,30 @@ _:node-beforeSV a vg:Node ;
     a faldo:Region ;
     faldo:begin [
       a faldo:FuzzyPosition ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ] ;
     faldo:end [
       a faldo:ExactPosition ;
       faldo:position 23595987 ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ]
-  ] .	
-_:node-A
-  a vg:Node ;
+  ] .
+_:node-A a vg:Node ;
   vg:linksForwardToForward _:node-B ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
       a faldo:ExactPosition ;
       faldo:position 23595988 ;
-      faldo:reference	hco:1
+      faldo:reference hco:1\/GRCh38
     ] ;
     faldo:end [
       a faldo:ExactPosition ;
       faldo:position 23597379 ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ]
   ] .
-_:node-B
-  a vg:Node ;
+_:node-B a vg:Node ;
   vg:linksForwardToForward _:node-C ;
   vg:linksReverseToForward _:node-C ;
   faldo:location [
@@ -74,218 +81,107 @@ _:node-B
     faldo:begin [
       a faldo:ExactPosition ;
       faldo:position 23597380 ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ] ;
     faldo:end [
       a faldo:ExactPosition ;
       faldo:position 23597541 ;
-      faldo:reference hco:1 ;
+      faldo:reference hco:1\/GRCh38
     ]
-  ] .	
-_:node-C
-  a vg:Node ;
+  ] .
+_:node-C a vg:Node ;
   vg:linksForwardToForward _:node-afterSV ;
   vg:linksReverseToReverse _:node-B ;
+  vg:linksForwardToForward _:node-afterSV ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
       a faldo:ExactPosition ;
       faldo:position 23597542 ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ] ;
     faldo:end [
       a faldo:ExactPosition ;
       faldo:position 23597738 ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ]
   ] .
-_:node-afterSV
-  a vg:Node ;
+_:node-afterSV a vg:Node ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
       a faldo:ExactPosition ;
-      faldo:position 23597740 ;
-      faldo:reference hco:1
+      faldo:position 23597739 ;
+      faldo:reference hco:1\/GRCh38
     ] ;
     faldo:end [
       a faldo:FuzzyPosition ;
-      faldo:reference hco:1
+      faldo:reference hco:1\/GRCh38
     ]
   ] .
 
-  
 # ref path
-_:path-ref
-  a vg:Path .
+_:path-ref a vg:Path .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-ref ;
   vg:rank 1 ;
-  vg:node _:node-beforeSV ;
-  faldo:end [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 0 ;
-    faldo:reference _:path-ref
-  ]
+  vg:node _:node-beforeSV .
 ] .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-ref ;
   vg:rank 2 ;
-  vg:node _:node-A ;
-  faldo:begin [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 0 ;
-    faldo:reference _:path-ref
-  ] ;
-  faldo:end [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 1392 ;
-    faldo:reference _:path-ref
-  ]
+  vg:node _:node-A .
 ] .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-ref ;
   vg:rank 3 ;
-  vg:node _:node-B ;
-  faldo:begin [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 1393 ;
-    faldo:reference _:path-ref
-  ] ;
-  faldo:end [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 1554 ;
-    faldo:reference _:path-ref
-  ]
+  vg:node _:node-B .
 ] .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-ref ;
   vg:rank 4 ;
-  vg:node _:node-C ;
-  faldo:begin [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 1555 ;
-    faldo:reference _:path-ref
-  ] ;
-  faldo:end [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 1751 ;
-    faldo:reference _:path-ref
-  ]
+  vg:node _:node-C .
 ] .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-ref ;
   vg:rank 5 ;
-  vg:node _:node-afterSV ;
-  faldo:begin [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 1752 ;
-    faldo:reference _:path-ref
-  ]
+  vg:node _:node-afterSV .
 ] .
 
-  
 # alt path
-_:path-alt
-  a vg:Path .
+_:path-alt a vg:Path .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-alt ;
   vg:rank 1 ;
-  vg:node _:node-beforeSV ;
-  faldo:end [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 0 ;
-    faldo:reference _:path-alt
-  ]
+  vg:node _:node-beforeSV .
 ] .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-alt ;
   vg:rank 2 ;
-  vg:node _:node-C ;
-  faldo:begin [
-    a faldo:ExactPosition ;
-    a faldo:ReverseStrandPosition ;
-    faldo:positon 0 ;
-    faldo:reference _:path-alt
-  ] ;
-  faldo:end [
-    a faldo:ExactPosition ;
-    a faldo:ReverseStrandPosition ;
-    faldo:positon 195 ;
-    faldo:reference _:path-alt
-  ]
+  vg:reveseOfNode _:node-C .
 ] .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-alt ;
   vg:rank 3 ;
-  vg:node _:node-B ;
-  faldo:begin [
-    a faldo:ExactPosition ;
-    a faldo:ReverseStrandPosition ;
-    faldo:positon 196 ;
-    faldo:reference _:path-alt
-  ] ;
-  faldo:end [
-    a faldo:ExactPosition ;
-    a faldo:ReverseStrandPosition ;
-    faldo:positon 357 ;
-    faldo:reference _:path-alt
-  ]
+  vg:reveseOfNode _:node-B .
 ] .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-alt ;
   vg:rank 4 ;
-  vg:node _:node-C ;
-  faldo:begin [
-    a faldo:ExactPosition ;
-    a faldo:ForwardtrandPosition ;
-    faldo:positon 358 ;
-    faldo:reference _:path-alt
-  ] ;
-  faldo:end [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 553 ;
-    faldo:reference _:path-alt
-  ]
+  vg:node _:node-C .
 ] .
 [
   a vg:Step ;
-  a faldo:Region ;
   vg:path _:path-alt ;
   vg:rank 5 ;
-  vg:node _:node-afterSV ;
-  faldo:begin [
-    a faldo:ExactPosition ;
-    a faldo:ForwardStrandPosition ;
-    faldo:positon 554 ;
-    faldo:reference _:path-alt
-  ]
+  vg:node _:node-afterSV .
 ] .
