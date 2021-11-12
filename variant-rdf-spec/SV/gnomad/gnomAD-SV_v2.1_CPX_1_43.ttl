@@ -11,10 +11,10 @@
   dct:ideitifier "gnomAD-SV_v2.1_CPX_1_43" ;
   gvo:ref_vcf "N" ;
   gvo:alt_vcf "<CPX>" ;
-  gvo:ref _:path-ref ;
-  gvo:alt _:path-alt ;
   faldo:location [
     a faldo:Region ;
+    gvo:ref _:path-ref ;
+    gvo:alt _:path-alt ;
     gvo:chrom hco:1 ;	
     gvo:lft 23595988 ;	
     gvo:rgt 23597738 ;
