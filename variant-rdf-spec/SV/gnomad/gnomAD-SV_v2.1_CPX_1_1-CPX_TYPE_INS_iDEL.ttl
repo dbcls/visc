@@ -151,38 +151,38 @@ _:path-ref_1 a vg:Path .
   a vg:Step ;
   vg:path _:path-ref_1 ;
   vg:rank 1 ;
-  vg:node _:node-beforeSV_1 .
+  vg:node _:node-beforeSV_1
 ] .
 [
   a vg:Step ;
   vg:path _:path-ref_1 ;
   vg:rank 2 ;
-  vg:node _:node-A .
+  vg:node _:node-A
 ] .
 [
   a vg:Step ;
   vg:path _:path-ref_1 ;
   vg:rank 3 ;
-  vg:node _:node-afterSV_1 .
+  vg:node _:node-afterSV_1
 ] .
 _:path-ref_2 a vg:Path .
 [
   a vg:Step ;
   vg:path _:path-ref_2 ;
   vg:rank 1 ;
-  vg:node _:node-beforeSV_2 .
+  vg:node _:node-beforeSV_2
 ] .
 [
   a vg:Step ;
   vg:path _:path-ref_2 ;
   vg:rank 2 ;
-  vg:node _:node-B .
+  vg:node _:node-B
 ] .
 [
   a vg:Step ;
   vg:path _:path-ref_2 ;
   vg:rank 3 ;
-  vg:node _:node-afterSV_2 .
+  vg:node _:node-afterSV_2
 ] .
 
 # alt path
@@ -191,30 +191,30 @@ _:path-alt_1 a vg:Path .
   a vg:Step ;
   vg:path _:path-alt_1 ;
   vg:rank 1 ;
-  vg:node _:node-beforeSV_1 .
+  vg:node _:node-beforeSV_1
 ] .
 [
   a vg:Step ;
   vg:path _:path-alt_1 ;
   vg:rank 2 ;
-  vg:node _:node-B .
+  vg:node _:node-B
 ] .
 [
   a vg:Step ;
   vg:path _:path-alt_1 ;
   vg:rank 3 ;
-  vg:node _:node-afterSV_1 .
+  vg:node _:node-afterSV_1
 ] .
 _:path-alt_2 a vg:Path .
 [
   a vg:Step ;
   vg:path _:path-alt_2 ;
   vg:rank 1 ;
-  vg:node _:node-beforeSV_2 .
+  vg:node _:node-beforeSV_2
 ] .
 [
   a vg:Step ;
   vg:path _:path-alt_2 ;
   vg:rank 2 ;
-  vg:node _:node-afterSV_2 .
+  vg:node _:node-afterSV_2
 ] .
