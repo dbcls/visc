@@ -1,0 +1,166 @@
+@prefix gvo: <http://genome-variation.org/resource/gvo#> .
+@prefix vg: <http://biohackathon.org/resource/vg#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+#1	10642	gnomAD-SV_v2.1_BND_1_1	N	<BND>	261	UNRESOLVED	END=10643;SVTYPE=BND;SVLEN=-1;CHR2=15;POS2=10642;END2=10643; ...
+
+
+[
+  a gvo:Bnd ;
+  dct:ideitifier "gnomAD-SV_v2.1_BND_1_1" ;
+  gvo:ref_vcf "N" ;
+  gvo:alt_vcf "<BND>" ;
+  gvo:ref _:path-ref ;
+  gvo:alt _:path-alt ;
+  
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 10642 ;                       # POS 10642
+    faldo:before 10643 ;                      # END=10643
+    faldo:reference hco:1 ;                   # CHROM
+    gvo:chrom hco:1 ;
+    gvo:lft 10643 ;  
+    gvo:rgt 10642 ;      
+  ];   
+  
+  ## TODO: faldo:InBetweenPosition → faldo:FuzzyPosition?
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 10642 ;                       # POS2=10642
+    faldo:before 10643 ;                      # END2=10643
+    faldo:reference hco:15 ;                  # CHR2=15
+    gvo:chrom hco:15 ; 
+    gvo:lft 10643 ;  
+    gvo:rgt 10642 ;  
+  ]
+].
+
+# nodes
+
+_:node-BND1-before a vg:Node ;
+  vg:linksForwardToForward _:node-BND1-after ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:ExactPosition ;
+      faldo:position 10642 ;
+      faldo:reference hco:1
+    ]
+  ] .	
+
+_:node-BND1-after a vg:Node ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:ExactPosition ;
+      faldo:position 10643 ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:1
+    ]
+  ] .
+
+
+_:node-BND15-before a vg:Node ;
+  vg:linksForwardToForward _:node-BND15-after ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:15
+    ] ;
+    faldo:end [
+      ## TODO: faldo:ExactPosition → faldo:FuzzyPosition?
+      a faldo:ExactPosition ;
+      faldo:position 10642 ;
+      faldo:reference hco:15
+    ]
+  ] .	
+
+
+_:node-BND15-after a vg:Node ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      ## TODO: faldo:ExactPosition → faldo:FuzzyPosition?
+      a faldo:ExactPosition ;
+      faldo:position 10643 ;
+      faldo:reference hco:15
+    ] ;
+    faldo:end [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:15
+    ]
+  ] .
+
+  
+# ref path
+_:path-ref a vg:Path .
+
+# ref step
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 1 ;
+  vg:node _:node-BND1-before;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ]
+] .
+
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 2 ;
+  vg:node _:node-BND1-after ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ]
+] .
+
+# alt path
+_:path-alt  a vg:Path .
+
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-alt ;
+  vg:rank 1 ;
+  vg:node _:node-BND1-before ;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ]
+] .
+
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-alt ;
+  vg:rank 2 ;
+  vg:node _:node-BND15-after ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ]
+] .
