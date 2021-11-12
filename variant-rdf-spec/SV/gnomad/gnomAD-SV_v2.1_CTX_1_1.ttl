@@ -1,54 +1,161 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix sio: <http://semanticscience.org/resource/> .
+@prefix gvo: <http://genome-variation.org/resource/gvo#> .
+@prefix vg: <http://biohackathon.org/resource/vg#> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
 @prefix hco: <http://identifiers.org/hco/> .
-@prefix gvo: <http://genome-variation.org/resource/gvo#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
 #1	56651907	gnomAD-SV_v2.1_CTX_1_1	N	<CTX>	999	PASS , 
 # INFO =>  END=56651908, SVLEN=-1, CHR2=5, POS2=12754270, END2=12754271
 
+[
+  a gvo:Ctx ;
+  dct:ideitifier "gnomAD-SV_v2.1_CTX_1_1" ;
+  gvo:ref_vcf "N" ;
+  gvo:alt_vcf "<CTX>" ;
+  gvo:ref _:path-ref ;
+  gvo:alt _:path-alt ;
+  
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 56651907 ;                       # POS  56651907
+    faldo:before 56651908 ;                      # END=56651908
+    faldo:reference hco:1 ;                      # CHROM
+    gvo:chrom hco:1 ; 
+    gvo:lft 56651908 ;  
+    gvo:rgt 56651907 ;      
+  ];   
+  
+  faldo:location [
+    a faldo:InBetweenPosition ;
+    faldo:after 12754270 ;                       # POS2=12754270
+    faldo:before 12754271 ;                      # END2=12754271
+    faldo:reference hco:5 ;                      # CHR2=5
+    gvo:chrom hco:5 ; 
+    gvo:lft 12754271 ;  
+    gvo:rgt 12754270 ;  
+  ]
+].
+
+# nodes
+
+_:node-BND1-before a vg:Node ;
+  vg:linksForwardToForward _:node-BND1-after ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:ExactPosition ;
+      faldo:position 56651907 ;
+      faldo:reference hco:1
+    ]
+  ] .	
+
+_:node-BND1-after a vg:Node ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:ExactPosition ;
+      faldo:position 56651908 ;
+      faldo:reference hco:1
+    ] ;
+    faldo:end [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:1
+    ]
+  ] .
+
+_:node-BND5-before a vg:Node ;
+  vg:linksForwardToForward _:node-BND5-after ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:5
+    ] ;
+    faldo:end [
+      a faldo:ExactPosition ;
+      faldo:position 12754270 ;
+      faldo:reference hco:5
+    ]
+  ] .	
+
+_:node-BND5-after a vg:Node ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:ExactPosition ;
+      faldo:position 12754271 ;
+      faldo:reference hco:5
+    ] ;
+    faldo:end [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:5
+    ]
+  ] .
+
+  
+# ref path
+_:path-ref a vg:Path .
+
+# ref step
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 1 ;
+  vg:node _:node-BND1-before;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ]
+] .
 
 [
-  # sequence_feature > sequence_comparison
-  rdf:type gvo:Interchromosomal_translocation ;             #variant type
-  rdfs:subClassOf obo:SO_0002060 ; #interchromosomal_translocation
-  # sequence_feature > sequence_comparison> sequence_alteration > structural_alteration > translocation > chromosomal_translocation> interchromosomal_translocation
-  # http://purl.obolibrary.org/obo/SO_0002060
-  dct:identifier "gnomAD-SV_v2.1_CTX_1_1" ;
-
-  # REF
-  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
-    rdf:type gvo:ReferenceFeature ;
-    rdfs:subClassOf obo:SO_0001873 ;               # interchromosomal_breakpoint
-    # http://purl.obolibrary.org/obo/SO_0001873
-    # sequence_feature > junction > chromosome_breakpoint > interchromosomal_breakpoint
-    faldo:location [
-      a faldo:InBetweenPosition ;
-      faldo:after 56651907 ;                       # POS  56651907
-      faldo:before 56651908 ;                      # END=56651908
-      faldo:reference hco:1#GRCh37                 # CHROM
-    ];
-    sio:SIO_000300 "N"  #has value                 # REF
-  ];
-
-  # ALT
-  gvo:ref [                                        # gvo:ref or sio:SIO_000223 (has property)
-    rdf:type gvo:AlternativeFeature ;
-    rdfs:subClassOf obo:SO_0001873 ;               # interchromosomal_breakpoint
-    # http://purl.obolibrary.org/obo/SO_0001873
-    # sequence_feature > junction > chromosome_breakpoint > interchromosomal_breakpoint
-    rdf:type _:AlternativeAllele;                         #
-    sio:SIO_000061 [];                             # is located in ?
-    faldo:location [
-      a faldo:InBetweenPosition ;
-      faldo:after 12754270 ;                       # POS2=12754270
-      faldo:before 12754271 ;                      # END2=12754271
-      faldo:reference hco:5#GRCh37                 # CHR2=5
-    ]; 
-    sio:SIO_000300 "<CTX>"                         # ALT, has value   
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-ref ;
+  vg:rank 2 ;
+  vg:node _:node-BND1-after ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
   ]
-]
-.
+] .
+
+# alt path
+_:path-alt  a vg:Path .
+
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-alt ;
+  vg:rank 1 ;
+  vg:node _:node-BND1-before ;
+  faldo:end [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ]
+] .
+
+[
+  a vg:Step ;
+  a faldo:Region ;
+  vg:path _:path-alt ;
+  vg:rank 2 ;
+  vg:node _:node-BND5-after ;
+  faldo:begin [
+    a faldo:ExactPosition ;
+    a faldo:ForwardStrandPosition ;
+    faldo:positon 0 ;
+    faldo:reference _:path-ref
+  ]
+] .
