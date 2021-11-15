@@ -14,51 +14,51 @@
     rdfs:comment "GVO: Genome Variation Ontology for semantic representation of the genome variation"@en ;
     owl:versionInfo "2021-11-10"^^xsd:date .
  
-gvo:ref
+:ref
     a owl:DatatypeProperty ;
     rdfs:label "Reference allele"@en .
 
-gvo:ref_vcf
+:ref_vcf
     a owl:DatatypeProperty ;
     rdfs:label "Reference allele for VCF"@en .
 
-gvo:alt
+:alt
     a owl:DatatypeProperty ;
     rdfs:label "Alternative allele"@en .
 
-gvo:alt_vcf
+:alt_vcf
     a owl:DatatypeProperty ;
     rdfs:label "Alternative allele for VCF"@en .
 
-gvo:chrom
+:chrom
     a owl:DatatypeProperty ;
     rdfs:label "Chromosome"@en .
 
-gvo:pos
+:pos
     a owl:DatatypeProperty ;
     rdfs:label "Position"@en .
 
-gvo:pos_vcf
+:pos_vcf
     a owl:DatatypeProperty ;
     rdfs:label "Position for VCF"@en .
 
-gvo:lft
+:lft
     a owl:DatatypeProperty ;
-    rdfs:label "Left most position"@en .
+    rdfs:label "Left most position on the reference path"@en .
 
-gvo:rgt
+:rgt
     a owl:DatatypeProperty ;
-    rdfs:label "Right most position"@en .
+    rdfs:label "Right most position on the reference path"@en .
 
-gvo:filter
+:filter
     a owl:DatatypeProperty ;
     rdfs:label "Filter"@en .
 
-gvo:info
+:info
     a owl:DatatypeProperty ;
     rdfs:label "Info"@en .
 
-gvo:qual
+:qual
     a owl:DatatypeProperty ;
     rdfs:label "Qual"@en .
 
