@@ -25,14 +25,14 @@
     a owl:Class ;
     rdfs:label "CNG"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001742>, <http://purl.obolibrary.org/obo/VariO_0187> ;
-    rdfs:subClassOf :Variation ;
+    rdfs:subClassOf :CNV ;
     skos:definition "Copy number gain"@en .
 
 :CNL
     a owl:Class ;
     rdfs:label "CNL"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001743>, <http://purl.obolibrary.org/obo/VariO_0187> ;
-    rdfs:subClassOf :Variation ;
+    rdfs:subClassOf :CNV ;
     skos:definition "Copy number loss"@en .
 
 :CNV
@@ -40,7 +40,6 @@
     rdfs:label "CNV"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001019> ;
     rdfs:subClassOf :Variation ;
-    skos:altLabel "CNV"@en ;
     skos:definition "Copy number variation"@en .
 
 :CS
@@ -55,7 +54,6 @@
     rdfs:label "Cpx"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001784>, <http://purl.obolibrary.org/obo/VariO_0196>, <http://varnomen.hgvs.org/recommendations/DNA/variant/complex/> ;
     rdfs:subClassOf :Variation ;
-    skos:altLabel "CPX"@en ;
     skos:definition "Complex structual variation"@en, "Complex structural alteration"@en .
 
 :Ctx
@@ -330,6 +328,14 @@
     a owl:Class ;
     rdfs:label "Variation"@en .
 
+:ref
+    a owl:DatatypeProperty ;
+    rdfs:label "Reference allele"@en .
+
+:ref_vcf
+    a owl:DatatypeProperty ;
+    rdfs:label "Reference allele for VCF"@en .
+
 :alt
     a owl:DatatypeProperty ;
     rdfs:label "Alternative allele"@en .
@@ -342,18 +348,6 @@
     a owl:DatatypeProperty ;
     rdfs:label "Chromosome"@en .
 
-:filter
-    a owl:DatatypeProperty ;
-    rdfs:label "Filter"@en .
-
-:info
-    a owl:DatatypeProperty ;
-    rdfs:label "Info"@en .
-
-:lft
-    a owl:DatatypeProperty ;
-    rdfs:label "Left most position"@en .
-
 :pos
     a owl:DatatypeProperty ;
     rdfs:label "Position"@en .
@@ -362,22 +356,23 @@
     a owl:DatatypeProperty ;
     rdfs:label "Position for VCF"@en .
 
-:qual
+:lft
     a owl:DatatypeProperty ;
-    rdfs:label "Qual"@en .
-
-:ref
-    a owl:DatatypeProperty ;
-    rdfs:label "Reference allele"@en .
-
-:ref_vcf
-    a owl:DatatypeProperty ;
-    rdfs:label "Reference allele for VCF"@en .
+    rdfs:label "Left most position on the reference path"@en .
 
 :rgt
     a owl:DatatypeProperty ;
-    rdfs:label "Right most position"@en .
+    rdfs:label "Right most position on the reference path"@en .
 
-dct:license
-    a owl:AnnotationProperty .
+:filter
+    a owl:DatatypeProperty ;
+    rdfs:label "Filter"@en .
+
+:info
+    a owl:DatatypeProperty ;
+    rdfs:label "Info"@en .
+
+:qual
+    a owl:DatatypeProperty ;
+    rdfs:label "Qual"@en .
 
