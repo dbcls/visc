@@ -13,7 +13,7 @@
     rdfs:comment "GVO: Genome Variation Ontology for semantic representation of the genome variation"@en ;
     rdfs:label "Genome Variation ontology"@en ;
     owl:imports <http://www.w3.org/2004/02/skos/core>, <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl> ;
-    owl:versionInfo "2021-11-10"^^xsd:date .
+    owl:versionInfo "2021-11-18"^^xsd:date .
 
 :Bnd
     a owl:Class ;
