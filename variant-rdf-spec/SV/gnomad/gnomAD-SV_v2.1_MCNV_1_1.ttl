@@ -1,0 +1,180 @@
+@prefix gvo: <http://genome-variation.org/resource/gvo#> .
+@prefix vg: <http://biohackathon.org/resource/vg#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix hco: <http://identifiers.org/hco/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+#1       46000   gnomAD-SV_v2.1_MCNV_1_1 N       <CN=0>,<CN=1>,<CN=2>,<CN=3>,<CN=4>,<CN=5>,<CN=6>,<CN=7>,<CN=8>  999     MULTIALLELIC    END=111250;SVTYPE=MCNV;SVLEN=65250;ALGORITHMS=depth;
+[
+  a gvo:MCNV ;
+  dct:ideitifier "gnomAD-SV_v2.1_MCNV_1_1" ;
+  gvo:ref_vcf "N" ;
+  gvo:alt_vcf "<CN=0>,<CN=1>,<CN=2>,<CN=3>,<CN=4>,<CN=5>,<CN=6>,<CN=7>,<CN=8>" ;
+  gvo:ref _:path-ref ;
+  gvo:alt _:path-alt ;
+  
+  faldo:location [
+    gvo:chrom hco:1\/GRCh38 ;
+    a faldo:Region ;
+    faldo:after 46001 ;
+    faldo:before 111250 ;
+    faldo:reference hco:1\/GRCh38 ;
+    gvo:chrom hco:1 ;
+    gvo:lft 46001 ;
+    gvo:rgt 111250 
+  ] 
+] .
+
+# nodes
+
+_:node-before a vg:Node ;
+  vg:linksForwardToForward _:node ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:1\/GRCh38
+    ] ;    
+    faldo:end [
+      a faldo:InBetweenPosition ;
+      faldo:after 40000 ;
+      faldo:before 40001 ;
+      faldo:reference hco:1\/GRCh38
+    ]
+  ] .	
+
+_:node a vg:Node ;
+  vg:linksForwardToForward _:node-after ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:InBetweenPosition ;
+      faldo:after 40000 ;
+      faldo:before 40001 ;
+      faldo:reference hco:1\/GRCh38
+    ] ;
+    faldo:end [
+      a faldo:InBetweenPosition ;
+      faldo:after 111250 ;
+      faldo:before 111251 ;
+      faldo:reference hco:1\/GRCh38
+    ]
+  ] .
+
+_:node-after a vg:Node ;
+  faldo:location [
+    a faldo:Region ;
+    faldo:begin [
+      a faldo:InBetweenPosition ;
+      faldo:after 111250 ;
+      faldo:before 111251 ;
+      faldo:reference hco:1\/GRCh38
+    ] ;
+    faldo:end [
+      a faldo:FuzzyPosition ;
+      faldo:reference hco:1
+    ]
+  ] .
+
+# ref step
+_:path-ref  a vg:Path .
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 1 ;
+  vg:node _:node-before
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 2 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 3 ;
+  vg:node _:node-after
+] .
+
+# alt path
+_:path-alt  a vg:Path .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 1 ;
+  vg:node _:node-before
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 2 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 3 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 4 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 5 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 6 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 7 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 8 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 9 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 10 ;
+  vg:node _:node 
+] .
+
+[
+  a vg:Step ;
+  vg:path _:path-ref ;
+  vg:rank 11 ;
+  vg:node _:node-after
+] .
