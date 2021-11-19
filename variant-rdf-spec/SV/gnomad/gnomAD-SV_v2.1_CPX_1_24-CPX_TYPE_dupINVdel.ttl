@@ -15,7 +15,7 @@
     a faldo:Region ;
     gvo:ref _:pathref ;
     gvo:alt _:pathalt ;
-    gvo:chrom hco:1 ;
+    gvo:chrom "1" ;
     gvo:lft 12047054 ;
     gvo:rht 12052414 ;
     faldo:begin [
