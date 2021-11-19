@@ -15,7 +15,7 @@
   faldo:location [
     gvo:ref _:path-ref ;
     gvo:alt _:path-alt ;
-    gvo:chrom hco:1 ;
+    gvo:chrom "1" ;
     gvo:lft 2946981 ;
     gvo:rgt 2946982 ;
     a faldo:InBetweenPosition ;
