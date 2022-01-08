@@ -31,13 +31,12 @@ _:node-beforeSV a vg:Node ;
   faldo:location [
     a faldo:Region ;
     faldo:begin [
-      a faldo:ExactPosition ;
-      faldo:position  ;
+      a faldo:FuzzyPosition ;
       faldo:reference hco:1\/GRCh38
     ] ;
     faldo:end [
       a faldo:ExactPosition ;
-      faldo:position  ;
+      faldo:position 2946981 ;
       faldo:reference hco:1\/GRCh38
     ]
   ] .
@@ -46,12 +45,11 @@ _:node-afterSV a vg:Node ;
     a faldo:Region ;
     faldo:begin [
       a faldo:ExactPosition ;
-      faldo:position  ;
+      faldo:position 2946982 ;
       faldo:reference hco:1\/GRCh38
     ] ;
     faldo:end [
-      a faldo:ExactPosition ;
-      faldo:position  ;
+      a faldo:FuzzyPosition ;
       faldo:reference hco:1\/GRCh38
     ]
   ] .
