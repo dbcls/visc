@@ -15,7 +15,7 @@
   faldo:location [
     gvo:ref _:path-ref ;
     gvo:alt _:path-alt ;
-    gvo:chrom hco:1\/GRCh38 ;
+    gvo:chrom "1" ;
     gvo:lft 6460678 ;
     gvo:rgt 6467418 ;
     a faldo:Region ;
