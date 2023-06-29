@@ -1,0 +1,374 @@
+{
+    "@graph": [
+        {
+            "@id": "_:b0",
+            "faldo:reference": {
+                "@id": "hco:1"
+            },
+            "@type": "faldo:FuzzyPosition"
+        },
+        {
+            "@id": "_:b1",
+            "faldo:end": {
+                "@id": "_:b2"
+            },
+            "vg:node": {
+                "@id": "_:b3"
+            },
+            "vg:rank": {
+                "@value": "1",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "vg:path": {
+                "@id": "_:b4"
+            },
+            "@type": [
+                "faldo:Region",
+                "vg:Step"
+            ]
+        },
+        {
+            "@id": "_:b2",
+            "faldo:reference": {
+                "@id": "_:b20"
+            },
+            "faldo:positon": {
+                "@value": "0",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": [
+                "faldo:ForwardStrandPosition",
+                "faldo:ExactPosition"
+            ]
+        },
+        {
+            "@id": "_:b3",
+            "faldo:location": {
+                "@id": "_:b25"
+            },
+            "vg:linksForwardToForward": {
+                "@id": "_:b19"
+            },
+            "@type": "vg:Node"
+        },
+        {
+            "@id": "_:b4",
+            "@type": "vg:Path"
+        },
+        {
+            "@id": "_:b5",
+            "faldo:end": {
+                "@id": "_:b0"
+            },
+            "faldo:begin": {
+                "@id": "_:b6"
+            },
+            "@type": "faldo:Region"
+        },
+        {
+            "@id": "_:b6",
+            "faldo:reference": {
+                "@id": "hco:1"
+            },
+            "faldo:position": {
+                "@value": "56651908",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": "faldo:ExactPosition"
+        },
+        {
+            "@id": "_:b7",
+            "faldo:reference": {
+                "@id": "hco:1"
+            },
+            "faldo:position": {
+                "@value": "56651907",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": "faldo:ExactPosition"
+        },
+        {
+            "@id": "_:b8",
+            "faldo:reference": {
+                "@id": "hco:5"
+            },
+            "@type": "faldo:FuzzyPosition"
+        },
+        {
+            "@id": "_:b9",
+            "faldo:reference": {
+                "@id": "hco:5"
+            },
+            "faldo:position": {
+                "@value": "12754271",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": "faldo:ExactPosition"
+        },
+        {
+            "@id": "_:b10",
+            "gvo:rgt": {
+                "@value": "12754270",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "gvo:lft": {
+                "@value": "12754271",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "gvo:chrom": {
+                "@id": "hco:5"
+            },
+            "faldo:reference": {
+                "@id": "hco:5"
+            },
+            "faldo:before": {
+                "@value": "12754271",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "faldo:after": {
+                "@value": "12754270",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": "faldo:InBetweenPosition"
+        },
+        {
+            "@id": "_:b11",
+            "faldo:begin": {
+                "@id": "_:b12"
+            },
+            "vg:node": {
+                "@id": "_:b13"
+            },
+            "vg:rank": {
+                "@value": "2",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "vg:path": {
+                "@id": "_:b4"
+            },
+            "@type": [
+                "faldo:Region",
+                "vg:Step"
+            ]
+        },
+        {
+            "@id": "_:b12",
+            "faldo:reference": {
+                "@id": "_:b20"
+            },
+            "faldo:positon": {
+                "@value": "0",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": [
+                "faldo:ForwardStrandPosition",
+                "faldo:ExactPosition"
+            ]
+        },
+        {
+            "@id": "_:b13",
+            "faldo:location": {
+                "@id": "_:b27"
+            },
+            "@type": "vg:Node"
+        },
+        {
+            "@id": "_:b14",
+            "faldo:reference": {
+                "@id": "hco:5"
+            },
+            "faldo:position": {
+                "@value": "12754270",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": "faldo:ExactPosition"
+        },
+        {
+            "@id": "_:b15",
+            "faldo:location": {
+                "@id": "_:b16"
+            },
+            "vg:linksForwardToForward": {
+                "@id": "_:b13"
+            },
+            "@type": "vg:Node"
+        },
+        {
+            "@id": "_:b16",
+            "faldo:end": {
+                "@id": "_:b14"
+            },
+            "faldo:begin": {
+                "@id": "_:b28"
+            },
+            "@type": "faldo:Region"
+        },
+        {
+            "@id": "_:b17",
+            "faldo:begin": {
+                "@id": "_:b18"
+            },
+            "vg:node": {
+                "@id": "_:b19"
+            },
+            "vg:rank": {
+                "@value": "2",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "vg:path": {
+                "@id": "_:b20"
+            },
+            "@type": [
+                "faldo:Region",
+                "vg:Step"
+            ]
+        },
+        {
+            "@id": "_:b18",
+            "faldo:reference": {
+                "@id": "_:b20"
+            },
+            "faldo:positon": {
+                "@value": "0",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": [
+                "faldo:ForwardStrandPosition",
+                "faldo:ExactPosition"
+            ]
+        },
+        {
+            "@id": "_:b19",
+            "faldo:location": {
+                "@id": "_:b5"
+            },
+            "@type": "vg:Node"
+        },
+        {
+            "@id": "_:b20",
+            "@type": "vg:Path"
+        },
+        {
+            "@id": "_:b21",
+            "faldo:location": [
+                {
+                    "@id": "_:b10"
+                },
+                {
+                    "@id": "_:b22"
+                }
+            ],
+            "gvo:alt": {
+                "@id": "_:b4"
+            },
+            "gvo:ref": {
+                "@id": "_:b20"
+            },
+            "gvo:alt_vcf": "<CTX>",
+            "gvo:ref_vcf": "N",
+            "dct:ideitifier": "gnomAD-SV_v2.1_CTX_1_1",
+            "@type": "gvo:Ctx"
+        },
+        {
+            "@id": "_:b22",
+            "gvo:rgt": {
+                "@value": "56651907",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "gvo:lft": {
+                "@value": "56651908",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "gvo:chrom": {
+                "@id": "hco:1"
+            },
+            "faldo:reference": {
+                "@id": "hco:1"
+            },
+            "faldo:before": {
+                "@value": "56651908",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "faldo:after": {
+                "@value": "56651907",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": "faldo:InBetweenPosition"
+        },
+        {
+            "@id": "_:b23",
+            "faldo:end": {
+                "@id": "_:b24"
+            },
+            "vg:node": {
+                "@id": "_:b3"
+            },
+            "vg:rank": {
+                "@value": "1",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "vg:path": {
+                "@id": "_:b20"
+            },
+            "@type": [
+                "faldo:Region",
+                "vg:Step"
+            ]
+        },
+        {
+            "@id": "_:b24",
+            "faldo:reference": {
+                "@id": "_:b20"
+            },
+            "faldo:positon": {
+                "@value": "0",
+                "@type": "http://www.w3.org/2001/XMLSchema#integer"
+            },
+            "@type": [
+                "faldo:ForwardStrandPosition",
+                "faldo:ExactPosition"
+            ]
+        },
+        {
+            "@id": "_:b25",
+            "faldo:end": {
+                "@id": "_:b7"
+            },
+            "faldo:begin": {
+                "@id": "_:b26"
+            },
+            "@type": "faldo:Region"
+        },
+        {
+            "@id": "_:b26",
+            "faldo:reference": {
+                "@id": "hco:1"
+            },
+            "@type": "faldo:FuzzyPosition"
+        },
+        {
+            "@id": "_:b27",
+            "faldo:end": {
+                "@id": "_:b8"
+            },
+            "faldo:begin": {
+                "@id": "_:b9"
+            },
+            "@type": "faldo:Region"
+        },
+        {
+            "@id": "_:b28",
+            "faldo:reference": {
+                "@id": "hco:5"
+            },
+            "@type": "faldo:FuzzyPosition"
+        }
+    ],
+    "@context": {
+        "gvo": "http://genome-variation.org/resource/gvo#",
+        "vg": "http://biohackathon.org/resource/vg#",
+        "dct": "http://purl.org/dc/terms/",
+        "hco": "http://identifiers.org/hco/",
+        "faldo": "http://biohackathon.org/resource/faldo#"
+    }
+}
