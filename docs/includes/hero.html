@@ -1,0 +1,10 @@
+<div class="hero">
+  <div class="hero__inner">
+    <h1>{{ include.title }}</h1>
+    <p>{{ include.subtitle }}</p>
+    {% if include.cta_label and include.cta_url %}
+      <a class="btn" href="{{ include.cta_url }}">{{ include.cta_label }}</a>
+    {% endif %}
+  </div>
+</div>
+
