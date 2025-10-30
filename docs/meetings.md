@@ -17,7 +17,7 @@ permalink: /meetings/
   <li class="meeting-item">
     <div class="meeting-line">
       <span class="meeting-title">{{ m.title }}</span>
-      <span class="meeting-sep">　</span>
+      <span class="meeting-sep"></span>
       <a class="meeting-link" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.short }}</a>
     </div>
     {% if m.date_text %}
