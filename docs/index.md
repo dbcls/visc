@@ -3,7 +3,7 @@ layout: home
 title: Home
 ---
 
-# VISC (Vocabulary for Interlinking Scientific Concepts)
+# VISC (Variant Information Standardization Collegium)
 
 Welcome to the VISC project website.
 
