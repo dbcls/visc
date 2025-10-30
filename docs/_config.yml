@@ -1,21 +1,37 @@
-# --- Jekyll config for PROJECT SITE (https://dbcls.github.io/visc/) ---
 title: VISC
-description: Variant Information Standardization Collegium
+description: バリアント情報標準化研究会（Variant Information Standardization Collegium）
 theme: minima
 
-# プロジェクトサイトでは baseurl が必須（リポジトリ名）
+# プロジェクトサイト配信
 baseurl: "/visc"
 url: "https://dbcls.github.io"
 
-# ナビ（minimaの簡易ヘッダー）
+# コレクション定義
+collections:
+  meetings:
+    output: true
+    permalink: /meetings/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+  people:
+    output: true
+    permalink: /members/:name/
+  publications:
+    output: true
+    permalink: /publications/:name/
+
+# ヘッダーメニュー
 header_pages:
+  - meetings.md
+  - projects.md
+  - databases.md
+  - publications.md
+  - members.md
+  - join.md
+  - news.md
   - about.md
 
-# 画像やファイルのURLを相対解決したいときは下記をON（必要に応じて）
-# relative_links:
-#   enabled: true
-#   collections: true
-
-# ビルド対象外（必要に応じて）
+# 除外
 exclude:
   - README.md
