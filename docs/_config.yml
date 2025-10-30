@@ -1,0 +1,21 @@
+# --- Jekyll config for PROJECT SITE (https://dbcls.github.io/visc/) ---
+title: VISC
+description: Vocabulary for Interlinking Scientific Concepts
+theme: minima
+
+# プロジェクトサイトでは baseurl が必須（リポジトリ名）
+baseurl: "/visc"
+url: "https://dbcls.github.io"
+
+# ナビ（minimaの簡易ヘッダー）
+header_pages:
+  - about.md
+
+# 画像やファイルのURLを相対解決したいときは下記をON（必要に応じて）
+# relative_links:
+#   enabled: true
+#   collections: true
+
+# ビルド対象外（必要に応じて）
+exclude:
+  - README.md
