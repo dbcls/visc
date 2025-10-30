@@ -1,6 +1,6 @@
 # --- Jekyll config for PROJECT SITE (https://dbcls.github.io/visc/) ---
 title: VISC
-description: Vocabulary for Interlinking Scientific Concepts
+description: Variant Information Standardization Collegium
 theme: minima
 
 # プロジェクトサイトでは baseurl が必須（リポジトリ名）
