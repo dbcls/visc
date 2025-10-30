@@ -1,85 +1,145 @@
 - no: 21
-  date: 2025-10-29
-  title: "バリアント情報標準化研究会 VISC5.10"
+  title: "バリアント情報標準化研究会"
+  short: "VISC5.10"
   url: "https://github.com/dbcls/visc/wiki/VISC5.10"
+  date_text: "2025年 10/29 〜 10/30"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 20
-  date: 2025-06-16
-  title: "バリアント情報標準化研究会 VISC5.6"
+  title: "バリアント情報標準化研究会"
+  short: "VISC5.6"
   url: "https://github.com/dbcls/visc/wiki/VISC5.6"
+  date_text: "2025年 6/16 〜 6/17"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 19
-  date: 2025-04-13
   title: "第5回 バリアント情報標準化研究会"
   url: "https://github.com/dbcls/visc/wiki/VISC5"
+  date_text: "2025年 4/13 〜 4/15"
+  place: "奥琵琶湖 四季亭"
+  city: "滋賀県福岡市"
 - no: 18
-  date: 2025-02-17
-  title: "バリアント情報標準化研究会 VISC5.2"
+  title: "バリアント情報標準化研究会"
+  short: "VISC5.2"
   url: "https://github.com/dbcls/visc/wiki/VISC5.2"
+  date_text: "2025年 2/17 〜 2/18"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 17
-  date: 2024-11-25
   title: "バリアント情報標準化研究会 VISC4.11"
+  short: "VISC4.11"
   url: "https://github.com/dbcls/visc/wiki/VISC4.11"
+  date_text: "2024年 11/25 〜 11/26"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 16
-  date: 2024-09-12
-  title: "第5回 バリアント情報標準化研究会 VISC4.9"
+  title: "バリアント情報標準化研究会"
+  short: "VISC4.9"
   url: "https://github.com/dbcls/visc/wiki/VISC4.9"
+  date_text: "2024年 9/12 〜 9/13"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 15
-  date: 2024-06-17
-  title: "第5回 バリアント情報標準化研究会 VISC4.6"
+  title: "バリアント情報標準化研究会"
+  short: "VISC4.6"
   url: "https://github.com/dbcls/visc/wiki/VISC4.6"
+  date_text: "2024年 6/17 〜 6/18"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 14
-  date: 2024-04-22
-  title: "第5回 バリアント情報標準化研究会 VISC4.4"
+  title: "バリアント情報標準化研究会"
+  short: "VISC4.4"
   url: "https://github.com/dbcls/visc/wiki/VISC4.4"
+  date_text: "2024年 4/22 〜 4/23"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 13
-  date: 2024-02-13
-  title: "第5回 バリアント情報標準化研究会 VISC4.2"
+  title: "バリアント情報標準化研究会"
+  short: "VISC4.2"
   url: "https://github.com/dbcls/visc/wiki/VISC4.2"
+  date_text: "2024年 2/13 〜 2/14"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 12
-  date: 2024-01-05
   title: "第4回 バリアント情報標準化研究会"
+  short: "VISC4"
   url: "https://github.com/dbcls/visc/wiki/VISC4"
+  date_text: "2024年 1/5 〜 1/7"
+  place: "佐勘"
+  city: "仙台市"
 - no: 11
-  date: 2023-10-17
-  title: "バリアント情報標準化研究会 VISC3.10"
+  title: "バリアント情報標準化研究会"
+  short: "VISC3.10"
   url: "https://github.com/dbcls/visc/wiki/VISC3.10"
+  date_text: "2023年 10/17 〜 10/18"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 10
-  date: 2023-08-11
-  title: "バリアント情報標準化研究会 VISC3.8"
+  title: "バリアント情報標準化研究会"
+  short: "VISC3.8"
   url: "https://github.com/dbcls/visc/wiki/VISC3.8"
+  date_text: "2023年 8/11 〜 8/12"
+  place: "九州大学"
+  city: "福岡県福岡市"
 - no: 9
-  date: 2023-05-11
-  title: "バリアント情報標準化研究会 VISC Hackathon 3.5"
+  title: "バリアント情報標準化研究会"
+  short: "VISC Hackathon 3.5"
   url: "https://github.com/dbcls/visc/wiki/VISC-hackathon3.5"
+  date_text: "2023年 5/11 〜 5/12"
+  place: "奥琵琶湖 四季亭"
+  city: "滋賀県高島市海津"
 - no: 8
-  date: 2023-01-06
   title: "第3回 バリアント情報標準化研究会"
+  short: "VISC3"
   url: "https://github.com/dbcls/visc/wiki/VISC3"
+  date_text: "2023年 1/6 〜 1/8"
+  place: "松政"
+  city: "山口県山口市"
 - no: 7
-  date: 2022-01-07
   title: "第2回 バリアント情報標準化研究会"
+  short: "VISC2"
   url: "https://github.com/dbcls/visc/wiki/VISC2"
+  date_text: "2022年 1/7 〜 1/9"
+  place: "たちばなや"
+  city: "山形県鶴岡市"
 - no: 6
-  date: 2021-11-08
-  title: "ELIXIR BioHackathon Japan 2021"
+  title: "バリアント情報標準化研究会"
+  short: "ELIXIR BioHackathon Japan 2021"
   url: "https://github.com/dbcls/visc/wiki/ELIXIR-BioHackathon-Japan-2021"
+  date_text: "2021年 11/8 〜 11/12"
+  place: "Chalet Itomic"
+  city: "神奈川県箱根市"
 - no: 5
-  date: 2021-10-21
-  title: "VISC-SPARQLthon109"
+  title: "バリアント情報標準化研究会"
+  short: "VISC-SPARQLthon109"
   url: "https://github.com/dbcls/visc/wiki/VISC-SPARQLthon109"
+  date_text: "2021年 10/21 〜 10/22"
+  place: "DBCLS"
+  city: "千葉県柏市"
 - no: 4
-  date: 2021-08-05
-  title: "VISC-SPARQLthon107"
+  title: "バリアント情報標準化研究会"
+  short: "VISC-SPARQLthon107"
   url: "https://github.com/dbcls/visc/wiki/VISC-SPARQLthon107"
+  date_text: "2021年 8/5 〜 8/6"
+  place: "オンライン"
 - no: 3
-  date: 2021-06-23
   title: "バリアント情報標準化研究会 第2回ハッカソン"
+  short: "VISC-hackathon2"
   url: "https://github.com/dbcls/visc/wiki/VISC-hackathon2"
+  date_text: "2021年 6/23 〜 6/26"
+  place: "京都大学"
+  city: "京都府京都市"
 - no: 2
-  date: 2021-02-18
   title: "バリアント情報標準化研究会 第1回ハッカソン"
+  short: "VISC-hackathon1"
   url: "https://github.com/dbcls/visc/wiki/VISC-hackathon1"
+  date_text: "2021年 2/18 〜 2/20"
+  place: "丸駒旅館"
+  city: "北海道千歳市"
 - no: 1
-  date: 2021-01-05
   title: "第1回バリアント情報標準化研究会"
+  short: "VISC1"
   url: "https://github.com/dbcls/visc/wiki/VISC1"
-
+  date_text: "2021年 1/5 〜 1/7"
+  place: "佐勘"
+  city: "宮城県仙台市"

@@ -6,4 +6,11 @@
 .cards { display:grid; gap:16px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .card { border:1px solid #eee; border-radius:12px; padding:16px; }
 .card h3 { margin-top:0; }
-
+.meetings-list { list-style: none; padding-left: 0; }
+.meeting-item { padding: 10px 0; border-bottom: 1px solid #eee; }
+.meeting-line { font-weight: 600; }
+.meeting-title { }
+.meeting-sep { }
+.meeting-link { text-decoration: none; border-bottom: 1px dashed #aaa; }
+.meeting-meta { color: #555; margin-top: 2px; }
+.note { color: #666; margin-top: 16px; }
