@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-VISC is a vocabulary for interlinking scientific concepts.
+VISC is Variant Information Standardization Collegium.
 Write a short overview of goals, scope, and related resources here.
 
