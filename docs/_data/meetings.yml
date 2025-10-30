@@ -1,13 +1,85 @@
-- no: 20
+- no: 21
   date: 2025-10-29
-  title: "https://github.com/dbcls/visc/wiki/VISC5.10"
-  url: ""
-- no: 19
+  title: "バリアント情報標準化研究会 VISC5.10"
+  url: "https://github.com/dbcls/visc/wiki/VISC5.10"
+- no: 20
   date: 2025-06-16
   title: "バリアント情報標準化研究会 VISC5.6"
   url: "https://github.com/dbcls/visc/wiki/VISC5.6"
-- no: 18
+- no: 19
   date: 2025-04-13
   title: "第5回 バリアント情報標準化研究会"
   url: "https://github.com/dbcls/visc/wiki/VISC5"
+- no: 18
+  date: 2025-02-17
+  title: "バリアント情報標準化研究会 VISC5.2"
+  url: "https://github.com/dbcls/visc/wiki/VISC5.2"
+- no: 17
+  date: 2024-11-25
+  title: "バリアント情報標準化研究会 VISC4.11"
+  url: "https://github.com/dbcls/visc/wiki/VISC4.11"
+- no: 16
+  date: 2024-09-12
+  title: "第5回 バリアント情報標準化研究会 VISC4.9"
+  url: "https://github.com/dbcls/visc/wiki/VISC4.9"
+- no: 15
+  date: 2024-06-17
+  title: "第5回 バリアント情報標準化研究会 VISC4.6"
+  url: "https://github.com/dbcls/visc/wiki/VISC4.6"
+- no: 14
+  date: 2024-04-22
+  title: "第5回 バリアント情報標準化研究会 VISC4.4"
+  url: "https://github.com/dbcls/visc/wiki/VISC4.4"
+- no: 13
+  date: 2024-02-13
+  title: "第5回 バリアント情報標準化研究会 VISC4.2"
+  url: "https://github.com/dbcls/visc/wiki/VISC4.2"
+- no: 12
+  date: 2024-01-05
+  title: "第4回 バリアント情報標準化研究会"
+  url: "https://github.com/dbcls/visc/wiki/VISC4"
+- no: 11
+  date: 2023-10-17
+  title: "バリアント情報標準化研究会 VISC3.10"
+  url: "https://github.com/dbcls/visc/wiki/VISC3.10"
+- no: 10
+  date: 2023-08-11
+  title: "バリアント情報標準化研究会 VISC3.8"
+  url: "https://github.com/dbcls/visc/wiki/VISC3.8"
+- no: 9
+  date: 2023-05-11
+  title: "バリアント情報標準化研究会 VISC Hackathon 3.5"
+  url: "https://github.com/dbcls/visc/wiki/VISC-hackathon3.5"
+- no: 8
+  date: 2023-01-06
+  title: "第3回 バリアント情報標準化研究会"
+  url: "https://github.com/dbcls/visc/wiki/VISC3"
+- no: 7
+  date: 2022-01-07
+  title: "第2回 バリアント情報標準化研究会"
+  url: "https://github.com/dbcls/visc/wiki/VISC2"
+- no: 6
+  date: 2021-11-08
+  title: "ELIXIR BioHackathon Japan 2021"
+  url: "https://github.com/dbcls/visc/wiki/ELIXIR-BioHackathon-Japan-2021"
+- no: 5
+  date: 2021-10-21
+  title: "VISC-SPARQLthon109"
+  url: "https://github.com/dbcls/visc/wiki/VISC-SPARQLthon109"
+- no: 4
+  date: 2021-08-05
+  title: "VISC-SPARQLthon107"
+  url: "https://github.com/dbcls/visc/wiki/VISC-SPARQLthon107"
+- no: 3
+  date: 2021-06-23
+  title: "バリアント情報標準化研究会 第2回ハッカソン"
+  url: "https://github.com/dbcls/visc/wiki/VISC-hackathon2"
+- no: 2
+  date: 2021-02-18
+  title: "バリアント情報標準化研究会 第1回ハッカソン"
+  url: "https://github.com/dbcls/visc/wiki/VISC-hackathon1"
+- no: 1
+  date: 2021-01-05
+  title: "第1回バリアント情報標準化研究会"
+  url: "https://github.com/dbcls/visc/wiki/VISC1"
 
