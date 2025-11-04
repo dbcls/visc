@@ -22,7 +22,7 @@ collections:
     permalink: /publications/:name/
 
 # ヘッダーメニュー
-header_pages:
+#header_pages:
 #  - meetings.md
 #  - projects.md
 #  - databases.md
