@@ -11,7 +11,7 @@ title: Home
 %}
 
 ### 最新のお知らせ
-（最新の News を3件表示）
+
 <ul>
 {% for post in site.posts limit:3 %}
   <li>
