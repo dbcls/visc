@@ -23,14 +23,14 @@ collections:
 
 # ヘッダーメニュー
 header_pages:
-  - meetings.md
-  - projects.md
-  - databases.md
-  - publications.md
-  - members.md
-  - join.md
-  - news.md
-  - about.md
+#  - meetings.md
+#  - projects.md
+#  - databases.md
+#  - publications.md
+#  - members.md
+#  - join.md
+#  - news.md
+#  - about.md
 
 # 除外
 exclude:
