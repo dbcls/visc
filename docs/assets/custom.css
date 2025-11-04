@@ -9,11 +9,9 @@
 .meetings-list { list-style: none; padding-left: 0; }
 .meeting-item { padding: 10px 0; border-bottom: 1px solid #eee; }
 .meeting-line { font-weight: 600; }
-.meeting-title { }
 .meeting-sep { }
 .meeting-link { text-decoration: none; border-bottom: 1px dashed #aaa; }
 .meeting-meta { color: #555; margin-top: 2px; }
-.note { color: #666; margin-top: 16px; }
 
 .meeting-cards {
   display: grid;
@@ -33,13 +31,30 @@
   transform: translateY(-2px);
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
 }
-.meeting-card h3 {
-  margin-top: 0;
+/* タイトルと略称を横並びに */
+.meeting-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.meeting-title {
+  margin: 0;
   font-size: 1.1rem;
 }
-.meeting-card a {
+.meeting-short {
   font-weight: 600;
   text-decoration: none;
+  color: #0044cc;
   border-bottom: 1px dashed #aaa;
 }
-.note { margin-top: 20px; color: #666; }
+.meeting-short:hover {
+  color: #000;
+  border-bottom-color: #666;
+}
+.note {
+  margin-top: 20px;
+  color: #666;
+}
+

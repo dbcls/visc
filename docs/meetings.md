@@ -15,9 +15,17 @@ permalink: /meetings/
 {% assign list = site.data.meetings | sort: "no" | reverse %}
 {% for m in list %}
   <div class="meeting-card">
-    <h3>{{ m.title }}</h3>
-    <p><a href="{{ m.url }}" target="_blank" rel="noopener">{{ m.short }}</a></p>
-    {% if m.date_text %}<p><strong>日程：</strong>{{ m.date_text }}</p>{% endif %}
+    <div class="meeting-header">
+      <h3 class="meeting-title">{{ m.title }}</h3>
+      {% if m.short %}
+        <a class="meeting-short" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.short }}</a>
+      {% endif %}
+    </div>
+
+    {% if m.date_text %}
+      <p><strong>日程：</strong>{{ m.date_text }}</p>
+    {% endif %}
+
     {% if m.place or m.city %}
       <p><strong>場所：</strong>
         {% if m.place %}{{ m.place }}{% endif %}
@@ -27,7 +35,6 @@ permalink: /meetings/
   </div>
 {% endfor %}
 </div>
-
 
 <p class="note">※ 各回の議事録・発表資料・動画リンクなどは Wiki ページをご参照ください。</p>
 
