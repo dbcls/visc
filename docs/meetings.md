@@ -15,12 +15,11 @@ permalink: /meetings/
 {% assign list = site.data.meetings | sort: "no" | reverse %}
 {% for m in list %}
   <div class="meeting-card">
-    <div class="meeting-header">
-      <h3 class="meeting-title">{{ m.title }}</h3>
-      {% if m.short %}
-        <a class="meeting-short" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.short }}</a>
-      {% endif %}
-    </div>
+
+    <!-- タイトルと略称を同じ h3 内に -->
+    <h3 class="meeting-title">
+      {{ m.title }}&nbsp;<a class="meeting-short" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.short }}</a>
+    </h3>
 
     {% if m.date_text %}
       <p><strong>日程：</strong>{{ m.date_text }}</p>
@@ -32,6 +31,7 @@ permalink: /meetings/
         {% if m.place and m.city %}（{% endif %}{% if m.city %}{{ m.city }}{% endif %}{% if m.place and m.city %}）{% endif %}
       </p>
     {% endif %}
+
   </div>
 {% endfor %}
 </div>

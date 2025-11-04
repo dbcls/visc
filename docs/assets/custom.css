@@ -39,16 +39,6 @@
   gap: 6px;
   margin-bottom: 4px;
 }
-.meeting-title {
-  margin: 0;
-  font-size: 1.1rem;
-}
-.meeting-short {
-  font-weight: 600;
-  text-decoration: none;
-  color: #0044cc;
-  border-bottom: 1px dashed #aaa;
-}
 .meeting-short:hover {
   color: #000;
   border-bottom-color: #666;
@@ -57,4 +47,10 @@
   margin-top: 20px;
   color: #666;
 }
-
+.meeting-title { margin: 0 0 4px; font-size: 1.1rem; }
+.meeting-short {
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed #aaa;
+  white-space: nowrap; /* 略称は必ず1行 */
+}
