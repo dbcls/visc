@@ -24,7 +24,7 @@ permalink: /en/
 {% endfor %}
 </ul>
 
-### クイックリンク
+### Quick links
 - **Meetings:** Past events → [View all]({{ '/meetings/' | relative_url }})
 - **Projects:** GVO, Graph genomes etc → [View all]({{ '/projects/' | relative_url }})
 - **Databases:** TogoVar / JoGo → [View details]({{ '/databases/' | relative_url }})
