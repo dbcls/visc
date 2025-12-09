@@ -1,0 +1,9 @@
+{% if page.alt_url %}
+  <p class="lang-switch">
+    {% if page.lang == "ja" %}
+      <a href="{{ page.alt_url | relative_url }}">English</a>
+    {% elsif page.lang == "en" %}
+      <a href="{{ page.alt_url | relative_url }}">日本語</a>
+    {% endif %}
+  </p>
+{% endif %}
