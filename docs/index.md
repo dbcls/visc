@@ -8,7 +8,6 @@ nav_exclude: true
 
 {% include hero.html
   title="VISC — バリアント情報標準化研究会"
-#  subtitle="Variant Information Standardization Collegium: Human genome variant information standardization"
   cta_label="次回の研究会"
   cta_url="/visc/meetings/"
 %}
