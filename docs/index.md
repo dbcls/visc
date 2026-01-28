@@ -3,6 +3,7 @@ layout: home
 title: Home
 lang: ja
 alt_url: /en/
+nav_exclude: true
 ---
 
 {% include hero.html
