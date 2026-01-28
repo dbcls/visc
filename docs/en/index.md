@@ -4,6 +4,7 @@ title: Home
 lang: en
 alt_url: /
 permalink: /en/
+nav_exclude: true
 ---
 
 {% include lang-switch.html %}
