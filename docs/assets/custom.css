@@ -69,3 +69,4 @@
 .header-flex { display:flex; align-items:center; justify-content:space-between; }
 .lang-link { margin-left: 12px; }
 
+.page-heading { display: none !important; }
