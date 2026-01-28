@@ -6,7 +6,6 @@ permalink: /en/
 nav_exclude: true
 ---
 
-{% include lang-switch.html %}
 {% include hero_en.html
   title="VISC — Variant Information Standardization Collegium"
   cta_label="Next meeting"

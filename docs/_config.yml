@@ -31,7 +31,6 @@ header_pages:
   - join.md
   - news.md
   - about.md
-  - english.md
 
 # 除外
 exclude:
