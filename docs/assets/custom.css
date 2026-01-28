@@ -70,3 +70,5 @@
 .lang-link { margin-left: 12px; }
 
 .page-heading { display: none !important; }
+/* minima のフッタを非表示（VISCの二重表示を含め全部消す） */
+.site-footer { display: none !important; }
