@@ -5,7 +5,6 @@ lang: ja
 alt_url: /en/
 ---
 
-{% include lang-switch.html %}
 {% include hero.html
   title="VISC — バリアント情報標準化研究会"
 #  subtitle="Variant Information Standardization Collegium: Human genome variant information standardization"
