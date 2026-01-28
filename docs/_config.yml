@@ -22,15 +22,15 @@ collections:
     permalink: /publications/:name/
 
 # ヘッダーメニュー
-#header_pages:
-#  - meetings.md
-#  - projects.md
-#  - databases.md
+header_pages:
+  - meetings.md
+  - projects.md
+  - databases.md
 #  - publications.md
 #  - members.md
-#  - join.md
-#  - news.md
-#  - about.md
+  - join.md
+  - news.md
+  - about.md
 
 # 除外
 exclude:
