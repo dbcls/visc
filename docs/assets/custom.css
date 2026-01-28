@@ -66,3 +66,6 @@
   text-decoration: none;
   border-bottom: 1px dashed #aaa;
 }
+.header-flex { display:flex; align-items:center; justify-content:space-between; }
+.lang-link { margin-left: 12px; }
+
