@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Home
 lang: en
 alt_url: /
 permalink: /en/
