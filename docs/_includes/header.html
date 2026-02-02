@@ -3,35 +3,23 @@
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
     <nav class="site-nav header-nav">
-      {%- assign default_paths = site.pages | map: "path" -%}
-      {%- assign page_paths = site.header_pages | default: default_paths -%}
+      {%- assign page_paths = site.header_pages -%}
+      {%- assign is_en_page = page.url contains '/en/' -%}
 
-      {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page and my_page.title and my_page.nav_exclude != true -%}
-
-          {%- comment -%}
-          英語ページのナビには英語ページだけ、日本語ページのナビには日本語ページだけを出す
-          （英語ページは /en/ 配下にある前提）
-          {%- endcomment -%}
-
-          {%- assign is_en_page = page.url contains '/en/' -%}
-          {%- assign is_en_item = my_page.url contains '/en/' -%}
-
-          {%- if is_en_page == is_en_item -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      {%- if page_paths -%}
+        {%- for path in page_paths -%}
+          {%- assign my_page = site.pages | where: "path", path | first -%}
+          {%- if my_page and my_page.title and my_page.nav_exclude != true -%}
+            {%- assign is_en_item = my_page.url contains '/en/' -%}
+            {%- if is_en_page == is_en_item -%}
+              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {%- endif -%}
           {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
 
-        {%- endif -%}
-      {%- endfor -%}
-
-      {%- comment -%}
-      言語切替リンク（1個だけ）
-      page.alt_url があればそれを優先。なければトップへ。
-      {%- endcomment -%}
       <span class="lang-toggle">
-        {%- assign is_en = page.url contains '/en/' -%}
-        {%- if is_en -%}
+        {%- if is_en_page -%}
           <a class="page-link" href="{{ page.alt_url | default: '/' | relative_url }}">日本語</a>
         {%- else -%}
           <a class="page-link" href="{{ page.alt_url | default: '/en/' | relative_url }}">English</a>
@@ -40,4 +28,3 @@
     </nav>
   </div>
 </header>
-
