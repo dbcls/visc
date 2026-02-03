@@ -80,3 +80,28 @@
 /* フッタ（VISCが2回出ている部分）を消す */
 .site-footer { display: none !important; }
 
+.highlight-meeting {
+  border: 2px solid #4a6cff;
+  background: #f8faff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 16px 0 24px;
+}
+
+.highlight-meeting h3 {
+  margin-top: 0;
+}
+
+.highlight-meeting a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.highlight-meeting .btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #4a6cff;
+  text-decoration: none;
+}
