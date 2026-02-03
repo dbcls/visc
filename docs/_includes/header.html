@@ -4,6 +4,8 @@
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
     <nav class="site-nav header-nav">
+<!-- DEBUG header_pages={{ site.header_pages | inspect }} -->
+<!-- DEBUG sample_paths={{ site.pages | map: "path" | slice: 0, 20 | inspect }} -->
       {%- assign page_paths = site.header_pages -%}
       {%- assign is_en_page = page.url contains '/en/' -%}
 
