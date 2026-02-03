@@ -1,22 +1,36 @@
-<!-- DEBUG header: 2026-01-28 v3 -->
+<!-- DEBUG is_en_page={{ is_en_page }} page.lang={{ page.lang }} page.path={{ page.path }} -->
 <header class="site-header" role="banner">
   <div class="wrapper header-flex">
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
     <nav class="site-nav header-nav">
-<!-- DEBUG header_pages={{ site.header_pages | inspect }} -->
-<!-- DEBUG sample_paths={{ site.pages | map: "path" | slice: 0, 20 | inspect }} -->
       {%- assign page_paths = site.header_pages -%}
-      {%- assign is_en_page = page.url contains '/en/' -%}
+
+      {%- comment -%} 現在ページが英語かどうか（lang優先） {%- endcomment -%}
+      {%- assign is_en_page = false -%}
+      {%- if page.lang == 'en' -%}
+        {%- assign is_en_page = true -%}
+      {%- elsif page.path contains 'en/' -%}
+        {%- assign is_en_page = true -%}
+      {%- endif -%}
 
       {%- if page_paths -%}
         {%- for path in page_paths -%}
           {%- assign my_page = site.pages | where: "path", path | first -%}
           {%- if my_page and my_page.title and my_page.nav_exclude != true -%}
-            {%- assign is_en_item = my_page.url contains '/en/' -%}
+
+            {%- comment -%} メニュー項目が英語かどうか（lang優先） {%- endcomment -%}
+            {%- assign is_en_item = false -%}
+            {%- if my_page.lang == 'en' -%}
+              {%- assign is_en_item = true -%}
+            {%- elsif my_page.path contains 'en/' -%}
+              {%- assign is_en_item = true -%}
+            {%- endif -%}
+
             {%- if is_en_page == is_en_item -%}
               <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
+
           {%- endif -%}
         {%- endfor -%}
       {%- endif -%}

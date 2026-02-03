@@ -2,6 +2,7 @@
 layout: page
 title: Meetings
 permalink: /meetings/
+lang: ja
 ---
 
 # Meetings（開催記録）
