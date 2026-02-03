@@ -1,6 +1,3 @@
-<div style="background:yellow; padding:8px; border:1px solid #ccc;">
-  LIQUID TEST: {{ 1 | plus: 1 }}
-</div>
 ---
 layout: home
 lang: ja
@@ -11,18 +8,23 @@ nav_exclude: true
 {% include hero.html
   title="VISC — バリアント情報標準化研究会"
   cta_label="最新の研究会"
+  cta_url="/visc/meetings/"
+%}
 
-  {% assign latest = site.data.meetings | sort: "date" | reverse | first %}
-<p>DEBUG latest short: {{ latest.short }}</p>
-<p>DEBUG latest date: {{ latest.date }}</p>
+{% assign latest = site.data.meetings | sort: "date" | reverse | first %}
 
-  {% if latest %}
-  <div class="highlight-meeting">
+{%
+comment %}
+DEBUG（必要なければ削除してOK）
+latest short: {{ latest.short }}
+latest date: {{ latest.date }}
+{% endcomment %}
+
+{% if latest %}
+<div class="highlight-meeting">
   <h3>
-    {{ latest.title }}
-    <a href="{{ latest.url }}" target="_blank" rel="noopener">
-      {{ latest.short }}
-    </a>
+    {{ latest.title }}&nbsp;
+    <a href="{{ latest.url }}" target="_blank" rel="noopener">{{ latest.short }}</a>
   </h3>
 
   {% if latest.date_text %}
@@ -30,21 +32,14 @@ nav_exclude: true
   {% endif %}
 
   {% if latest.place or latest.city %}
-    <p><strong>場所：</strong>
-      {{ latest.place }}{% if latest.city %}（{{ latest.city }}）{% endif %}
-    </p>
+    <p><strong>場所：</strong>{{ latest.place }}{% if latest.city %}（{{ latest.city }}）{% endif %}</p>
   {% endif %}
 
   <p>
-    <a class="btn" href="{{ '/meetings/' | relative_url }}">
-      開催記録一覧を見る
-    </a>
+    <a class="btn" href="{{ '/meetings/' | relative_url }}">開催記録一覧を見る</a>
   </p>
-  </div>
-  {% endif %}
-
-  cta_url="/visc/meetings/"
-%}
+</div>
+{% endif %}
 
 ### 最新のお知らせ
 
