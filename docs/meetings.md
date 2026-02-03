@@ -13,7 +13,7 @@ lang: ja
 以下は主要な開催回へのリンク一覧です（最新順）。
 
 <div class="meeting-cards">
-{% assign meetings = site.data.meetings | sort: "no" | reverse %}
+{% assign meetings = site.data.meetings | sort: "date" | reverse %}
 {% for m in meetings %}
   <div class="meeting-card">
 
