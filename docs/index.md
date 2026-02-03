@@ -1,3 +1,6 @@
+<div style="background:yellow; padding:8px; border:1px solid #ccc;">
+  LIQUID TEST: {{ 1 | plus: 1 }}
+</div>
 ---
 layout: home
 lang: ja
