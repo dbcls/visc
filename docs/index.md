@@ -7,7 +7,37 @@ nav_exclude: true
 
 {% include hero.html
   title="VISC — バリアント情報標準化研究会"
-  cta_label="次回の研究会"
+  cta_label="最新の研究会"
+
+  {% assign latest = site.data.meetings | sort: "date" | reverse | first %}
+
+  {% if latest %}
+  <div class="highlight-meeting">
+  <h3>
+    {{ latest.title }}
+    <a href="{{ latest.url }}" target="_blank" rel="noopener">
+      {{ latest.short }}
+    </a>
+  </h3>
+
+  {% if latest.date_text %}
+    <p><strong>日程：</strong>{{ latest.date_text }}</p>
+  {% endif %}
+
+  {% if latest.place or latest.city %}
+    <p><strong>場所：</strong>
+      {{ latest.place }}{% if latest.city %}（{{ latest.city }}）{% endif %}
+    </p>
+  {% endif %}
+
+  <p>
+    <a class="btn" href="{{ '/meetings/' | relative_url }}">
+      開催記録一覧を見る
+    </a>
+  </p>
+  </div>
+  {% endif %}
+
   cta_url="/visc/meetings/"
 %}
 
