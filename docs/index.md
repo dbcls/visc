@@ -8,8 +8,12 @@ nav_exclude: true
 {% include hero.html
   title="VISC — バリアント情報標準化研究会"
   cta_label="最新の研究会"
+<!-- DEBUG meetings_count={{ site.data.meetings | size }} -->
+<!-- DEBUG meetings_keys={{ site.data.meetings[0] | inspect }} -->
 
   {% assign latest = site.data.meetings | sort: "date" | reverse | first %}
+<p>DEBUG latest short: {{ latest.short }}</p>
+<p>DEBUG latest date: {{ latest.date }}</p>
 
   {% if latest %}
   <div class="highlight-meeting">
