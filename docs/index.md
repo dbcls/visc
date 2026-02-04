@@ -7,8 +7,8 @@ nav_exclude: true
 
 {% include hero.html
   title="VISC — バリアント情報標準化研究会"
-  cta_label="最新の研究会"
-  cta_url="/visc/meetings/"
+-  cta_label="最新の研究会"
+-  cta_url="/visc/meetings/"
 %}
 
 {% assign latest = site.data.meetings | sort: "date" | reverse | first %}
