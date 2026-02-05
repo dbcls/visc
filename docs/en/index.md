@@ -8,8 +8,6 @@ nav_exclude: true
 
 {% include hero_en.html
   title="VISC — Variant Information Standardization Collegium"
-  cta_label="Next meeting"
-  cta_url="/visc/meetings/"
 %}
 
 
