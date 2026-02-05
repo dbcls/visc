@@ -9,35 +9,31 @@ nav_exclude: true
   title="VISC — バリアント情報標準化研究会"
 %}
 
+
 {% assign latest = site.data.meetings | sort: "date" | reverse | first %}
 
-{%
-comment %}
-DEBUG（必要なければ削除してOK）
-latest short: {{ latest.short }}
-latest date: {{ latest.date }}
-{% endcomment %}
-
 {% if latest %}
-<div class="highlight-meeting">
-  <h3>
-    {{ latest.title }}&nbsp;
-    <a href="{{ latest.url }}" target="_blank" rel="noopener">{{ latest.short }}</a>
-  </h3>
+<div class="meeting-highlight compact">
+  <div class="mh-head">
+    <span class="mh-label">最新の研究会</span>
+    <span class="mh-short">
+      <a href="{{ latest.url }}" target="_blank" rel="noopener">{{ latest.short }}</a>
+    </span>
+  </div>
 
-  {% if latest.date_text %}
-    <p><strong>日程：</strong>{{ latest.date_text }}</p>
-  {% endif %}
+  <div class="mh-title">{{ latest.title }}</div>
 
+  {% if latest.date_text %}<div class="mh-row"><strong>日程：</strong>{{ latest.date_text }}</div>{% endif %}
   {% if latest.place or latest.city %}
-    <p><strong>場所：</strong>{{ latest.place }}{% if latest.city %}（{{ latest.city }}）{% endif %}</p>
+    <div class="mh-row"><strong>場所：</strong>{{ latest.place }}{% if latest.city %}（{{ latest.city }}）{% endif %}</div>
   {% endif %}
 
-  <p>
-    <a class="btn" href="{{ '/meetings/' | relative_url }}">開催記録一覧を見る</a>
-  </p>
+  <div class="mh-actions">
+    <a class="mh-link" href="{{ '/meetings/' | relative_url }}">開催記録を見る</a>
+  </div>
 </div>
 {% endif %}
+
 
 ### 最新のお知らせ
 
