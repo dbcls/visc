@@ -7,7 +7,7 @@ nav_exclude: true
 ---
 
 {% include hero_en.html
-  title="VISC — Variant Information Standardization Collegium"
+  title="VISC: Variant Information Standardization Collegium"
 %}
 
 
@@ -16,7 +16,7 @@ nav_exclude: true
 {% if latest %}
 <div class="meeting-highlight compact">
   <div class="mh-head">
-    <span class="mh-label">Latest meeting</span>
+    <span class="mh-label">The latest meeting</span>
     <span class="mh-short">
       <a href="{{ latest.url }}" target="_blank" rel="noopener">{{ latest.short }}</a>
     </span>
