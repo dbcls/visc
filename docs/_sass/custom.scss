@@ -164,8 +164,9 @@
 }
 
 .hero__logo {
-  height: 48px;   /* ロゴの高さ（お好みで 40〜56px） */
+  height: 44px;
   width: auto;
-  flex-shrink: 0;
+  display: block;
+  margin-bottom: 10px;
 }
 
