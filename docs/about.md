@@ -1,6 +1,6 @@
 ---
 layout: page
-title: この研究会について 
+title: About
 permalink: /about/
 lang: ja
 alt_url: /en/about/
