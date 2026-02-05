@@ -6,7 +6,7 @@ lang: en
 alt_url: /about/
 ---
 
-** The Variant Information Standardization Collegium (VISC) **is a research group dedicated to developing standards for representing and sharing human genome variant information in a more accurate and interoperable manner.
+**The Variant Information Standardization Collegium (VISC)** is a research group dedicated to developing standards for representing and sharing human genome variant information in a more accurate and interoperable manner.
 
 In recent years, rapid advances in genome analysis technologies—such as long-read sequencing, hybrid assembly, and Hi-C—have significantly improved the accuracy of analyses including structural variant detection and genotyping. These developments have made it possible to capture structural polymorphisms at an unprecedented scale and level of precision. However, the challenge of how to describe complex structural polymorphisms in a standardized way remains insufficiently addressed. This issue is expected to become increasingly important as variant information is accumulated and reused over the long term, and as it is integrated with existing knowledge and other databases.
 
