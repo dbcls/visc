@@ -105,3 +105,53 @@
   border: 1px solid #4a6cff;
   text-decoration: none;
 }
+
+
+.meeting-highlight.compact {
+  border: 1px solid #d6dfff;
+  background: #fbfcff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 14px 0 18px;
+  max-width: 720px;   /* 横幅を少し抑える（不要なら削除） */
+}
+
+.meeting-highlight .mh-head {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.meeting-highlight .mh-label {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 600;
+}
+
+.meeting-highlight .mh-short a {
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dashed #aaa;
+}
+
+.meeting-highlight .mh-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 4px 0 8px;
+}
+
+.meeting-highlight .mh-row {
+  margin: 2px 0;
+  color: #333;
+}
+
+.meeting-highlight .mh-actions {
+  margin-top: 8px;
+}
+
+.meeting-highlight .mh-link {
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 1px dashed #aaa;
+}
