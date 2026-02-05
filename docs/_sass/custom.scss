@@ -156,9 +156,32 @@
   border-bottom: 1px dashed #aaa;
 }
 
+.hero__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
 .hero__logo {
-  height: 44px;
+  height: 48px;   /* ロゴの高さ（お好みで 40〜56px） */
   width: auto;
-  display: block;
-  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.hero__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.hero__brand-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.hero__brand-subtitle {
+  font-size: 0.95rem;
+  color: #555;
 }
