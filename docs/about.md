@@ -1,7 +1,9 @@
 ---
 layout: page
-title: この研究会について
+title: About
 permalink: /about/
+lang: ja
+alt_url: /en/about/
 ---
 
 **バリアント情報標準化研究会（VISC: Variant Information Standardization Collegium）** は、  
