@@ -12,6 +12,32 @@ nav_exclude: true
   cta_url="/visc/meetings/"
 %}
 
+
+{% assign latest = site.data.meetings | sort: "date" | reverse | first %}
+
+{% if latest %}
+<div class="meeting-highlight compact">
+  <div class="mh-head">
+    <span class="mh-label">Latest meeting</span>
+    <span class="mh-short">
+      <a href="{{ latest.url }}" target="_blank" rel="noopener">{{ latest.short }}</a>
+    </span>
+  </div>
+
+  <div class="mh-title">{{ latest.title }}</div>
+
+  {% if latest.date_text %}<div class="mh-row"><strong>Date：</strong>{{ latest.date_text }}</div>{% endif %}
+  {% if latest.place or latest.city %}
+    <div class="mh-row"><strong>Venue：</strong>{{ latest.place }}{% if latest.city %}（{{ latest.city }}）{% endif %}</div>
+  {% endif %}
+
+  <div class="mh-actions">
+    <a class="mh-link" href="{{ '/meetings/' | relative_url }}">Past meetings</a>
+  </div>
+</div>
+{% endif %}
+
+
 ### News
 
 <ul>
