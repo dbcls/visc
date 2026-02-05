@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About VISC
 permalink: /en/about/
 lang: en
 alt_url: /about/
