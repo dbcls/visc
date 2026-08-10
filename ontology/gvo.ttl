@@ -79,7 +79,7 @@
     a owl:Class ;
     rdfs:label "Del"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0000159>, <http://purl.obolibrary.org/obo/VariO_0141>, <http://varnomen.hgvs.org/recommendations/DNA/variant/deletion/> ;
-    rdfs:subClassOf :Variation ;
+    rdfs:subClassOf :CNV ;
     skos:definition "Deletion"@en .
 
 :DelAlu
@@ -139,7 +139,7 @@
     a owl:Class ;
     rdfs:label "Dup"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_1000035>, <http://varnomen.hgvs.org/recommendations/DNA/variant/duplication/> ;
-    rdfs:subClassOf :Variation ;
+    rdfs:subClassOf :CNV ;
     skos:definition "Duplication"@en .
 
 :DupInv
@@ -192,6 +192,7 @@
     rdfs:label "insHERV"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002187> ;
     rdfs:subClassOf :InsME ;
+    rdfs:comment "Human endogenous retrovirus (HERV) insertion"@en ;
     skos:definition "HERV insertion"@en .
 
 :InsIDel
@@ -205,11 +206,13 @@
     rdfs:label "insLINE1"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002064> ;
     rdfs:subClassOf :InsME ;
+    rdfs:comment "Long interspersed nuclear element (LINE) 1 insertion"@en ;
     skos:definition "LINE1 insertion"@en .
 
 :InsME
     a owl:Class ;
     rdfs:label "insME"@en ;
+    skos:altLabel "MEI"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001837>, <http://purl.obolibrary.org/obo/VariO_0192> ;
     rdfs:subClassOf :Ins ;
     skos:definition "Mobile element insertion"@en .
@@ -226,6 +229,7 @@
     rdfs:label "insSVA"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002065> ;
     rdfs:subClassOf :InsME ;
+    rdfs:comment "SINE/variable number of tandem repeats/Alu (SVA) insertion"@en ;
     skos:definition "SVA insertion"@en .
 
 :InterBnd
@@ -278,7 +282,7 @@
 :MCNV
     a owl:Class ;
     rdfs:label "MCNV"@en ;
-    rdfs:subClassOf :Variation ;
+    rdfs:subClassOf :CNV ;
     skos:definition "Multiallelic copy number variation"@en .
 
 :MNV
@@ -305,6 +309,7 @@
 :SNV
     a owl:Class ;
     rdfs:label "SNV"@en ;
+    skos:altLabel "SNP"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0001483>, <http://purl.obolibrary.org/obo/VariO_0136>, <http://varnomen.hgvs.org/recommendations/DNA/variant/substitution/> ;
     rdfs:subClassOf :Variation ;
     skos:definition "Single nucleotide variant"@en .
@@ -313,7 +318,7 @@
     a owl:Class ;
     rdfs:label "STRV"@en ;
     rdfs:seeAlso <http://purl.obolibrary.org/obo/SO_0002096> ;
-    rdfs:subClassOf :Variation ;
+    rdfs:subClassOf :TR ;
     skos:definition "Short tandem repeat variation"@en .
 
 :TDup
